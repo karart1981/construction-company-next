@@ -7,13 +7,21 @@ import { Menu, X } from 'lucide-react';
 import "./navbar.css";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const handleToggle = (): void => {
+    setIsOpen((prev) => !prev);
+  };
+
+  const handleLinkClick = (): void => {
+    setIsOpen(false);
+  };
 
   return (
     <nav className="bg-white w-full h-[100px] px-6 md:px-32 flex justify-between items-center relative z-50">
-      <a href="#">
+      <Link href="/">
         <Image src="/logo.png" width={40} height={40} alt="Logo of the Company" />
-      </a>
+      </Link>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex items-center gap-[30px]">
@@ -26,7 +34,7 @@ export default function Navbar() {
       {/* Mobile Burger Icon */}
       <button
         className="md:hidden text-black cursor-pointer"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={handleToggle}
         aria-label="Toggle menu"
       >
         {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -35,20 +43,13 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <ul className="absolute top-[100px] left-0 w-full bg-white flex flex-col items-center gap-6 py-6 shadow-md md:hidden">
-            <li>
-                <Link className="tracking-widest font-normal" href="/" onClick={() => setIsOpen(false)}>Home</Link>
-            </li>
-            <li>
-                <Link className="tracking-widest font-normal" href="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
-            </li>
-            <li>
-                <Link className="tracking-widest font-normal" href="/landing" onClick={() => setIsOpen(false)}>Landing</Link>
-            </li>
-            <li>
-                <Link className="tracking-widest font-normal" href="/about" onClick={() => setIsOpen(false)}>About</Link>
-            </li>
+          <li><Link className="tracking-widest font-normal" href="/" onClick={handleLinkClick}>Home</Link></li>
+          <li><Link className="tracking-widest font-normal" href="/projects" onClick={handleLinkClick}>Projects</Link></li>
+          <li><Link className="tracking-widest font-normal" href="/landing" onClick={handleLinkClick}>Landing</Link></li>
+          <li><Link className="tracking-widest font-normal" href="/about" onClick={handleLinkClick}>About</Link></li>
         </ul>
       )}
     </nav>
   );
 }
+
