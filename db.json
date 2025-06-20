@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Modern Office Tower",
+      "description": "A high-rise commercial project in the city center.",
+      "image": "/projects/project-1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Luxury Villa",
+      "description": "A premium residential villa with modern architecture.",
+      "image": "/projects/project-2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Industrial Warehouse",
+      "description": "A large storage facility with durable construction.",
+      "image": "/projects/project-3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Industrial Warehouse",
+      "description": "A large storage facility with durable construction.",
+      "image": "/projects/project-4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Industrial Warehouse",
+      "description": "A large storage facility with durable construction.",
+      "image": "/projects/project-5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Industrial Warehouse",
+      "description": "A large storage facility with durable construction.",
+      "image": "/projects/project-6.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Industrial Warehouse",
+      "description": "A large storage facility with durable construction.",
+      "image": "/projects/project-7.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Industrial Warehouse",
+      "description": "A large storage facility with durable construction.",
+      "image": "/projects/project-8.jpg"
+    }
+  ]
+}
