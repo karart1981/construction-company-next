@@ -19,9 +19,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white w-full h-[100px] px-6 md:px-32 flex justify-between items-center relative z-50">
-      <Link href="/">
-        <Image src="/logo.png" width={40} height={40} alt="Logo of the Company" />
-      </Link>
+        <Image src="/logo.png" width={50} height={50} alt="Logo of the Company" />
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex items-center gap-[30px]">
