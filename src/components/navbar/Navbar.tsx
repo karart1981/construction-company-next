@@ -18,7 +18,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white w-full h-[100px] px-6 md:px-32 flex justify-between items-center relative z-50">
+    <nav className="bg-white w-full h-[100px] px-6 md:px-10 flex justify-between items-center relative z-50">
         <Image src="/logo.png" width={50} height={50} alt="Logo of the Company" />
 
       {/* Desktop Menu */}
@@ -26,6 +26,8 @@ export default function Navbar() {
         <li><Link className="tracking-widest font-normal" href="/">Home</Link></li>
         <li><Link className="tracking-widest font-normal" href="/projects">Projects</Link></li>
         <li><Link className="tracking-widest font-normal" href="/about">About</Link></li>
+        <li><Link className="tracking-widest font-normal" href="/calculator">Calculator</Link></li>
+        <li><Link className="tracking-widest font-normal" href="/contact">Contact</Link></li>
         <li><Link className="tracking-widest font-normal" href="/profile">Profile</Link></li>
       </ul>
 
@@ -44,6 +46,8 @@ export default function Navbar() {
           <li><Link className="tracking-widest font-normal" href="/" onClick={handleLinkClick}>Home</Link></li>
           <li><Link className="tracking-widest font-normal" href="/projects" onClick={handleLinkClick}>Projects</Link></li>
           <li><Link className="tracking-widest font-normal" href="/about" onClick={handleLinkClick}>About</Link></li>
+          <li><Link className="tracking-widest font-normal" href="/calculator" onClick={handleLinkClick}>Calculator</Link></li>
+          <li><Link className="tracking-widest font-normal" href="/contact" onClick={handleLinkClick}>Contact</Link></li>
           <li><Link className="tracking-widest font-normal" href="/profile" onClick={handleLinkClick}>Profile</Link></li>
         </ul>
       )}
