@@ -43,8 +43,8 @@ export default function Navbar() {
         <ul className="absolute top-[100px] left-0 w-full bg-white flex flex-col items-center gap-6 py-6 shadow-md md:hidden">
           <li><Link className="tracking-widest font-normal" href="/" onClick={handleLinkClick}>Home</Link></li>
           <li><Link className="tracking-widest font-normal" href="/projects" onClick={handleLinkClick}>Projects</Link></li>
-          <li><Link className="tracking-widest font-normal" href="/landing" onClick={handleLinkClick}>Landing</Link></li>
           <li><Link className="tracking-widest font-normal" href="/about" onClick={handleLinkClick}>About</Link></li>
+          <li><Link className="tracking-widest font-normal" href="/profile" onClick={handleLinkClick}>Profile</Link></li>
         </ul>
       )}
     </nav>
