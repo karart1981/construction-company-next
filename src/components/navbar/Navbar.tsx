@@ -25,8 +25,8 @@ export default function Navbar() {
       <ul className="hidden md:flex items-center gap-[30px]">
         <li><Link className="tracking-widest font-normal" href="/">Home</Link></li>
         <li><Link className="tracking-widest font-normal" href="/projects">Projects</Link></li>
-        <li><Link className="tracking-widest font-normal" href="/landing">Landing</Link></li>
         <li><Link className="tracking-widest font-normal" href="/about">About</Link></li>
+        <li><Link className="tracking-widest font-normal" href="/profile">Profile</Link></li>
       </ul>
 
       {/* Mobile Burger Icon */}
