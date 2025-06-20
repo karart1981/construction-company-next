@@ -26,7 +26,9 @@ const Projects = () => {
       <h2 className="text-[55px] font-bold mb-12 text-center text-white leading-[100%]">
         900 residential projects
       </h2>
-      <p></p>
+      <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white mt-6 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-32 text-center pb-10 md:pb-12 lg:pb-16 max-w-7xl mx-auto">
+          Discover a selection of our finest construction projects, from residential buildings to commercial spaces. Each project showcases our commitment to quality, innovation, and craftsmanship. We take pride in transforming ideas into reality and building environments that inspire, endure, and exceed expectations in every detail.
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
           <div
