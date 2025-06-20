@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Real Construction",
   description: "Professional construction company specializing in residential, commercial, and industrial building solutions. We deliver quality craftsmanship, on-time projects, and customer-focused services.",
+  keywords: "construction company, building contractor, residential construction, commercial construction, industrial building, general contractor, renovation, remodeling, construction services, architecture, project management, real estate development, house building, office construction",
   icons: {
     icon: "/favicon.ico",
   },
