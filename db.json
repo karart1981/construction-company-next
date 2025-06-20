@@ -1,53 +1,53 @@
 {
   "projects": [
-    {
-      "id": 1,
-      "title": "Modern Office Tower",
-      "description": "A high-rise commercial project in the city center.",
-      "image": "/projects/project-1.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Luxury Villa",
-      "description": "A premium residential villa with modern architecture.",
-      "image": "/projects/project-2.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Industrial Warehouse",
-      "description": "A large storage facility with durable construction.",
-      "image": "/projects/project-3.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Industrial Warehouse",
-      "description": "A large storage facility with durable construction.",
-      "image": "/projects/project-4.jpg"
-    },
-    {
-      "id": 5,
-      "title": "Industrial Warehouse",
-      "description": "A large storage facility with durable construction.",
-      "image": "/projects/project-5.jpg"
-    },
-    {
-      "id": 6,
-      "title": "Industrial Warehouse",
-      "description": "A large storage facility with durable construction.",
-      "image": "/projects/project-6.jpg"
-    },
-    {
-      "id": 7,
-      "title": "Industrial Warehouse",
-      "description": "A large storage facility with durable construction.",
-      "image": "/projects/project-7.jpg"
-    },
-    {
-      "id": 8,
-      "title": "Industrial Warehouse",
-      "description": "A large storage facility with durable construction.",
-      "image": "/projects/project-8.jpg"
-    }
+  {
+    "id": 1,
+    "title": "22 Bishopsgate, London",
+    "description": "A landmark skyscraper offering world-class commercial office space in the heart of London.",
+    "image": "/projects/project-1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "One Bishopsgate Plaza",
+    "description": "A luxury mixed-use development combining elegant residences with a five-star hotel experience.",
+    "image": "/projects/project-2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Arbor, London, UK",
+    "description": "A sustainable office development known for its modern design and eco-friendly construction.",
+    "image": "/projects/project-3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Bankside Yards",
+    "description": "A vibrant riverside regeneration project featuring residential, retail, and cultural spaces.",
+    "image": "/projects/project-4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "4 Cannon Street",
+    "description": "A modern commercial property with premium office spaces located in the City of London.",
+    "image": "/projects/project-5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Westferry Printworks",
+    "description": "A major redevelopment project transforming a former printworks into a residential-led community.",
+    "image": "/projects/project-6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Park Modern, London",
+    "description": "An ultra-luxury residential development overlooking Hyde Park, offering exceptional amenities.",
+    "image": "/projects/project-7.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Park Nova, Singapore",
+    "description": "An iconic residential tower in Singapore known for its lush garden terraces and futuristic design.",
+    "image": "/projects/project-8.jpg"
+  }
   ],
   "partners": [
     { "id": 1, "logo": "/partners/p-1.png", "alt": "Partner 1" },
