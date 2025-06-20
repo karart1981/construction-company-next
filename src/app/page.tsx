@@ -1,9 +1,11 @@
- import Hero from "../components/hero/Hero";
+ import OurPartners from "@/components/partners/Partners";
+import Hero from "../components/hero/Hero";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <OurPartners />
     </>
   );
 }
