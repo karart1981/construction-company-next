@@ -1,8 +1,23 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, MouseEvent } from 'react';
 
-const configObj = {
+interface Config {
+  buttonD: string;
+  buttonT: string;
+  shadowSize: string;
+  roundnessSize: string;
+  buttonDToBottom: string;
+  buttonDToRight: string;
+  selectedBackgroundColor: string;
+  selectedIconColor: string;
+  buttonWidth: string;
+  buttonHeight: string;
+  svgWidth: string;
+  svgHeight: string;
+}
+
+const configObj: Config = {
   buttonD: 'M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z',
   buttonT: 'translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)',
   shadowSize: 'none',
@@ -14,11 +29,11 @@ const configObj = {
   buttonWidth: '56px',
   buttonHeight: '56px',
   svgWidth: '50px',
-  svgHeight: '100px'
+  svgHeight: '100px',
 };
 
-export default function BackToTopButton() {
-  const [showButton, setShowButton] = useState(false);
+export default function BackToTopButton(): JSX.Element {
+  const [showButton, setShowButton] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +44,8 @@ export default function BackToTopButton() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleClick = () => {
+  const handleClick = (e: MouseEvent<HTMLSpanElement>) => {
+    e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -54,7 +70,7 @@ export default function BackToTopButton() {
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
-        zIndex: 9999
+        zIndex: 9999,
       }}
     >
       <svg
