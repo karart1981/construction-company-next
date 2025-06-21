@@ -1,0 +1,9 @@
+.projImg{
+    width: 287px;
+    height: 250px;
+    transition: transform .3s ease;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}
