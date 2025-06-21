@@ -23,7 +23,7 @@ const Projects = () => {
 
   return (
     <div className="py-10 px-6 md:px-20 bg-[#26466e]">
-      <h2 className="text-[55px] font-bold mb-12 text-center text-white leading-[100%]">
+      <h2 className="text-[50px] font-bold mb-12 text-center text-white leading-[100%]">
         900 residential projects
       </h2>
       <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white mt-6 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-32 text-center pb-10 md:pb-12 lg:pb-16 max-w-7xl mx-auto">
