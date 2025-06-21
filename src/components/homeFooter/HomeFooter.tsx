@@ -23,7 +23,7 @@ const HomeFooter: FC = () => {
 
       if (response.ok) {
         setSuccess(true);
-        form.reset(); // Clear the form
+        form.reset(); 
       } else {
         alert('There was a problem submitting your form.');
       }

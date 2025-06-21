@@ -16,7 +16,7 @@ const imageSources: string[] = [
   '/projects-pictures/proj-image8.jpg',
 ];
 
-const Pictures: React.FC = (): JSX.Element => {
+const Pictures: React.FC = () => {
   return (
     <div className="py-10 px-4 sm:px-6 md:px-10 lg:px-[60px] bg-[#d6d7d9]">
       {/* Responsive image grid */}
