@@ -32,7 +32,7 @@ const configObj: Config = {
   svgHeight: '100px',
 };
 
-export default function BackToTopButton(): JSX.Element {
+export default function BackToTopButton() {
   const [showButton, setShowButton] = useState<boolean>(false);
 
   useEffect(() => {
