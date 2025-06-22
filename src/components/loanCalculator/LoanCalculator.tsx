@@ -3,10 +3,10 @@
 import { useState } from 'react';
 
 export default function LoanCalculator() {
-  const [price, setPrice] = useState('');
+  const [price, setPrice] = useState('20000');
   const [prepayment, setPrepayment] = useState('0');
   const [creditTerm, setCreditTerm] = useState('240');
-  const [interestRate, setInterestRate] = useState('13');
+  const [interestRate, setInterestRate] = useState('7');
   const [scheme, setScheme] = useState<'Annuity' | 'Differentiated'>('Annuity');
   const [result, setResult] = useState<null | {
     monthlyPayment: number;
@@ -15,7 +15,6 @@ export default function LoanCalculator() {
     schedule: { month: number; payment: number; principal: number; interest: number; balance: number }[];
   }>(null);
 
-  // Input value getter
   const getValue = (label: string) => {
     switch (label) {
       case 'Price':
@@ -31,7 +30,6 @@ export default function LoanCalculator() {
     }
   };
 
-  // Setter function getter
   const getSetter = (label: string) => {
     switch (label) {
       case 'Price':
@@ -47,35 +45,72 @@ export default function LoanCalculator() {
     }
   };
 
-  // Fetch calculation
-  const handleCalculate = async () => {
-    try {
-      const url = new URL('http://localhost:4000/calculations');
-      url.searchParams.set('price', price);
-      url.searchParams.set('prepayment', prepayment);
-      url.searchParams.set('creditTerm', creditTerm);
-      url.searchParams.set('interestRate', interestRate);
-      url.searchParams.set('scheme', scheme);
+  const calculateLoan = () => {
+    const loanAmount = parseFloat(price) - parseFloat(prepayment);
+    const months = parseInt(creditTerm);
+    const rate = parseFloat(interestRate) / 100 / 12;
 
-      const res = await fetch(url.toString());
-      if (!res.ok) throw new Error('Failed to fetch from server.');
-
-      const data = await res.json();
-      if (data.length > 0) {
-        setResult(data[0].result);
-      } else {
-        alert('No matching data found.');
-        setResult(null);
+    if (scheme === 'Annuity') {
+      const monthlyPayment =
+        (loanAmount * rate) / (1 - Math.pow(1 + rate, -months));
+      const schedule = [];
+      let balance = loanAmount;
+      for (let month = 1; month <= months; month++) {
+        const interest = balance * rate;
+        const principal = monthlyPayment - interest;
+        balance -= principal;
+        schedule.push({
+          month,
+          payment: monthlyPayment,
+          principal,
+          interest,
+          balance: balance < 0 ? 0 : balance,
+        });
       }
+      const totalPayment = monthlyPayment * months;
+      const overpayment = totalPayment - loanAmount;
+
+      return { monthlyPayment, totalPayment, overpayment, schedule };
+    } else {
+      // Differentiated
+      const principalPayment = loanAmount / months;
+      const schedule = [];
+      let balance = loanAmount;
+      let totalPayment = 0;
+
+      for (let month = 1; month <= months; month++) {
+        const interest = balance * rate;
+        const payment = principalPayment + interest;
+        balance -= principalPayment;
+        totalPayment += payment;
+        schedule.push({
+          month,
+          payment,
+          principal: principalPayment,
+          interest,
+          balance: balance < 0 ? 0 : balance,
+        });
+      }
+      const monthlyPayment = schedule[0].payment; // first month
+      const overpayment = totalPayment - loanAmount;
+
+      return { monthlyPayment, totalPayment, overpayment, schedule };
+    }
+  };
+
+  const handleCalculate = () => {
+    try {
+      const result = calculateLoan();
+      setResult(result);
     } catch (error) {
       console.error(error);
-      alert('Error fetching calculation. Please check the server and inputs.');
+      alert('Error during calculation. Please check your input.');
     }
   };
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow max-w-4xl mx-auto my-10">
-      <h2 className="text-2xl font-bold mb-4 text-center">Loan Calculator</h2>
+    <div className="p-6 bg-white rounded-lg shadow-md max-w-4xl mx-auto my-10">
+      <h2 className="text-2xl font-bold mb-4 text-center text-black">Loan Calculator</h2>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {['Price', 'Prepayment', 'Credit term', 'Interest rate'].map((label) => (
@@ -104,18 +139,18 @@ export default function LoanCalculator() {
       </div>
 
       <button
-        className="mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+        className="mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 cursor-pointer"
         onClick={handleCalculate}
       >
-        Calculate
+        Calculate (Calculated in dollars)
       </button>
 
       {result && (
         <div className="mt-8">
           <div className="flex flex-wrap gap-6 justify-center text-lg">
-            <div><strong>Monthly Payment:</strong> {result.monthlyPayment.toLocaleString()} ֏</div>
-            <div><strong>Overpayment:</strong> {result.overpayment.toLocaleString()} ֏</div>
-            <div><strong>Total:</strong> {result.totalPayment.toLocaleString()} ֏</div>
+            <div><strong>Monthly Payment:</strong> {result.monthlyPayment.toLocaleString(undefined, { maximumFractionDigits: 2 })} $</div>
+            <div><strong>Overpayment:</strong> {result.overpayment.toLocaleString(undefined, { maximumFractionDigits: 2 })} $</div>
+            <div><strong>Total:</strong> {result.totalPayment.toLocaleString(undefined, { maximumFractionDigits: 2 })} $</div>
           </div>
 
           <div className="mt-6 max-h-[300px] overflow-auto">
@@ -133,10 +168,10 @@ export default function LoanCalculator() {
                 {result.schedule.map((row) => (
                   <tr key={row.month} className="border-t">
                     <td className="py-1 border">{row.month}</td>
-                    <td className="border">{row.payment.toLocaleString()}</td>
-                    <td className="border">{row.principal.toLocaleString()}</td>
-                    <td className="border">{row.interest.toLocaleString()}</td>
-                    <td className="border">{row.balance.toLocaleString()}</td>
+                    <td className="border">{row.payment.toFixed(2)}</td>
+                    <td className="border">{row.principal.toFixed(2)}</td>
+                    <td className="border">{row.interest.toFixed(2)}</td>
+                    <td className="border">{row.balance.toFixed(2)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -147,6 +182,3 @@ export default function LoanCalculator() {
     </div>
   );
 }
-
-
-

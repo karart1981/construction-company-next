@@ -26,7 +26,7 @@ export default function Navbar() {
         <li><Link className="tracking-widest font-normal" href="/">Home</Link></li>
         <li><Link className="tracking-widest font-normal" href="/projects">Projects</Link></li>
         <li><Link className="tracking-widest font-normal" href="/about">About</Link></li>
-        <li><Link className="tracking-widest font-normal" href="/calculator">Calculator</Link></li>
+        <li><Link className="tracking-widest font-normal" href="/calculators">Calculators</Link></li>
         <li><Link className="tracking-widest font-normal" href="/contact">Contact</Link></li>
         <li><Link className="tracking-widest font-normal" href="/profile">Profile</Link></li>
       </ul>
@@ -46,7 +46,7 @@ export default function Navbar() {
           <li><Link className="tracking-widest font-normal" href="/" onClick={handleLinkClick}>Home</Link></li>
           <li><Link className="tracking-widest font-normal" href="/projects" onClick={handleLinkClick}>Projects</Link></li>
           <li><Link className="tracking-widest font-normal" href="/about" onClick={handleLinkClick}>About</Link></li>
-          <li><Link className="tracking-widest font-normal" href="/calculator" onClick={handleLinkClick}>Calculator</Link></li>
+          <li><Link className="tracking-widest font-normal" href="/calculators" onClick={handleLinkClick}>Calculators</Link></li>
           <li><Link className="tracking-widest font-normal" href="/contact" onClick={handleLinkClick}>Contact</Link></li>
           <li><Link className="tracking-widest font-normal" href="/profile" onClick={handleLinkClick}>Profile</Link></li>
         </ul>
