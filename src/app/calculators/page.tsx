@@ -4,8 +4,8 @@ import BuildingCostCalculator from '../../components/buildingCostCalculator/Buil
 
 const Calculators = () => {
   return (
-    <div className="bg-[#d7e8ea] pb-2">
-      <h2 className="mb-[70px] pt-16 text-center text-[45px] font-bold text-black text-shadow-md">Calculators</h2>
+    <div className="bg-[#26466e] pb-2">
+      <h2 className="mb-[70px] pt-16 text-center text-[45px] font-bold text-white text-shadow-md">Calculators</h2>
       <BuildingCostCalculator />
       <LoanCalculator />
     </div>
