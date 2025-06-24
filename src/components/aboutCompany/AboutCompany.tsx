@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function AboutCompany() {
   return (
-    <div className="bg-[#26466e] w-full py-16 px-4 flex flex-col lg:flex-row justify-center items-center gap-10 mx-auto">
+    <div className="bg-[#26466e] w-full py-16 px-4 flex flex-col lg:flex-row justify-center items-center gap-10 mx-auto select-none">
 
       <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-lg">
         <Image
