@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import "./navbar.css";
+import styles from './Navbar.module.css';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -18,22 +18,22 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white w-full h-[100px] px-6 md:px-10 flex justify-between items-center relative z-50">
-        <Image src="/logo.png" width={50} height={50} alt="Logo of the Company" />
+    <nav className={styles.navbar}>
+      <Image src="/logo.png" width={50} height={50} alt="Logo of the Company" />
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex items-center gap-[30px]">
-        <li><Link className="tracking-widest font-normal" href="/">Home</Link></li>
-        <li><Link className="tracking-widest font-normal" href="/projects">Projects</Link></li>
-        <li><Link className="tracking-widest font-normal" href="/about">About</Link></li>
-        <li><Link className="tracking-widest font-normal" href="/calculators">Calculators</Link></li>
-        <li><Link className="tracking-widest font-normal" href="/contact">Contact</Link></li>
-        <li><Link className="tracking-widest font-normal" href="/profile">Profile</Link></li>
+      <ul className={styles.desktopMenu}>
+        <li><Link className={styles.menuLink} href="/">Home</Link></li>
+        <li><Link className={styles.menuLink} href="/projects">Projects</Link></li>
+        <li><Link className={styles.menuLink} href="/about">About</Link></li>
+        <li><Link className={styles.menuLink} href="/calculators">Calculators</Link></li>
+        <li><Link className={styles.menuLink} href="/contact">Contact</Link></li>
+        <li><Link className={styles.menuLink} href="/profile">Profile</Link></li>
       </ul>
 
       {/* Mobile Burger Icon */}
       <button
-        className="md:hidden text-black cursor-pointer"
+        className={styles.burgerIcon}
         onClick={handleToggle}
         aria-label="Toggle menu"
       >
@@ -42,16 +42,17 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="absolute top-[100px] left-0 w-full bg-white flex flex-col items-center gap-6 py-6 shadow-md md:hidden">
-          <li><Link className="tracking-widest font-normal" href="/" onClick={handleLinkClick}>Home</Link></li>
-          <li><Link className="tracking-widest font-normal" href="/projects" onClick={handleLinkClick}>Projects</Link></li>
-          <li><Link className="tracking-widest font-normal" href="/about" onClick={handleLinkClick}>About</Link></li>
-          <li><Link className="tracking-widest font-normal" href="/calculators" onClick={handleLinkClick}>Calculators</Link></li>
-          <li><Link className="tracking-widest font-normal" href="/contact" onClick={handleLinkClick}>Contact</Link></li>
-          <li><Link className="tracking-widest font-normal" href="/profile" onClick={handleLinkClick}>Profile</Link></li>
+        <ul className={styles.mobileMenu}>
+          <li><Link className={styles.menuLink} href="/" onClick={handleLinkClick}>Home</Link></li>
+          <li><Link className={styles.menuLink} href="/projects" onClick={handleLinkClick}>Projects</Link></li>
+          <li><Link className={styles.menuLink} href="/about" onClick={handleLinkClick}>About</Link></li>
+          <li><Link className={styles.menuLink} href="/calculators" onClick={handleLinkClick}>Calculators</Link></li>
+          <li><Link className={styles.menuLink} href="/contact" onClick={handleLinkClick}>Contact</Link></li>
+          <li><Link className={styles.menuLink} href="/profile" onClick={handleLinkClick}>Profile</Link></li>
         </ul>
       )}
     </nav>
   );
 }
+
 

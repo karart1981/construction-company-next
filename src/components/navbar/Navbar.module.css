@@ -1,0 +1,97 @@
+.navbar {
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 50;
+
+  a {
+      text-decoration: none;
+      color: black;
+      font-weight: 700;
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;  
+      position: relative;
+      transition: all .3s ease;
+      &::before {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 0%;
+          height: 2px;
+          background: #91b3e0;
+          transition: width .1s ease;
+      }
+      &:hover {
+          &::before {
+              width: 100%;
+          }
+      }
+      &:focus{
+        color: #91b3e0;
+      }
+}
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.desktopMenu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktopMenu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.menuLink {
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+.burgerIcon {
+  display: block;
+  color: black;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .burgerIcon {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .mobileMenu {
+    display: none;
+  }
+}
