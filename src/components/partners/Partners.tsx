@@ -50,7 +50,7 @@ const OurPartners: React.FC = () => {
   }, []);
 
   return (
-    <section className="w-full bg-gray-100 py-15 px-4 overflow-hidden">
+    <div className="w-full bg-gray-100 py-15 px-4 overflow-hidden select-none">
       <h2 className="text-center text-2xl md:text-4xl font-semibold mb-12">Our Partners</h2>
       <Slider {...sliderSettings}>
         {partners.map(partner => (
@@ -65,7 +65,7 @@ const OurPartners: React.FC = () => {
           </div>
         ))}
       </Slider>
-    </section>
+    </div>
   );
 };
 

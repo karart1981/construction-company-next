@@ -22,7 +22,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="py-10 px-6 md:px-20 bg-[#26466e]">
+    <div className="py-10 px-6 md:px-20 bg-[#26466e] select-none">
       <h2 className="text-[50px] font-bold mb-12 text-center text-white leading-[100%]">
         900 residential projects
       </h2>
@@ -51,7 +51,7 @@ const Projects = () => {
           </div>
         ))}
         <div className="flex items-center bg-white py-4 px-8 rounded-2xl">
-           <Link className="text-white m-auto text-[22px] tracking-[2px]" href="/projects">MORE</Link>
+           <Link className="text-[#26466e] font-bold hover:opacity-[0.8] m-auto text-[22px] tracking-[2px]" href="/projects">MORE</Link>
         </div>
       </div>
     </div>

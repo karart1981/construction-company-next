@@ -23,7 +23,7 @@ export default function BuldingCostCalculator() {
   }, [mode, area, pricePerSqM, landCost, constructionCostPerSqM]);
 
   return (
-<div className="bg-[url(/bg-calculator.jpg)] m-auto w-[80%] h-auto flex flex-col items-center justify-center p-8 bg-gray-100 text-gray-800 rounded-2xl">
+    <div className="bg-[url(/bg-calculator.jpg)] m-auto w-[80%] h-auto flex flex-col items-center justify-center p-8 bg-gray-100 text-gray-800 rounded-2xl select-none">
       <h1 className="text-3xl font-bold mb-6 text-black text-shadow-md text-center">Building Cost Calculator</h1>
 
       <div className="flex gap-4 mb-6">

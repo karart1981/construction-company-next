@@ -34,7 +34,7 @@ const HomeFooter: FC = () => {
   };
 
   return (
-    <div className="bg-[url('/footer-bg.jpg')] bg-cover bg-center w-full">
+    <div className="bg-[url('/footer-bg.jpg')] bg-cover bg-center w-full select-none">
       <div className="z-[9999] flex flex-col justify-center items-center gap-12 px-4 py-20">
         <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold text-center mt-8">
           Contact Us

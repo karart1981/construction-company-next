@@ -105,7 +105,7 @@ export default function LoanCalculator() {
   };
 
   return (
-    <div className="bg-[url(/banking-bg.jpg)] w-full py-32 max-w-[80%] m-auto mt-[100px] rounded-2xl mb-[100px]">
+    <div className="bg-[url(/banking-bg.jpg)] w-full py-32 max-w-[80%] m-auto mt-[100px] rounded-2xl mb-[100px] select-none">
       <div className="p-6 bg-white rounded-lg shadow-md max-w-4xl mx-auto my-10">
         <h2 className="text-3xl font-bold mb-4 text-center text-black text-shadow-md">Loan Calculator</h2>
 
