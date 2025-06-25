@@ -32,7 +32,7 @@ export default function Navbar() {
 
   const handleLogout = () => {
     sessionStorage.removeItem('isLoggedIn');
-    window.location.href = '/'; // Refresh to update navbar
+    window.location.href = '/'; 
   };
 
   return (
@@ -57,20 +57,18 @@ export default function Navbar() {
           <Link href="/contact" className={styles.menuLink}>Contact</Link>
         </li>
         <li>
-          <div className="space-x-4">
-            {!loading && (
-              loggedIn ? (
-                <>
-                  <Link href="/profile" className="text-white underline">Profile</Link>
-                  <button onClick={handleLogout} className="text-white underline">Log Out</button>
-                </>
-              ) : registered ? (
-                <Link href="/login" className="text-white underline">Log In</Link>
-              ) : (
-                <Link href="/register" className="text-white underline">Sign In</Link>
-              )
-            )}
-          </div>
+          {!loading && (
+            loggedIn ? (
+              <>
+                <Link href="/profile" className={styles.menuLink}>Profile</Link>
+                <button onClick={handleLogout} className="text-white underline">Log Out</button>
+              </>
+            ) : registered ? (
+              <Link href="/login" className={styles.menuLink}>Log In</Link>
+            ) : (
+              <Link href="/register" className={styles.menuLink}>Sign In</Link>
+            )
+          )}
         </li>
       </ul>
 
