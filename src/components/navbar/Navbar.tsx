@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
@@ -8,6 +8,9 @@ import styles from './Navbar.module.css';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [registered, setRegistered] = useState<boolean>(false);
+  const [loggedIn, setLoggedIn] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true); 
 
   const handleToggle = (): void => {
     setIsOpen((prev) => !prev);
@@ -17,18 +20,58 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const user = sessionStorage.getItem('user');
+      const loginStatus = sessionStorage.getItem('isLoggedIn');
+      setRegistered(!!user);
+      setLoggedIn(loginStatus === 'true');
+      setLoading(false);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    sessionStorage.removeItem('isLoggedIn');
+    window.location.href = '/'; // Refresh to update navbar
+  };
+
   return (
     <nav className={styles.navbar}>
       <Image src="/logo.png" width={50} height={50} alt="Logo of the Company" />
 
       {/* Desktop Menu */}
       <ul className={styles.desktopMenu}>
-        <li><Link className={styles.menuLink} href="/">Home</Link></li>
-        <li><Link className={styles.menuLink} href="/projects">Projects</Link></li>
-        <li><Link className={styles.menuLink} href="/about">About</Link></li>
-        <li><Link className={styles.menuLink} href="/calculators">Calculators</Link></li>
-        <li><Link className={styles.menuLink} href="/contact">Contact</Link></li>
-        <li><Link className={styles.menuLink} href="/profile">Profile</Link></li>
+        <li>
+          <Link href="/" className={styles.menuLink}>Home</Link>
+        </li>
+        <li>
+          <Link href="/projects" className={styles.menuLink}>Projects</Link>
+        </li>
+        <li>
+          <Link href="/about" className={styles.menuLink}>About</Link>
+        </li>
+        <li>
+          <Link href="/calculators" className={styles.menuLink}>Calculators</Link>
+        </li>
+        <li>
+          <Link href="/contact" className={styles.menuLink}>Contact</Link>
+        </li>
+        <li>
+          <div className="space-x-4">
+            {!loading && (
+              loggedIn ? (
+                <>
+                  <Link href="/profile" className="text-white underline">Profile</Link>
+                  <button onClick={handleLogout} className="text-white underline">Log Out</button>
+                </>
+              ) : registered ? (
+                <Link href="/login" className="text-white underline">Log In</Link>
+              ) : (
+                <Link href="/register" className="text-white underline">Sign In</Link>
+              )
+            )}
+          </div>
+        </li>
       </ul>
 
       {/* Mobile Burger Icon */}
@@ -43,12 +86,26 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <ul className={styles.mobileMenu}>
-          <li><Link className={styles.menuLink} href="/" onClick={handleLinkClick}>Home</Link></li>
-          <li><Link className={styles.menuLink} href="/projects" onClick={handleLinkClick}>Projects</Link></li>
-          <li><Link className={styles.menuLink} href="/about" onClick={handleLinkClick}>About</Link></li>
-          <li><Link className={styles.menuLink} href="/calculators" onClick={handleLinkClick}>Calculators</Link></li>
-          <li><Link className={styles.menuLink} href="/contact" onClick={handleLinkClick}>Contact</Link></li>
-          <li><Link className={styles.menuLink} href="/profile" onClick={handleLinkClick}>Profile</Link></li>
+          <li>
+            <Link href="/" className={styles.menuLink} onClick={handleLinkClick}>Home</Link>
+          </li>
+          <li>
+            <Link href="/projects" className={styles.menuLink} onClick={handleLinkClick}>Projects</Link>
+          </li>
+          <li>
+            <Link href="/about" className={styles.menuLink} onClick={handleLinkClick}>About</Link>
+          </li>
+          <li>
+            <Link href="/calculators" className={styles.menuLink} onClick={handleLinkClick}>Calculators</Link>
+          </li>
+          <li>
+            <Link href="/contact" className={styles.menuLink} onClick={handleLinkClick}>Contact</Link>
+          </li>
+          {!loading && loggedIn && (
+            <li>
+              <Link href="/profile" className={styles.menuLink} onClick={handleLinkClick}>Profile</Link>
+            </li>
+          )}
         </ul>
       )}
     </nav>
