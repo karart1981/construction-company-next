@@ -1,4 +1,5 @@
-"use client"
+'use client';
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 
@@ -57,9 +58,14 @@ export default function ContactSection() {
       title: 'OUR MAIN OFFICE',
       content: (
         <>
-          <Link href="https://maps.app.goo.gl/8trqBq8Ltj5fES2KA" target="_blank" className="hover:underline">
+          <a
+            href="https://maps.app.goo.gl/8trqBq8Ltj5fES2KA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
             SoHo 94 Broadway St
-          </Link>
+          </a>
           <p>New York, NY 1001</p>
         </>
       ),
@@ -71,8 +77,8 @@ export default function ContactSection() {
       title: 'PHONE NUMBER',
       content: (
         <>
-          <Link href="tel:23498765400" className="hover:underline">234-9876-5400</Link>
-          <Link href="tel:88801234567" className="hover:underline">888-0123-4567 (Toll Free)</Link>
+          <a href="tel:23498765400" className="hover:underline">234-9876-5400</a><br />
+          <a href="tel:88801234567" className="hover:underline">888-0123-4567 (Toll Free)</a>
         </>
       ),
     },
@@ -81,7 +87,7 @@ export default function ContactSection() {
         <svg width="40" height="40" viewBox="0 0 32 32"><path fill="currentColor" d="M12 5v5h-2V8H4v18h2v1c0 1.645 1.355 3 3 3s3-1.355 3-3v-1h16V10h-4V5H12zm2 2h8v5h-8V7zm-8 3h2v14H6V10zm4 2h2v2h12v-2h2v12H10V12zm3 4v2h2v-2h-2zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zm-8 4v2h2v-2h-2zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zM8 26h2v1c0 .555-.445 1-1 1c-.555 0-1-.445-1-1v-1z"/></svg>
       ),
       title: 'FAX',
-      content: <Link href="fax:12345678900" className="hover:underline">1-234-567-8900</Link>,
+      content: <a href="fax:12345678900" className="hover:underline">1-234-567-8900</a>,
     },
     {
       icon: (
@@ -93,7 +99,7 @@ export default function ContactSection() {
   ];
 
   return (
-      <>
+    <>
       <div className="bg-[#1b366b] w-full py-12 px-4 h-auto">
         <h2 className="text-white text-3xl md:text-5xl font-bold text-center mb-4">Contact Us</h2>
         <p className="text-white text-center text-base md:text-lg max-w-md mx-auto tracking-wide pb-[100px]">
@@ -103,48 +109,7 @@ export default function ContactSection() {
 
       <div className="bg-gray-100 w-full py-16 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 -mt-40">
-          {[
-            {
-              icon: (
-                <svg width="40" height="40" viewBox="0 0 32 32"><path fill="currentColor" d="m16 24l-6.09-8.6A8.14 8.14 0 0 1 16 2a8.08 8.08 0 0 1 8 8.13a8.2 8.2 0 0 1-1.8 5.13Zm0-20a6.07 6.07 0 0 0-6 6.13a6.19 6.19 0 0 0 1.49 4L16 20.52L20.63 14A6.24 6.24 0 0 0 22 10.13A6.07 6.07 0 0 0 16 4Z"/><circle cx="16" cy="9" r="2" fill="currentColor"/><path fill="currentColor" d="M28 12h-2v2h2v14H4V14h2v-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V14a2 2 0 0 0-2-2Z"/></svg>
-              ),
-              title: 'OUR MAIN OFFICE',
-              content: (
-                <>
-                  <Link href="https://maps.app.goo.gl/8trqBq8Ltj5fES2KA" target="_blank" className="hover:underline">
-                    SoHo 94 Broadway St
-                  </Link>
-                  <p>New York, NY 1001</p>
-                </>
-              ),
-            },
-            {
-              icon: (
-                <svg width="25" height="25" viewBox="0 0 20 20"><path fill="currentColor" d="M20 18.35V19a1 1 0 0 1-1 1h-2A17 17 0 0 1 0 3V1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 0 1 .99 1v3.35z"/></svg>
-              ),
-              title: 'PHONE NUMBER',
-              content: (
-                <>
-                  <Link href="tel:23498765400" className="hover:underline">234-9876-5400</Link>
-                  <Link href="tel:88801234567" className="hover:underline">888-0123-4567 (Toll Free)</Link>
-                </>
-              ),
-            },
-            {
-              icon: (
-                <svg width="40" height="40" viewBox="0 0 32 32"><path fill="currentColor" d="M12 5v5h-2V8H4v18h2v1c0 1.645 1.355 3 3 3s3-1.355 3-3v-1h16V10h-4V5H12zm2 2h8v5h-8V7zm-8 3h2v14H6V10zm4 2h2v2h12v-2h2v12H10V12zm3 4v2h2v-2h-2zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zm-8 4v2h2v-2h-2zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zM8 26h2v1c0 .555-.445 1-1 1c-.555 0-1-.445-1-1v-1z"/></svg>
-              ),
-              title: 'FAX',
-              content: <Link href="fax:12345678900" className="hover:underline">1-234-567-8900</Link>,
-            },
-            {
-              icon: (
-                <svg width="40" height="40" viewBox="0 0 32 32"><path fill="currentColor" d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm-2.2 2L16 14.78L6.2 8ZM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24Z"/></svg>
-              ),
-              title: 'EMAIL',
-              content: <a href="mailto:hello@theme.com" className="hover:underline">hello@theme.com</a>,
-            },
-          ].map((item, idx) => (
+          {contactCards.map((item, idx) => (
             <div key={idx} className="bg-white w-full sm:w-[calc(50%-0.75rem)] lg:w-[23%] p-6 rounded-2xl shadow-lg text-center flex flex-col items-center gap-2">
               {item.icon}
               <h3 className="font-bold text-lg">{item.title}</h3>
@@ -219,6 +184,7 @@ export default function ContactSection() {
     </>
   );
 }
+
 
 
  
