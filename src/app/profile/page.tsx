@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { getSessionUser, logoutUser } from '@/utils/session';
 import { useRouter } from 'next/navigation';
-
+import News from '@/components/news/News';
 interface User {
   name: string;
   email: string;
@@ -30,11 +30,14 @@ export default function ProfilePage() {
   if (!user) return null;
 
   return (
-    <div className="max-w-lg mx-auto mt-10 p-6 border rounded shadow text-center">
-      <h2 className="text-2xl font-bold mt-4">{user.name}</h2>
-      <p className="text-gray-600">{user.email}</p>
-      <button onClick={handleLogout} className="mt-6 bg-red-600 text-white px-4 py-2 rounded">Log Out</button>
-    </div>
+    <>
+      <div className="max-w-lg mx-auto mt-10 p-6 border rounded shadow text-center mb-[100px]">
+          <h2 className="text-2xl font-bold mt-4">{user.name}</h2>
+          <p className="text-gray-600">{user.email}</p>
+          <button onClick={handleLogout} className="mt-6 bg-red-600 text-white px-4 py-2 rounded">Log Out</button>
+      </div>
+      <News />
+    </>
   );
 }
 
