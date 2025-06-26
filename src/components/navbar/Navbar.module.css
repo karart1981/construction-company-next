@@ -11,7 +11,7 @@
   user-select: none;
   z-index: 50;
 
-  a {
+  .menuLink {
       text-decoration: none;
       color: black;
       font-weight: 700;

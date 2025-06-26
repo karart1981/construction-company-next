@@ -37,7 +37,9 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      <Image src="/logo.png" width={50} height={50} alt="Logo of the Company" />
+      <Link href="/" className="all-[unset]">
+          <Image src="/logo.png" width={50} height={50} alt="Logo of the Company" />
+      </Link>
 
       {/* Desktop Menu */}
       <ul className={styles.desktopMenu}>

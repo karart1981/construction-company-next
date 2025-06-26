@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './pictures.module.css';
@@ -17,14 +17,37 @@ const imageSources: string[] = [
 ];
 
 const Pictures: React.FC = () => {
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+
+  const handleOpen = (index: number) => {
+    setSelectedImageIndex(index);
+  };
+
+  const handleClose = () => {
+    setSelectedImageIndex(null);
+  };
+
+  const showPrev = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((prev) => (prev! - 1 + imageSources.length) % imageSources.length);
+    }
+  };
+
+  const showNext = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((prev) => (prev! + 1) % imageSources.length);
+    }
+  };
+
   return (
-    <div className="py-10 px-4 sm:px-6 md:px-10 lg:px-[60px] bg-[#d6d7d9] select-none">
-      {/* Responsive image grid */}
+    <div className="py-10 px-4 sm:px-6 md:px-10 lg:px-[60px] bg-[#d6d7d9] select-none relative">
+      {/* Image Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
         {imageSources.map((src, index) => (
           <div
             key={index}
-            className="relative w-full max-w-[300px] h-[250px] overflow-hidden rounded-lg shadow-md"
+            className="relative w-full max-w-[300px] h-[250px] overflow-hidden rounded-lg shadow-md cursor-pointer"
+            onClick={() => handleOpen(index)}
           >
             <Image
               src={src}
@@ -36,7 +59,28 @@ const Pictures: React.FC = () => {
         ))}
       </div>
 
-      {/* Last section with text and icons */}
+      {/* Modal */}
+      {selectedImageIndex !== null && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4">
+          <button onClick={handleClose} className="absolute top-4 right-4 text-white text-3xl">&times;</button>
+
+          <button onClick={showPrev} className="absolute left-4 text-white text-3xl cursor-pointer">&larr;</button>
+
+          <div className="max-w-full max-h-[90vh] relative">
+            <Image
+              src={imageSources[selectedImageIndex]}
+              alt={`Enlarged Project image ${selectedImageIndex + 1}`}
+              width={1000}
+              height={700}
+              className="rounded-lg max-h-[90vh] object-contain"
+            />
+          </div>
+
+          <button onClick={showNext} className="absolute right-4 text-white text-3xl cursor-pointer">&rarr;</button>
+        </div>
+      )}
+
+      {/* Text & Icons */}
       <div className="w-full flex flex-col items-center gap-5 py-12 px-4">
         <p className="max-w-[400px] text-center text-base sm:text-lg">
           Sample text. Click to select the text box. Click again or double click to start editing the text.
@@ -70,4 +114,3 @@ const Pictures: React.FC = () => {
 };
 
 export default Pictures;
-
