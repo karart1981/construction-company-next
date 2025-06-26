@@ -1,24 +1,46 @@
 'use client';
+
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import { getSessionUser} from '@/utils/session';
+import { useEffect, useState, ChangeEvent, FormEvent } from 'react';
+import { getSessionUser } from '@/utils/session';
+
+// Define the structure of the form state
+interface FormState {
+  email: string;
+  password: string;
+}
+
+// Define the structure of the user object
+export interface User {
+  name: string;
+  email: string;
+  password: string;
+  token?: string;
+}
 
 export default function LoginPage() {
-  const [form, setForm] = useState({ email: '', password: '' });
+  const [form, setForm] = useState<FormState>({ email: '', password: '' });
   const router = useRouter();
-  const [error, setError] = useState('');
+  const [error, setError] = useState<string>('');
 
+  // Redirect to profile if user is already logged in
   useEffect(() => {
-    if (getSessionUser()) {
+    const user = getSessionUser();
+    if (user) {
       router.push('/profile');
     }
-  }, []);
+  }, [router]);
 
-  const handleChange = (e: any) => setForm({ ...form, [e.target.name]: e.target.value });
+  // Handle input changes
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
-  const handleSubmit = (e: any) => {
+  // Handle form submission
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const storedUser = getSessionUser();
+
+    const storedUser = getSessionUser() as User | null;
 
     if (
       storedUser &&
@@ -32,14 +54,37 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 border rounded shadow">
-      <h2 className="text-2xl mb-4">Login</h2>
+    <div className="max-w-md mx-auto mt-10 p-6 border rounded shadow bg-white">
+      <h2 className="text-2xl mb-4 font-semibold text-center">Login</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
-        <input name="email" type="email" placeholder="Email" onChange={handleChange} className="w-full p-2 border" required />
-        <input name="password" type="password" placeholder="Password" onChange={handleChange} className="w-full p-2 border" required />
-        <button type="submit" className="bg-green-600 text-white px-4 py-2 rounded">Log In</button>
-        {error && <p className="text-red-600">{error}</p>}
+        <input
+          name="email"
+          type="email"
+          placeholder="Email"
+          value={form.email}
+          onChange={handleChange}
+          className="w-full p-2 border rounded"
+          required
+        />
+        <input
+          name="password"
+          type="password"
+          placeholder="Password"
+          value={form.password}
+          onChange={handleChange}
+          className="w-full p-2 border rounded"
+          required
+        />
+        <button
+          type="submit"
+          className="bg-green-600 text-white px-4 py-2 rounded w-full hover:bg-green-700 transition"
+        >
+          Log In
+        </button>
+        {error && <p className="text-red-600 text-sm">{error}</p>}
       </form>
     </div>
   );
 }
+
+
