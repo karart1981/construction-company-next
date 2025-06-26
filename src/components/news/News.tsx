@@ -37,7 +37,7 @@ export default function NewsList() {
   }
 
   return (
-    <section className="bg-[#1b366b] w-full py-12 px-4">
+    <div className="bg-[#1b366b] w-full py-12 px-4 select-none">
       <h2 className="text-white text-4xl font-bold mb-10 text-center">Real Construction News</h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {news.slice(0, visibleCount).map((item) => (
@@ -72,6 +72,6 @@ export default function NewsList() {
           </button>
         </div>
       )}
-    </section>
+    </div>
   );
 }
