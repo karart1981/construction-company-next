@@ -10,34 +10,35 @@
   position: relative;
   user-select: none;
   z-index: 50;
-
-  .menuLink {
-      text-decoration: none;
-      color: black;
-      font-weight: 700;
-      font-size: 16px;
-      transition: all 0.3s ease-in-out;  
-      position: relative;
-      transition: all .3s ease;
-      &::before {
-          content: "";
-          position: absolute;
-          bottom: -10px;
-          left: 0;
-          width: 0%;
-          height: 2px;
-          background: #91b3e0;
-          transition: width .1s ease;
-      }
-      &:hover {
-          &::before {
-              width: 100%;
-          }
-      }
-      &:focus{
-        color: #91b3e0;
-      }
 }
+
+.menuLink {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  letter-spacing: 0.1em;
+}
+
+.menuLink::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #91b3e0;
+  transition: width 0.1s ease;
+}
+
+.menuLink:hover::before {
+  width: 100%;
+}
+
+.menuLink:focus {
+  color: #91b3e0;
 }
 
 @media (min-width: 768px) {
@@ -57,11 +58,6 @@
     align-items: center;
     gap: 30px;
   }
-}
-
-.menuLink {
-  letter-spacing: 0.1em;
-  font-weight: 400;
 }
 
 .burgerIcon {
@@ -96,3 +92,62 @@
     display: none;
   }
 }
+
+/* Dropdown Styles */
+
+.dropdownContainer {
+  position: relative;
+}
+
+.dropdownButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  color: black;
+  position: relative;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease-in-out;
+  padding: 0.25rem 0;
+}
+
+.dropdownButton::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #91b3e0;
+  transition: width 0.1s ease;
+}
+
+.dropdownButton:hover::before {
+  width: 100%;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 0.5rem 0;
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.dropdownContainer:hover .dropdownMenu {
+  display: flex;
+}
+
+.dropdownMenu li {
+  padding: 0.5rem 1rem;
+}
+
+
+

@@ -20,6 +20,11 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
+  const handleLogout = () => {
+    sessionStorage.removeItem('isLoggedIn');
+    window.location.href = '/'; 
+  };
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const user = sessionStorage.getItem('user');
@@ -30,15 +35,10 @@ export default function Navbar() {
     }
   }, []);
 
-  const handleLogout = () => {
-    sessionStorage.removeItem('isLoggedIn');
-    window.location.href = '/'; 
-  };
-
   return (
     <nav className={styles.navbar}>
       <Link href="/" className="all-[unset]">
-          <Image src="/logo.png" width={50} height={50} alt="Logo of the Company" />
+        <Image src="/logo.png" width={50} height={50} alt="Logo of the Company" />
       </Link>
 
       {/* Desktop Menu */}
@@ -46,7 +46,18 @@ export default function Navbar() {
         <li><Link href="/" className={styles.menuLink}>Home</Link></li>
         <li><Link href="/projects" className={styles.menuLink}>Projects</Link></li>
         <li><Link href="/about" className={styles.menuLink}>About</Link></li>
-        <li><Link href="/calculators" className={styles.menuLink}>Calculators</Link></li>
+
+        {/* Dropdown */}
+        <li className={styles.dropdownContainer}>
+          <div className={`${styles.menuLink} ${styles.dropdownButton}`}>
+            Calculators
+            <ul className={styles.dropdownMenu}>
+              <li><Link href="/calculators#building-cost" className={styles.menuLink}>Building Cost Calculator</Link></li>
+              <li><Link href="/calculators#loan" className={styles.menuLink}>Loan Calculator</Link></li>
+            </ul>
+          </div>
+        </li>
+
         <li><Link href="/contact" className={styles.menuLink}>Contact</Link></li>
         <li>
           {!loading && (
@@ -79,7 +90,8 @@ export default function Navbar() {
           <li><Link href="/" className={styles.menuLink} onClick={handleLinkClick}>Home</Link></li>
           <li><Link href="/projects" className={styles.menuLink} onClick={handleLinkClick}>Projects</Link></li>
           <li><Link href="/about" className={styles.menuLink} onClick={handleLinkClick}>About</Link></li>
-          <li><Link href="/calculators" className={styles.menuLink} onClick={handleLinkClick}>Calculators</Link></li>
+          <li><Link href="/calculators#building-cost" className={styles.menuLink} onClick={handleLinkClick}>Building Cost Calculator</Link></li>
+          <li><Link href="/calculators#loan" className={styles.menuLink} onClick={handleLinkClick}>Loan Calculator</Link></li>
           <li><Link href="/contact" className={styles.menuLink} onClick={handleLinkClick}>Contact</Link></li>
           <li>
             {!loading && (
@@ -100,6 +112,9 @@ export default function Navbar() {
     </nav>
   );
 }
+
+
+
 
 
 
