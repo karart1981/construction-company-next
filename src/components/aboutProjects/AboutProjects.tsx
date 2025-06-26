@@ -51,7 +51,7 @@ const Projects = () => {
           </div>
         ))}
         <div className="flex items-center bg-white py-4 px-8 rounded-2xl">
-           <Link className="text-[#26466e] font-bold hover:opacity-[0.8] m-auto text-[22px] tracking-[2px]" href="/projects">MORE</Link>
+           <Link className="flex justify-center items-center text-[#26466e] font-bold hover:opacity-[0.8] m-auto text-[22px] tracking-[2px] w-full h-full" href="/projects">MORE</Link>
         </div>
       </div>
     </div>

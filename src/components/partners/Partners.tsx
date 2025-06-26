@@ -43,7 +43,7 @@ const OurPartners: React.FC = () => {
   const [partners, setPartners] = useState<Partner[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/partners') // Make sure db.json has a "partners" array
+    fetch('http://localhost:4000/partners') 
       .then(res => res.json())
       .then(data => setPartners(data))
       .catch(err => console.error("Failed to fetch partners:", err));
