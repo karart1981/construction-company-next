@@ -6,7 +6,7 @@ import { NewsItem } from '@/types/types';
 
 export default function NewsList() {
   const [news, setNews] = useState<NewsItem[]>([]);
-  const [visibleCount, setVisibleCount] = useState(2);
+  const [visibleCount, setVisibleCount] = useState(3);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function NewsList() {
   }, []);
 
   const handleShowMore = () => {
-    setVisibleCount((prev) => prev + 10);
+    setVisibleCount((prev) => prev + 9);
   };
 
   if (loading) {
