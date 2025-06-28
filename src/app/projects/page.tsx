@@ -54,7 +54,7 @@ export default function ProjectsPage() {
             <p className="mt-1 text-sm">🏢 {building.status}</p>
             <p className="text-sm">🕒 {building.reserved}</p>
             <Link href={`/projects/${building.id}`} className="mt-auto">
-              <button className="mt-4 w-full bg-[#27446C] text-white px-4 py-2 rounded hover:opacity-80 duration-300">
+              <button className="mt-4 w-full bg-[#27446C] text-white px-4 py-2 rounded hover:opacity-80 duration-300 cursor-pointer">
                 More Information
               </button>
             </Link>

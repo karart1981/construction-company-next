@@ -51,7 +51,7 @@ export default function ProjectDetailPage({ id }: { id: string }) {
           alt={building.name}
           width={800}
           height={400}
-          className="w-full h-64 object-cover rounded"
+          className="w-full h-full object-cover rounded"
         />
         <h1 className="text-3xl font-bold mt-4">{building.name}</h1>
         <p className="text-gray-600 mb-2">{building.location}</p>
@@ -66,7 +66,7 @@ export default function ProjectDetailPage({ id }: { id: string }) {
 
         <div className="mt-6">
           <Link href="/projects">
-            <button className="bg-[#27446C] text-white px-4 py-2 rounded hover:bg-[#1d3550]">
+            <button className="bg-[#27446C] text-white px-4 py-2 rounded hover:bg-[#1d3550] cursor-pointer">
               ← Back to Projects
             </button>
           </Link>
