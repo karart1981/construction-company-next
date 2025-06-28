@@ -1,5 +1,13 @@
 import ProjectDetailPage from './client-page';
 
-export default function Page({ params }: { params: { id: string } }) {
-  return <ProjectDetailPage id={params.id} />;
+interface PageProps {
+  params: Promise<{
+    id: string;
+  }>;
 }
+
+export default async function Page({ params }: PageProps) {
+  const { id } = await params;
+  return <ProjectDetailPage id={id} />;
+}
+
