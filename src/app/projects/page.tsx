@@ -20,7 +20,7 @@ export default function ProjectsPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('http://localhost:4000/buildings');
+        const res = await fetch(`http://localhost:4000/buildings`);
         const data = await res.json();
         setBuildings(data);
       } catch (error) {

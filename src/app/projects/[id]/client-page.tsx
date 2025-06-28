@@ -44,7 +44,7 @@ export default function ProjectDetailPage({ id }: { id: string }) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen bg-[#91b3e0] p-6">
       <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow">
         <Image
           src={building.image}
