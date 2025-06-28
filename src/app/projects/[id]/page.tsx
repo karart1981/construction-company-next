@@ -2,94 +2,84 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
 
-export default function ProjectDetails() {
+interface Building {
+  id: number;
+  name: string;
+  area: number;
+  rooms: number;
+  price: number;
+  status: string;
+  reserved: string;
+  image: string;
+  location: string;
+}
+
+export default function ProjectDetailPage() {
   const params = useParams();
   const id = params?.id;
-  const [building, setBuilding] = useState<any>(null);
+  const [building, setBuilding] = useState<Building | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!id) return;
 
-    fetch(`http://localhost:4000/buildings`)
+    fetch(`http://localhost:4000/buildings/${id}`)
       .then(res => res.json())
       .then(data => {
-        console.log('API response:', data);
-
-        // Handle case where data is an array or an object with 'buildings' property
-        const buildings = Array.isArray(data) ? data : data?.buildings;
-
-        if (!buildings) {
-          setError('Invalid API response structure.');
-          setLoading(false);
-          return;
-        }
-
-        const b = buildings.find((b: any) => b.id === parseInt(id as string));
-
-        if (!b) {
-          setError('Building not found.');
-        } else {
-          setBuilding(b);
-        }
-
+        setBuilding(data);
         setLoading(false);
       })
       .catch(err => {
         console.error(err);
-        setError('Failed to fetch buildings.');
         setLoading(false);
       });
   }, [id]);
 
-  const handleBuy = (aptId: number) => {
-    const updated = building.apartments.map((apt: any) =>
-      apt.id === aptId ? { ...apt, status: 'sold' } : apt
-    );
-    setBuilding({ ...building, apartments: updated });
-  };
+  if (loading) {
+    return <div className="p-10 text-center text-gray-600">Loading...</div>;
+  }
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div className="text-red-600">{error}</div>;
-  if (!building) return <div>Building not found.</div>;
+  if (!building) {
+    return <div className="p-10 text-center text-red-500">Building not found</div>;
+  }
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-2">{building.name}</h1>
-      <p className="text-gray-600 mb-6">{building.location}</p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {building.apartments?.map((apt: any) => (
-          <div key={apt.id} className="border rounded p-4 shadow">
-            <h2 className="text-lg font-semibold">{apt.name}</h2>
-            <p>📐 {apt.area} m²</p>
-            <p>🛏️ {apt.rooms} rooms</p>
-            <p>💵 ${apt.price.toLocaleString()}</p>
-            <p>
-              Status:{" "}
-              <span
-                className={
-                  apt.status === 'available' ? 'text-green-600' : 'text-red-500'
-                }
-              >
-                {apt.status}
-              </span>
-            </p>
-            {apt.status === 'available' && (
-              <button
-                onClick={() => handleBuy(apt.id)}
-                className="mt-2 w-full bg-blue-600 text-white py-1 rounded hover:bg-blue-700"
-              >
-                Buy
-              </button>
-            )}
-          </div>
-        ))}
+    <div className="min-h-screen bg-gray-100 p-6">
+      <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow">
+        <Image
+          src={building.image}
+          alt={building.name}
+          width={800}
+          height={400}
+          className="w-full h-64 object-cover rounded"
+        />
+        <h1 className="text-3xl font-bold mt-4">{building.name}</h1>
+        <p className="text-gray-600 mb-2">{building.location}</p>
+
+        <div className="grid grid-cols-2 gap-4 mt-4">
+          <p><strong>📐 Area:</strong> {building.area} m²</p>
+          <p><strong>🛏️ Rooms:</strong> {building.rooms}</p>
+          <p><strong>💵 Price:</strong> ${building.price.toLocaleString()}</p>
+          <p><strong>📌 Status:</strong> {building.status}</p>
+          <p><strong>📅 Reserved:</strong> {building.reserved}</p>
+        </div>
+
+        <div className="mt-6">
+          <Link href="/projects">
+            <button className="bg-[#27446C] text-white px-4 py-2 rounded hover:bg-[#1d3550]">
+              ← Back to Projects
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
 }
+
+
 
 
 
