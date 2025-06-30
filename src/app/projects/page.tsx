@@ -9,7 +9,7 @@ interface Building {
   name: string;
   location: string;
   image: string;
-  status: number;
+  status?: number;
   reserved?: number;
 }
 
@@ -52,7 +52,6 @@ export default function ProjectsPage() {
             <h2 className="text-xl font-semibold mt-2 h-[70px]">{building.name}</h2>
             <p className="text-gray-500 h-[70px]">{building.location}</p>
             <p className="mt-1 text-sm">🏢 {building.status}</p>
-            <p className="text-sm">🕒 {building.reserved}</p>
             <Link href={`/projects/${building.id}`} className="mt-auto">
               <button className="mt-4 w-full bg-[#27446C] text-white px-4 py-2 rounded hover:opacity-80 duration-300 cursor-pointer">
                 More Information

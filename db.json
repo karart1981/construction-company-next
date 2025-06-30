@@ -110,18 +110,48 @@
   { "id": 50, "title": "Wellness Program for Staff", "date": "2024-09-28", "content": "Mental health, fitness, and nutrition plans introduced.", "image": "/news/news-50.jpg" }
   ],
   "buildings": [
-  {
-    "id": 1,
-    "name": "Elise Residential Complex",
-    "area": 85,
-    "rooms": 3,
-    "price": 52000,
-    "status": "available",
-    "reserved": "free",
-    "image": "/buildings/building-1.jpg",
-    "location": "Yerevan, Davtashen 4th quarter, 46/9"
-  },
-  {
+    {
+      "id": 1,
+      "name": "Elise Residential Complex",
+      "location": "Yerevan, Davtashen 4th quarter, 46/9",
+      "status": "available",
+      "image": "/buildings/building-1.jpg",
+      "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ]
+    },
+    {
     "id": 2,
     "name": "Green Hills",
     "area": 92,
@@ -130,6 +160,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-2.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Nor Nork, David Bek 103/5"
   },
   {
@@ -141,6 +205,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-3.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, Arghutyan 15/10"
   },
   {
@@ -152,6 +250,40 @@
     "status": "available",
     "reserved": "reserved",
     "image": "/buildings/building-4.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, G. Vardanyan 1/3"
   },
   {
@@ -163,6 +295,40 @@
     "status": "reserved",
     "reserved": "free",
     "image": "/buildings/building-5.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, Malkhasyants 8"
   },
   {
@@ -174,6 +340,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-6.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Avan, Acharyan 35/19"
   },
   {
@@ -185,6 +385,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-7.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Avan, Acharyan 37/1"
   },
   {
@@ -196,6 +430,40 @@
     "status": "available",
     "reserved": "reserved",
     "image": "/buildings/building-8.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Avan, Acharyan 37/27"
   },
   {
@@ -207,6 +475,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-9.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Avan, Alma-Ata 1/4"
   },
   {
@@ -218,6 +520,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-10.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Davtashen, Pirumyanner 13"
   },
   {
@@ -229,6 +565,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-11.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Jrvezh, Jrvezh 17"
   },
   {
@@ -240,6 +610,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-12.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Kentron, Azatutyan 1/43"
   },
   {
@@ -251,6 +655,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-13.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Kentron, Aghbyur Serob 50"
   },
   {
@@ -262,6 +700,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-14.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Kentron, Firdus 33rd District"
   },
   {
@@ -273,6 +745,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-15.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Nor Nork, David Bek 105"
   },
   {
@@ -284,6 +790,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-16.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Nor Nork, Lvovyan 19/7"
   },
   {
@@ -295,6 +835,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-17.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Nork-Marash, G. Hovsepyan 38/11"
   },
   {
@@ -306,6 +880,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-18.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Nork-Marash, G. Hovsepyan 48/3"
   },
   {
@@ -317,6 +925,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-19.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Nork-Marash, G. Hovsepyan 52/5"
   },
   {
@@ -328,6 +970,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-20.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Nork-Marash, Norki Ayginer 180"
   },
   {
@@ -339,6 +1015,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-21.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Shengavit, Arshakunyats 192"
   },
   {
@@ -350,6 +1060,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-22.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Shengavit, Frunze 10/4"
   },
   {
@@ -361,6 +1105,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-23.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Ajapnyak, Abelyan 2/1"
   },
   {
@@ -372,6 +1150,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-24.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Ajapnyak, Fuchik 1/1"
   },
   {
@@ -383,6 +1195,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-25.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Ajapnyak, Fuchik 1/3"
   },
   {
@@ -394,6 +1240,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-26.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Ajapnyak, Fuchik 1/3"
   },
   {
@@ -405,6 +1285,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-27.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Ajapnyak, G-1 Dist."
   },
   {
@@ -416,6 +1330,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-28.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Ajapnyak, Nazarbekyan 41/1, 41/8"
   },
   {
@@ -427,6 +1375,40 @@
     "status": "solid",
     "reserved": "reserved",
     "image": "/buildings/building-29.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Ajapnyak, Nazarbekyan 44/13"
   },
   {
@@ -438,6 +1420,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-30.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Ajapnyak"
   },
   {
@@ -449,6 +1465,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-31.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir"
   },
   {
@@ -460,6 +1510,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-32.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, Aygedzor 18"
   },
   {
@@ -471,6 +1555,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-33.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, Baghramyan 59"
   },
   {
@@ -482,6 +1600,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-34.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, Baghramyan 3rd Lane 4/3"
   },
   {
@@ -493,6 +1645,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-35.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, Davtyan 1/4"
   },
   {
@@ -504,6 +1690,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-36.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, Mamikonyants 41"
   },
   {
@@ -515,6 +1735,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-37.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, Mamikonyants 42/1"
   },
   {
@@ -526,6 +1780,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-38.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, N. Zaryan 74"
   },
   {
@@ -537,6 +1825,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-39.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, Northern Ray 2"
   },
   {
@@ -548,6 +1870,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-40.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, Orbeli Brothers 67/2"
   },
   {
@@ -559,6 +1915,40 @@
     "status": "available",
     "reserved": "reserved",
     "image": "/buildings/building-41.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, Papazyan"
   },
   {
@@ -570,6 +1960,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-42.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Arabkir, Papazyan"
   },
   {
@@ -581,6 +2005,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-43.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Avan, Avan-Arinj"
   },
   {
@@ -592,6 +2050,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-44.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Avan, Avan-Arinj"
   },
   {
@@ -603,6 +2095,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-45.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Avan"
   },
   {
@@ -614,6 +2140,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-46.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Avan"
   },
   {
@@ -625,6 +2185,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-47.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Davtashen"
   },
   {
@@ -636,6 +2230,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-48.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Davtashen, A. Mikoyan"
   },
   {
@@ -647,6 +2275,40 @@
     "status": "sold",
     "reserved": "reserved",
     "image": "/buildings/building-49.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Davtashen, Melkumov 46"
   },
   {
@@ -658,6 +2320,40 @@
     "status": "available",
     "reserved": "free",
     "image": "/buildings/building-50.jpg",
+    "apartments": [
+        {
+          "area": 45,
+          "rooms": 1,
+          "price": 54000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/45.jpg"
+        },
+        {
+          "area": 60,
+          "rooms": 2,
+          "price": 72000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/60.jpg"
+        },
+        {
+          "area": 75,
+          "rooms": 3,
+          "price": 90000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/75.jpg"
+        },
+        {
+          "area": 90,
+          "rooms": 4,
+          "price": 108000,
+          "status": "available",
+          "reserved": "free",
+          "image": "/floorplans/building-1/90.jpg"
+        }
+      ],
     "location": "Yerevan, Davtashen, Pirumyanner 7/6"
   }
   ]
