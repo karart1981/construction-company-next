@@ -154,11 +154,8 @@
     {
     "id": 2,
     "name": "Green Hills",
-    "area": 92,
-    "rooms": 3,
-    "price": 61000,
+    "location": "Yerevan, Nor Nork, David Bek 103/5",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-2.jpg",
     "apartments": [
         {
@@ -193,17 +190,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Nor Nork, David Bek 103/5"
+    ]
   },
   {
     "id": 3,
     "name": "New Komitas Residential District",
-    "area": 74,
-    "rooms": 2,
-    "price": 45000,
+    "location": "Yerevan, Arabkir, Arghutyan 15/10",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-3.jpg",
     "apartments": [
         {
@@ -238,17 +231,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, Arghutyan 15/10"
+    ]
   },
   {
     "id": 4,
     "name": "Sunday Towers",
-    "area": 100,
-    "rooms": 4,
-    "price": 78000,
+    "location": "Yerevan, Arabkir, G. Vardanyan 1/3",
     "status": "available",
-    "reserved": "reserved",
     "image": "/buildings/building-4.jpg",
     "apartments": [
         {
@@ -283,17 +272,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, G. Vardanyan 1/3"
+    ]
   },
   {
     "id": 5,
     "name": "Malkhasyants Complex",
-    "area": 88,
-    "rooms": 3,
-    "price": 57000,
-    "status": "reserved",
-    "reserved": "free",
+    "location": "Yerevan, Arabkir, Malkhasyants 8",
+    "status": "available",
     "image": "/buildings/building-5.jpg",
     "apartments": [
         {
@@ -328,17 +313,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, Malkhasyants 8"
+    ]
   },
   {
     "id": 6,
     "name": "E1 Residence",
-    "area": 70,
-    "rooms": 2,
-    "price": 43000,
+    "location": "Yerevan, Avan, Acharyan 35/19",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-6.jpg",
     "apartments": [
         {
@@ -373,17 +354,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Avan, Acharyan 35/19"
+    ]
   },
   {
     "id": 7,
     "name": "Nor Avan Residential Complex",
-    "area": 95,
-    "rooms": 3,
-    "price": 62000,
+    "location": "Yerevan, Avan, Acharyan 37/1",
     "status": "sold",
-    "reserved": "reserved",
     "image": "/buildings/building-7.jpg",
     "apartments": [
         {
@@ -418,17 +395,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Avan, Acharyan 37/1"
+    ]
   },
   {
     "id": 8,
     "name": "Kanach Tagh",
-    "area": 79,
-    "rooms": 2,
-    "price": 50000,
+    "location": "Yerevan, Avan, Acharyan 37/27",
     "status": "available",
-    "reserved": "reserved",
     "image": "/buildings/building-8.jpg",
     "apartments": [
         {
@@ -463,17 +436,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Avan, Acharyan 37/27"
+    ]
   },
   {
     "id": 9,
     "name": "Solar Residential Complex",
-    "area": 83,
-    "rooms": 3,
-    "price": 56000,
+    "location": "Yerevan, Avan, Alma-Ata 1/4",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-9.jpg",
     "apartments": [
         {
@@ -508,19 +477,15 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Avan, Alma-Ata 1/4"
+    ]
   },
   {
     "id": 10,
     "name": "Bedeck Davtashen Complex",
-    "area": 91,
-    "rooms": 3,
-    "price": 64000,
+    "location": "Yerevan, Davtashen, Pirumyanner 13",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-10.jpg",
-    "apartments": [
+     "apartments": [
         {
           "area": 45,
           "rooms": 1,
@@ -553,19 +518,15 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Davtashen, Pirumyanner 13"
+    ]
   },
   {
     "id": 11,
     "name": "Bagrevand Residence",
-    "area": 67,
-    "rooms": 2,
-    "price": 42000,
+    "location": "Yerevan, Jrvezh, Jrvezh 17",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-11.jpg",
-    "apartments": [
+     "apartments": [
         {
           "area": 45,
           "rooms": 1,
@@ -598,19 +559,15 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Jrvezh, Jrvezh 17"
+    ]
   },
   {
     "id": 12,
     "name": "Liberty 1",
-    "area": 105,
-    "rooms": 4,
-    "price": 82000,
-    "status": "sold",
-    "reserved": "reserved",
+    "location": "Yerevan, Kentron, Azatutyan 1/43",
+    "status": "available",
     "image": "/buildings/building-12.jpg",
-    "apartments": [
+     "apartments": [
         {
           "area": 45,
           "rooms": 1,
@@ -643,17 +600,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Kentron, Azatutyan 1/43"
+    ]
   },
   {
     "id": 13,
     "name": "Technotun",
-    "area": 80,
-    "rooms": 3,
-    "price": 55000,
+    "location": "Yerevan, Kentron, Aghbyur Serob 50",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-13.jpg",
     "apartments": [
         {
@@ -688,19 +641,15 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Kentron, Aghbyur Serob 50"
+    ]
   },
   {
     "id": 14,
     "name": "Firdus",
-    "area": 76,
-    "rooms": 2,
-    "price": 48000,
+    "location": "Yerevan, Kentron, Firdus 33rd District",
     "status": "sold",
-    "reserved": "reserved",
     "image": "/buildings/building-14.jpg",
-    "apartments": [
+     "apartments": [
         {
           "area": 45,
           "rooms": 1,
@@ -733,17 +682,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Kentron, Firdus 33rd District"
+    ]
   },
   {
     "id": 15,
     "name": "David Bek Residential Complex",
-    "area": 90,
-    "rooms": 3,
-    "price": 60000,
+    "location": "Yerevan, Nor Nork, David Bek 105",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-15.jpg",
     "apartments": [
         {
@@ -778,19 +723,15 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Nor Nork, David Bek 105"
+    ]
   },
   {
     "id": 16,
     "name": "Lvovyan Tower",
-    "area": 85,
-    "rooms": 3,
-    "price": 54000,
+    "location": "Yerevan, Nor Nork, Lvovyan 19/7",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-16.jpg",
-    "apartments": [
+     "apartments": [
         {
           "area": 45,
           "rooms": 1,
@@ -823,19 +764,15 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Nor Nork, Lvovyan 19/7"
+    ]
   },
   {
     "id": 17,
     "name": "Amanoo",
-    "area": 71,
-    "rooms": 2,
-    "price": 44000,
-    "status": "sold",
-    "reserved": "reserved",
+    "location": "Yerevan, Nork-Marash, G. Hovsepyan 38/11",
+    "status": "available",
     "image": "/buildings/building-17.jpg",
-    "apartments": [
+     "apartments": [
         {
           "area": 45,
           "rooms": 1,
@@ -868,17 +805,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Nork-Marash, G. Hovsepyan 38/11"
+    ]
   },
   {
     "id": 18,
     "name": "Mountain Plaza",
-    "area": 89,
-    "rooms": 3,
-    "price": 59000,
+    "location": "Yerevan, Nork-Marash, G. Hovsepyan 48/3",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-18.jpg",
     "apartments": [
         {
@@ -913,19 +846,15 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Nork-Marash, G. Hovsepyan 48/3"
+    ]
   },
   {
     "id": 19,
     "name": "Monterosso",
-    "area": 97,
-    "rooms": 4,
-    "price": 76000,
+    "location": "Yerevan, Nork-Marash, G. Hovsepyan 52/5",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-19.jpg",
-    "apartments": [
+     "apartments": [
         {
           "area": 45,
           "rooms": 1,
@@ -958,17 +887,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Nork-Marash, G. Hovsepyan 52/5"
+    ]
   },
   {
     "id": 20,
     "name": "Pullman Residences Yerevan",
-    "area": 82,
-    "rooms": 3,
-    "price": 56000,
+    "location": "Yerevan, Nork-Marash, Norki Ayginer 180",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-20.jpg",
     "apartments": [
         {
@@ -1003,17 +928,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Nork-Marash, Norki Ayginer 180"
+    ]
   },
   {
     "id": 21,
     "name": "Orient Stone",
-    "area": 77,
-    "rooms": 2,
-    "price": 46000,
+    "location": "Yerevan, Shengavit, Arshakunyats 192",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-21.jpg",
     "apartments": [
         {
@@ -1048,17 +969,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Shengavit, Arshakunyats 192"
+    ]
   },
   {
     "id": 22,
     "name": "Frunze Residential Complex",
-    "area": 93,
-    "rooms": 3,
-    "price": 65000,
-    "status": "sold",
-    "reserved": "reserved",
+    "location": "Yerevan, Shengavit, Frunze 10/4",
+    "status": "available",
     "image": "/buildings/building-22.jpg",
     "apartments": [
         {
@@ -1093,17 +1010,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Shengavit, Frunze 10/4"
+    ]
   },
   {
     "id": 23,
     "name": "Abelyan",
-    "area": 73,
-    "rooms": 2,
-    "price": 47000,
+    "location": "Yerevan, Ajapnyak, Abelyan 2/1",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-23.jpg",
     "apartments": [
         {
@@ -1138,17 +1051,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Ajapnyak, Abelyan 2/1"
+    ]
   },
   {
     "id": 24,
     "name": "Alliance Plaza",
-    "area": 88,
-    "rooms": 3,
-    "price": 60000,
+    "location": "Yerevan, Ajapnyak, Fuchik 1/1",
     "status": "sold",
-    "reserved": "reserved",
     "image": "/buildings/building-24.jpg",
     "apartments": [
         {
@@ -1183,17 +1092,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Ajapnyak, Fuchik 1/1"
+    ]
   },
   {
     "id": 25,
     "name": "Gevmik",
-    "area": 86,
-    "rooms": 3,
-    "price": 58000,
+    "location": "Yerevan, Ajapnyak, Fuchik 1/3",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-25.jpg",
     "apartments": [
         {
@@ -1228,17 +1133,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Ajapnyak, Fuchik 1/3"
+    ]
   },
   {
     "id": 26,
     "name": "Araks Residential Complex",
-    "area": 84,
-    "rooms": 3,
-    "price": 55000,
+    "location": "Yerevan, Ajapnyak, Fuchik 1/3",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-26.jpg",
     "apartments": [
         {
@@ -1273,17 +1174,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Ajapnyak, Fuchik 1/3"
+    ]
   },
   {
     "id": 27,
     "name": "Dream Family Townhouses",
-    "area": 90,
-    "rooms": 3,
-    "price": 62000,
+    "location": "Yerevan, Ajapnyak, G-1 Dist.",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-27.jpg",
     "apartments": [
         {
@@ -1318,18 +1215,14 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Ajapnyak, G-1 Dist."
+    ]
   },
   {
     "id": 28,
     "name": "Nazarbekyan Towers",
-    "area": 81,
-    "rooms": 3,
-    "price": 54000,
+    "location": "Yerevan, Ajapnyak, Nazarbekyan 41/1, 41/8",
     "status": "sold",
-    "reserved": "reserved",
-    "image": "/buildings/building-28.jpg",
+    "image": "/buildings/building-28.jpg",  
     "apartments": [
         {
           "area": 45,
@@ -1363,17 +1256,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Ajapnyak, Nazarbekyan 41/1, 41/8"
+    ]
   },
   {
     "id": 29,
     "name": "Shushi Palace",
-    "area": 75,
-    "rooms": 2,
-    "price": 45000,
-    "status": "solid",
-    "reserved": "reserved",
+    "location": "Yerevan, Ajapnyak, Nazarbekyan 44/13",
+    "status": "available",
     "image": "/buildings/building-29.jpg",
     "apartments": [
         {
@@ -1408,17 +1297,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Ajapnyak, Nazarbekyan 44/13"
+    ]
   },
   {
     "id": 30,
     "name": "Nor Silikyan District",
-    "area": 92,
-    "rooms": 3,
-    "price": 66000,
+    "location": "Yerevan, Ajapnyak",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-30.jpg",
     "apartments": [
         {
@@ -1453,17 +1338,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Ajapnyak"
+    ]
   },
   {
     "id": 31,
     "name": "Antarayin Residential Complex",
-    "area": 68,
-    "rooms": 2,
-    "price": 43000,
+    "location": "Yerevan, Arabkir",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-31.jpg",
     "apartments": [
         {
@@ -1498,17 +1379,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir"
+    ]
   },
   {
     "id": 32,
     "name": "Platinum Homes",
-    "area": 96,
-    "rooms": 3,
-    "price": 69000,
-    "status": "sold",
-    "reserved": "reserved",
+    "location": "Yerevan, Arabkir, Aygedzor 18",
+    "status": "available",
     "image": "/buildings/building-32.jpg",
     "apartments": [
         {
@@ -1543,17 +1420,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, Aygedzor 18"
+    ]
   },
   {
     "id": 33,
     "name": "Elite Group",
-    "area": 87,
-    "rooms": 3,
-    "price": 60000,
+    "location": "Yerevan, Arabkir, Baghramyan 59",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-33.jpg",
     "apartments": [
         {
@@ -1588,17 +1461,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, Baghramyan 59"
+    ]
   },
   {
     "id": 34,
     "name": "Barekamutyun Complex",
-    "area": 78,
-    "rooms": 2,
-    "price": 49000,
+    "location": "Yerevan, Arabkir, Baghramyan 3rd Lane 4/3",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-34.jpg",
     "apartments": [
         {
@@ -1633,17 +1502,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, Baghramyan 3rd Lane 4/3"
+    ]
   },
   {
     "id": 35,
     "name": "Sil Capital",
-    "area": 85,
-    "rooms": 3,
-    "price": 57000,
+    "location": "Yerevan, Arabkir, Davtyan 1/4",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-35.jpg",
     "apartments": [
         {
@@ -1678,17 +1543,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, Davtyan 1/4"
+    ]
   },
   {
     "id": 36,
     "name": "Elite Group",
-    "area": 98,
-    "rooms": 4,
-    "price": 80000,
+    "location": "Yerevan, Arabkir, Mamikonyants 41",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-36.jpg",
     "apartments": [
         {
@@ -1723,17 +1584,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, Mamikonyants 41"
+    ]
   },
   {
     "id": 37,
     "name": "Mamik Residence",
-    "area": 82,
-    "rooms": 3,
-    "price": 56000,
+    "location": "Yerevan, Arabkir, Mamikonyants 42/1",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-37.jpg",
     "apartments": [
         {
@@ -1768,17 +1625,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, Mamikonyants 42/1"
+    ]
   },
   {
     "id": 38,
     "name": "Northern Ray, Elite Group",
-    "area": 79,
-    "rooms": 2,
-    "price": 51000,
+    "location": "Yerevan, Arabkir, N. Zaryan 74",
     "status": "sold",
-    "reserved": "reserved",
     "image": "/buildings/building-38.jpg",
     "apartments": [
         {
@@ -1813,17 +1666,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, N. Zaryan 74"
+    ]
   },
   {
     "id": 39,
     "name": "Elite Group",
-    "area": 86,
-    "rooms": 3,
-    "price": 58000,
+    "location": "Yerevan, Arabkir, Northern Ray 2",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-39.jpg",
     "apartments": [
         {
@@ -1858,17 +1707,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, Northern Ray 2"
+    ]
   },
   {
     "id": 40,
     "name": "Orbeli Brothers",
-    "area": 94,
-    "rooms": 3,
-    "price": 70000,
-    "status": "sold",
-    "reserved": "reserved",
+    "location": "Yerevan, Arabkir, Orbeli Brothers 67/2",
+    "status": "available",
     "image": "/buildings/building-40.jpg",
     "apartments": [
         {
@@ -1903,17 +1748,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, Orbeli Brothers 67/2"
+    ]
   },
   {
     "id": 41,
     "name": "Itarco",
-    "area": 83,
-    "rooms": 3,
-    "price": 56000,
+    "location": "Yerevan, Arabkir, Papazyan",
     "status": "available",
-    "reserved": "reserved",
     "image": "/buildings/building-41.jpg",
     "apartments": [
         {
@@ -1948,17 +1789,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, Papazyan"
+    ]
   },
   {
     "id": 42,
     "name": "Mia Town",
-    "area": 76,
-    "rooms": 2,
-    "price": 47000,
+    "location": "Yerevan, Arabkir, Papazyan",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-42.jpg",
     "apartments": [
         {
@@ -1993,17 +1830,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Arabkir, Papazyan"
+    ]
   },
   {
     "id": 43,
     "name": "Nut House",
-    "area": 88,
-    "rooms": 3,
-    "price": 59000,
-    "status": "sold",
-    "reserved": "reserved",
+    "location": "Yerevan, Avan, Avan-Arinj",
+    "status": "available",
     "image": "/buildings/building-43.jpg",
     "apartments": [
         {
@@ -2038,17 +1871,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Avan, Avan-Arinj"
+    ]
   },
   {
     "id": 44,
     "name": "Solar City",
-    "area": 90,
-    "rooms": 3,
-    "price": 62000,
+    "location": "Yerevan, Avan, Avan-Arinj",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-44.jpg",
     "apartments": [
         {
@@ -2083,18 +1912,14 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Avan, Avan-Arinj"
+    ]
   },
   {
     "id": 45,
     "name": "High Park Residential Community",
-    "area": 89,
-    "rooms": 3,
-    "price": 60000,
-    "status": "sold",
-    "reserved": "reserved",
-    "image": "/buildings/building-45.jpg",
+    "location": "Yerevan, Avan",
+    "status": "available",
+    "image": "/buildings/building-45.jpg", 
     "apartments": [
         {
           "area": 45,
@@ -2128,17 +1953,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Avan"
+    ]
   },
   {
     "id": 46,
     "name": "Zoar Residence",
-    "area": 77,
-    "rooms": 2,
-    "price": 46000,
+    "location": "Yerevan, Avan",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-46.jpg",
     "apartments": [
         {
@@ -2173,17 +1994,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Avan"
+    ]
   },
   {
     "id": 47,
     "name": "Bridgeview Residential Complex",
-    "area": 95,
-    "rooms": 3,
-    "price": 67000,
-    "status": "sold",
-    "reserved": "reserved",
+    "location": "Yerevan, Davtashen",
+    "status": "available",
     "image": "/buildings/building-47.jpg",
     "apartments": [
         {
@@ -2218,17 +2035,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Davtashen"
+    ]
   },
   {
     "id": 48,
     "name": "Van Residential Complex",
-    "area": 87,
-    "rooms": 3,
-    "price": 60000,
+    "location": "Yerevan, Davtashen, A. Mikoyan",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-48.jpg",
     "apartments": [
         {
@@ -2263,17 +2076,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Davtashen, A. Mikoyan"
+    ]
   },
   {
     "id": 49,
     "name": "Smart Plaza",
-    "area": 84,
-    "rooms": 3,
-    "price": 55000,
-    "status": "sold",
-    "reserved": "reserved",
+    "location": "Yerevan, Davtashen, Melkumov 46",
+    "status": "available",
     "image": "/buildings/building-49.jpg",
     "apartments": [
         {
@@ -2308,17 +2117,13 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Davtashen, Melkumov 46"
+    ]
   },
   {
     "id": 50,
     "name": "Blue Sky Residence",
-    "area": 93,
-    "rooms": 3,
-    "price": 66000,
+    "location": "Yerevan, Davtashen, Pirumyanner 7/6",
     "status": "available",
-    "reserved": "free",
     "image": "/buildings/building-50.jpg",
     "apartments": [
         {
@@ -2353,8 +2158,7 @@
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg"
         }
-      ],
-    "location": "Yerevan, Davtashen, Pirumyanner 7/6"
+    ]
   }
   ]
 }
