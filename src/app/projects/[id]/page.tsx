@@ -3,8 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link'
-
+import Link from 'next/link';
 
 interface Apartment {
   area: number;
@@ -12,7 +11,8 @@ interface Apartment {
   price: number;
   status: string;
   reserved: string;
-  image: string; // Floor plan image
+  image: string;
+  quantity: number;
 }
 
 interface Building {
@@ -51,6 +51,22 @@ export default function ProjectDetailPage() {
     if (id) fetchBuilding();
   }, [id]);
 
+  const handleReserve = (index: number) => {
+    if (!building) return;
+
+    const updatedApts = [...building.apartments];
+
+    const apt = updatedApts[index];
+    if (apt.quantity > 0) {
+      apt.quantity -= 1;
+      if (apt.quantity === 0) {
+        apt.status = 'reserved';
+      }
+    }
+
+    setBuilding({ ...building, apartments: updatedApts });
+  };
+
   if (error) {
     return (
       <div className="min-h-screen flex items-center justify-center text-red-600">
@@ -85,13 +101,18 @@ export default function ProjectDetailPage() {
               />
 
               <div className="mt-3 flex flex-wrap gap-2 mb-2">
-                <span className="bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">{apt.rooms} bedroom</span>
-                <span className="bg-pink-500 text-white text-xs px-2 py-0.5 rounded-full">Balcony</span>
+                <span className="bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
+                  {apt.rooms} bedroom
+                </span>
+                <span className="bg-pink-500 text-white text-xs px-2 py-0.5 rounded-full">
+                  Balcony
+                </span>
               </div>
 
               <p className="text-sm text-gray-800 mb-1">📐 Area: {apt.area} m²</p>
               <p className="text-sm text-gray-800 mb-1">💵 Price: {apt.price.toLocaleString()} ֏</p>
-              <p className="text-sm">
+              <p className="text-sm text-gray-800 mb-1">🏢 Quantity: {apt.quantity}</p>
+              <p className="text-sm mb-2">
                 🏷️ Status:{' '}
                 <span
                   className={
@@ -105,18 +126,30 @@ export default function ProjectDetailPage() {
                   {apt.status}
                 </span>
               </p>
+
+              <button
+                onClick={() => handleReserve(idx)}
+                disabled={apt.status === 'reserved'}
+                className={`mt-auto px-4 py-2 rounded text-white font-semibold transition ${
+                  apt.status === 'reserved'
+                    ? 'bg-gray-400 cursor-not-allowed'
+                    : 'bg-[#27446C] hover:bg-[#1d3550] cursor-pointer'
+                }`}
+              >
+                Reserve
+              </button>
             </div>
           ))}
         </div>
       </div>
+
       <div className="mt-12">
-          <Link href="/projects">
-            <button className="bg-[#27446C] text-white px-4 py-2 rounded hover:bg-[#1d3550] cursor-pointer">
-              ← Back to Projects
-            </button>
-          </Link>
-        </div>
+        <Link href="/projects">
+          <button className="bg-[#27446C] text-white px-4 py-2 rounded hover:bg-[#1d3550] cursor-pointer">
+            ← Back to Projects
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
-
