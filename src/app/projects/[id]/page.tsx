@@ -19,6 +19,7 @@ interface Building {
   id: number;
   name: string;
   location: string;
+  image: string; // ✅ Include image field here
   status: string;
   apartments: Apartment[];
 }
@@ -55,8 +56,8 @@ export default function ProjectDetailPage() {
     if (!building) return;
 
     const updatedApts = [...building.apartments];
-
     const apt = updatedApts[index];
+
     if (apt.quantity > 0) {
       apt.quantity -= 1;
       if (apt.quantity === 0) {
@@ -86,9 +87,20 @@ export default function ProjectDetailPage() {
   return (
     <div className="min-h-screen p-6 bg-[#91b3e0]">
       <div className="max-w-7xl mx-auto">
+        {/* Title and location */}
         <h1 className="text-3xl font-bold text-[#27446C] mb-2">{building.name}</h1>
-        <p className="text-gray-700 mb-6">{building.location}</p>
+        <p className="text-gray-700 mb-4">{building.location}</p>
 
+        {/* ✅ Main Image from projects page */}
+        <Image
+          src={building.image}
+          alt={building.name}
+          width={1200}
+          height={500}
+          className="rounded-lg object-cover w-full mb-8 max-h-[400px]"
+        />
+
+        {/* Apartments grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {building.apartments.map((apt, idx) => (
             <div key={idx} className="bg-white rounded-lg shadow-md p-4 flex flex-col">
@@ -153,3 +165,11 @@ export default function ProjectDetailPage() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
