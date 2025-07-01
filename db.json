@@ -647,7 +647,7 @@
     "id": 14,
     "name": "Firdus",
     "location": "Yerevan, Kentron, Firdus 33rd District",
-    "status": "sold",
+    "status": "available",
     "image": "/buildings/building-14.jpg",
      "apartments": [
         {
@@ -1057,7 +1057,7 @@
     "id": 24,
     "name": "Alliance Plaza",
     "location": "Yerevan, Ajapnyak, Fuchik 1/1",
-    "status": "sold",
+    "status": "available",
     "image": "/buildings/building-24.jpg",
     "apartments": [
         {
@@ -1221,7 +1221,7 @@
     "id": 28,
     "name": "Nazarbekyan Towers",
     "location": "Yerevan, Ajapnyak, Nazarbekyan 41/1, 41/8",
-    "status": "sold",
+    "status": "available",
     "image": "/buildings/building-28.jpg",  
     "apartments": [
         {
@@ -1631,7 +1631,7 @@
     "id": 38,
     "name": "Northern Ray, Elite Group",
     "location": "Yerevan, Arabkir, N. Zaryan 74",
-    "status": "sold",
+    "status": "available",
     "image": "/buildings/building-38.jpg",
     "apartments": [
         {
