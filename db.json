@@ -1,117 +1,441 @@
 {
   "projects": [
-  {
-    "id": 1,
-    "title": "22 Bishopsgate, London",
-    "description": "A landmark skyscraper offering world-class commercial office space in the heart of London.",
-    "image": "/projects/project-1.jpg"
-  },
-  {
-    "id": 2,
-    "title": "One Bishopsgate Plaza",
-    "description": "A luxury mixed-use development combining elegant residences with a five-star hotel experience.",
-    "image": "/projects/project-2.jpg"
-  },
-  {
-    "id": 3,
-    "title": "Arbor, London, UK",
-    "description": "A sustainable office development known for its modern design and eco-friendly construction.",
-    "image": "/projects/project-3.jpg"
-  },
-  {
-    "id": 4,
-    "title": "Bankside Yards",
-    "description": "A vibrant riverside regeneration project featuring residential, retail, and cultural spaces.",
-    "image": "/projects/project-4.jpg"
-  },
-  {
-    "id": 5,
-    "title": "4 Cannon Street",
-    "description": "A modern commercial property with premium office spaces located in the City of London.",
-    "image": "/projects/project-5.jpg"
-  },
-  {
-    "id": 6,
-    "title": "Westferry Printworks",
-    "description": "A major redevelopment project transforming a former printworks into a residential-led community.",
-    "image": "/projects/project-6.jpg"
-  },
-  {
-    "id": 7,
-    "title": "Park Modern, London",
-    "description": "An ultra-luxury residential development overlooking Hyde Park, offering exceptional amenities.",
-    "image": "/projects/project-7.jpg"
-  },
-  {
-    "id": 8,
-    "title": "Park Nova, Singapore",
-    "description": "An iconic residential tower in Singapore known for its lush garden terraces and futuristic design.",
-    "image": "/projects/project-8.jpg"
-  }
+    {
+      "id": "1",
+      "title": "22 Bishopsgate, London",
+      "description": "A landmark skyscraper offering world-class commercial office space in the heart of London.",
+      "image": "/projects/project-1.jpg"
+    },
+    {
+      "id": "2",
+      "title": "One Bishopsgate Plaza",
+      "description": "A luxury mixed-use development combining elegant residences with a five-star hotel experience.",
+      "image": "/projects/project-2.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Arbor, London, UK",
+      "description": "A sustainable office development known for its modern design and eco-friendly construction.",
+      "image": "/projects/project-3.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Bankside Yards",
+      "description": "A vibrant riverside regeneration project featuring residential, retail, and cultural spaces.",
+      "image": "/projects/project-4.jpg"
+    },
+    {
+      "id": "5",
+      "title": "4 Cannon Street",
+      "description": "A modern commercial property with premium office spaces located in the City of London.",
+      "image": "/projects/project-5.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Westferry Printworks",
+      "description": "A major redevelopment project transforming a former printworks into a residential-led community.",
+      "image": "/projects/project-6.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Park Modern, London",
+      "description": "An ultra-luxury residential development overlooking Hyde Park, offering exceptional amenities.",
+      "image": "/projects/project-7.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Park Nova, Singapore",
+      "description": "An iconic residential tower in Singapore known for its lush garden terraces and futuristic design.",
+      "image": "/projects/project-8.jpg"
+    }
   ],
   "partners": [
-    { "id": 1, "logo": "/partners/p-1.png", "alt": "Partner 1" },
-    { "id": 2, "logo": "/partners/p-2.png", "alt": "Partner 2" },
-    { "id": 3, "logo": "/partners/p-3.png", "alt": "Partner 3" },
-    { "id": 4, "logo": "/partners/p-4.png", "alt": "Partner 4" },
-    { "id": 5, "logo": "/partners/p-5.png", "alt": "Partner 5" },
-    { "id": 6, "logo": "/partners/p-6.png", "alt": "Partner 6" }
+    {
+      "id": "1",
+      "logo": "/partners/p-1.png",
+      "alt": "Partner 1"
+    },
+    {
+      "id": "2",
+      "logo": "/partners/p-2.png",
+      "alt": "Partner 2"
+    },
+    {
+      "id": "3",
+      "logo": "/partners/p-3.png",
+      "alt": "Partner 3"
+    },
+    {
+      "id": "4",
+      "logo": "/partners/p-4.png",
+      "alt": "Partner 4"
+    },
+    {
+      "id": "5",
+      "logo": "/partners/p-5.png",
+      "alt": "Partner 5"
+    },
+    {
+      "id": "6",
+      "logo": "/partners/p-6.png",
+      "alt": "Partner 6"
+    }
   ],
   "news": [
-  { "id": 1, "title": "New Headquarters Opened in Yerevan", "date": "2025-06-01", "content": "Real Construction opens its new headquarters in Yerevan to support regional operations.", "image": "/news/news-1.jpg" },
-  { "id": 2, "title": "Wins Sustainability Award", "date": "2025-05-28", "content": "The company received recognition for eco-friendly methods.", "image": "/news/news-2.jpeg" },
-  { "id": 3, "title": "Housing Project in Vanadzor", "date": "2025-05-20", "content": "A large housing complex is underway in Vanadzor.", "image": "/news/news-3.jpg" },
-  { "id": 4, "title": "Expansion into Georgia", "date": "2025-05-15", "content": "The company has launched projects in Tbilisi.", "image": "/news/news-4.jpg" },
-  { "id": 5, "title": "Bridge Project Finished Early", "date": "2025-05-10", "content": "A major bridge was completed two months ahead of schedule.", "image": "/news/news-5.jpg" },
-  { "id": 6, "title": "Training 100 New Engineers", "date": "2025-05-05", "content": "An internship program will train new engineers yearly.", "image": "/news/news-6.jpeg" },
-  { "id": 7, "title": "Partners with SolarTech", "date": "2025-05-01", "content": "The company integrates solar technology in upcoming builds.", "image": "/news/news-7.jpg" },
-  { "id": 8, "title": "Renovation in Gyumri", "date": "2025-04-28", "content": "Restoring heritage buildings in Gyumri begins.", "image": "/news/news-8.jpg" },
-  { "id": 9, "title": "Eco-Village Project Starts", "date": "2025-04-25", "content": "Smart homes and green spaces under development.", "image": "/news/news-9.jpg" },
-  { "id": 10, "title": "Park Completed in Dilijan", "date": "2025-04-22", "content": "A new park has opened in Dilijan for the community.", "image": "/news/news-10.jpg" },
-  { "id": 11, "title": "Hospital Renovation Begins", "date": "2025-04-20", "content": "The hospital in Armavir is being upgraded.", "image": "/news/news-11.jpeg" },
-  { "id": 12, "title": "ISO 9001 Certified", "date": "2025-04-15", "content": "Company gains international certification for quality.", "image": "/news/news-12.jpg" },
-  { "id": 13, "title": "University Campus Underway", "date": "2025-04-10", "content": "A new campus is under construction in Yerevan.", "image": "/news/news-13.jpg" },
-  { "id": 14, "title": "Mobile App Launched", "date": "2025-04-05", "content": "Clients can now track projects with a new app.", "image": "/news/news-14.jpg" },
-  { "id": 15, "title": "Affordable Housing Announced", "date": "2025-04-01", "content": "200 housing units will be built for low-income families.", "image": "/news/news-15.jpg" },
-  { "id": 16, "title": "Featured in Forbes", "date": "2025-03-28", "content": "Forbes recognized Real Construction for innovation.", "image": "/news/news-16.jpg" },
-  { "id": 17, "title": "New Highway Completed", "date": "2025-03-20", "content": "Improved road access between Yerevan and Goris.", "image": "/news/news-17.jpg" },
-  { "id": 18, "title": "Rebuilds Begin in Artsakh", "date": "2025-03-18", "content": "Projects approved for post-conflict regions.", "image": "/news/news-18.jpeg" },
-  { "id": 19, "title": "Wind Energy Project", "date": "2025-03-12", "content": "Clean energy wind farm starts in Syunik.", "image": "/news/news-19.jpeg" },
-  { "id": 20, "title": "Water Infrastructure Upgrade", "date": "2025-03-10", "content": "New systems being installed in Lori.", "image": "/news/news-20.jpeg" },
-  { "id": 21, "title": "5,000 Employees Milestone", "date": "2025-03-05", "content": "The company now employs over 5,000 people.", "image": "/news/news-21.jpg" },
-  { "id": 22, "title": "Tech Center Opens", "date": "2025-03-01", "content": "Sevan sees a new tech incubator by Real Construction.", "image": "/news/news-22.jpg" },
-  { "id": 23, "title": "Flood Protection in Lori", "date": "2025-02-25", "content": "New levees and barriers being installed.", "image": "/news/news-23.jpg" },
-  { "id": 24, "title": "10 Schools Renovated", "date": "2025-02-20", "content": "Public schools get modern facilities across Armenia.", "image": "/news/news-24.jpg" },
-  { "id": 25, "title": "International Award Finalist", "date": "2025-02-15", "content": "Eco-village plan selected for design award.", "image": "/news/news-25.jpg" },
-  { "id": 26, "title": "Fire Station Built", "date": "2025-02-10", "content": "New safety center opens in Ararat.", "image": "/news/news-26.jpg" },
-  { "id": 27, "title": "Smart Building Sensors", "date": "2025-02-05", "content": "Sensors being tested in smart apartments.", "image": "/news/news-27.jpg" },
-  { "id": 28, "title": "Logistics Hub Underway", "date": "2025-02-01", "content": "Center to boost national construction supply chain.", "image": "/news/news-28.jpeg" },
-  { "id": 29, "title": "Public Library in Goris", "date": "2025-01-28", "content": "Construction begins on a modern tech library.", "image": "/news/news-29.jpg" },
-  { "id": 30, "title": "Tunnel Links Villages", "date": "2025-01-25", "content": "New tunnel shortens rural travel by 40 minutes.", "image": "/news/news-30.jpeg" },
-  { "id": 31, "title": "Green Roof Pilot Program", "date": "2025-01-20", "content": "Sustainable rooftops begin rolling out.", "image": "/news/news-31.jpg" },
-  { "id": 32, "title": "Engineering Olympiad Sponsored", "date": "2025-01-15", "content": "Supporting Armenia's young engineering talent.", "image": "/news/news-32.jpg" },
-  { "id": 33, "title": "Mall Built in Abovyan", "date": "2025-01-10", "content": "New retail complex to host over 80 stores.", "image": "/news/news-33.jpg" },
-  { "id": 34, "title": "Hydropower Expansion", "date": "2025-01-05", "content": "Additional turbines added to small-scale hydroplant.", "image": "/news/news-34.jpg" },
-  { "id": 35, "title": "Rail Station Opens", "date": "2024-12-30", "content": "New commuter station connects rural towns.", "image": "/news/news-35.jpg" },
-  { "id": 36, "title": "Smart City Forum Held", "date": "2024-12-20", "content": "Public-private dialogue on urban development.", "image": "/news/news-36.jpeg" },
-  { "id": 37, "title": "School Supplies Donated", "date": "2024-12-15", "content": "Thousands of books and supplies donated.", "image": "/news/news-37.jpg" },
-  { "id": 38, "title": "Skyscraper Design Revealed", "date": "2024-12-10", "content": "Tallest building in Armenia breaks ground.", "image": "/news/news-38.jpg" },
-  { "id": 39, "title": "Expo 2025 Participation", "date": "2024-12-01", "content": "Innovation to be showcased at global expo.", "image": "/news/news-39.jpg" },
-  { "id": 40, "title": "1 Million Safe Work Hours", "date": "2024-11-28", "content": "Major safety milestone for company staff.", "image": "/news/news-40.jpg" },
-  { "id": 41, "title": "Recycling Plant Breaks Ground", "date": "2024-11-20", "content": "Waste recycling integrated into build process.", "image": "/news/news-41.jpg" },
-  { "id": 42, "title": "CEO Wins Industry Award", "date": "2024-11-15", "content": "Recognized for innovation in construction sector.", "image": "/news/news-42.jpg" },
-  { "id": 43, "title": "Green Energy Division Launch", "date": "2024-11-10", "content": "Renewables branch launches wind and solar projects.", "image": "/news/news-43.jpg" },
-  { "id": 44, "title": "Training Center in Armavir", "date": "2024-11-05", "content": "Modern lab and workshops open to students.", "image": "/news/news-44.jpg" },
-  { "id": 45, "title": "Road Projects Completed", "date": "2024-10-30", "content": "Several highways and feeder roads resurfaced.", "image": "/news/news-45.jpg" },
-  { "id": 46, "title": "Drones for Site Inspection", "date": "2024-10-25", "content": "Drone fleet used for efficiency and safety.", "image": "/news/news-46.jpg" },
-  { "id": 47, "title": "20 Year Anniversary", "date": "2024-10-15", "content": "Celebrating 20 years of innovation in building.", "image": "/news/news-47.jpg" },
-  { "id": 48, "title": "Data Center Project Begins", "date": "2024-10-10", "content": "First large-scale data center under construction.", "image": "/news/news-48.jpg" },
-  { "id": 49, "title": "Public Transit Hub Completed", "date": "2024-10-01", "content": "Central transport hub opens in capital.", "image": "/news/news-49.jpg" },
-  { "id": 50, "title": "Wellness Program for Staff", "date": "2024-09-28", "content": "Mental health, fitness, and nutrition plans introduced.", "image": "/news/news-50.jpg" }
+    {
+      "id": "1",
+      "title": "New Headquarters Opened in Yerevan",
+      "date": "2025-06-01",
+      "content": "Real Construction opens its new headquarters in Yerevan to support regional operations.",
+      "image": "/news/news-1.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Wins Sustainability Award",
+      "date": "2025-05-28",
+      "content": "The company received recognition for eco-friendly methods.",
+      "image": "/news/news-2.jpeg"
+    },
+    {
+      "id": "3",
+      "title": "Housing Project in Vanadzor",
+      "date": "2025-05-20",
+      "content": "A large housing complex is underway in Vanadzor.",
+      "image": "/news/news-3.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Expansion into Georgia",
+      "date": "2025-05-15",
+      "content": "The company has launched projects in Tbilisi.",
+      "image": "/news/news-4.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Bridge Project Finished Early",
+      "date": "2025-05-10",
+      "content": "A major bridge was completed two months ahead of schedule.",
+      "image": "/news/news-5.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Training 100 New Engineers",
+      "date": "2025-05-05",
+      "content": "An internship program will train new engineers yearly.",
+      "image": "/news/news-6.jpeg"
+    },
+    {
+      "id": "7",
+      "title": "Partners with SolarTech",
+      "date": "2025-05-01",
+      "content": "The company integrates solar technology in upcoming builds.",
+      "image": "/news/news-7.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Renovation in Gyumri",
+      "date": "2025-04-28",
+      "content": "Restoring heritage buildings in Gyumri begins.",
+      "image": "/news/news-8.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Eco-Village Project Starts",
+      "date": "2025-04-25",
+      "content": "Smart homes and green spaces under development.",
+      "image": "/news/news-9.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Park Completed in Dilijan",
+      "date": "2025-04-22",
+      "content": "A new park has opened in Dilijan for the community.",
+      "image": "/news/news-10.jpg"
+    },
+    {
+      "id": "11",
+      "title": "Hospital Renovation Begins",
+      "date": "2025-04-20",
+      "content": "The hospital in Armavir is being upgraded.",
+      "image": "/news/news-11.jpeg"
+    },
+    {
+      "id": "12",
+      "title": "ISO 9001 Certified",
+      "date": "2025-04-15",
+      "content": "Company gains international certification for quality.",
+      "image": "/news/news-12.jpg"
+    },
+    {
+      "id": "13",
+      "title": "University Campus Underway",
+      "date": "2025-04-10",
+      "content": "A new campus is under construction in Yerevan.",
+      "image": "/news/news-13.jpg"
+    },
+    {
+      "id": "14",
+      "title": "Mobile App Launched",
+      "date": "2025-04-05",
+      "content": "Clients can now track projects with a new app.",
+      "image": "/news/news-14.jpg"
+    },
+    {
+      "id": "15",
+      "title": "Affordable Housing Announced",
+      "date": "2025-04-01",
+      "content": "200 housing units will be built for low-income families.",
+      "image": "/news/news-15.jpg"
+    },
+    {
+      "id": "16",
+      "title": "Featured in Forbes",
+      "date": "2025-03-28",
+      "content": "Forbes recognized Real Construction for innovation.",
+      "image": "/news/news-16.jpg"
+    },
+    {
+      "id": "17",
+      "title": "New Highway Completed",
+      "date": "2025-03-20",
+      "content": "Improved road access between Yerevan and Goris.",
+      "image": "/news/news-17.jpg"
+    },
+    {
+      "id": "18",
+      "title": "Rebuilds Begin in Artsakh",
+      "date": "2025-03-18",
+      "content": "Projects approved for post-conflict regions.",
+      "image": "/news/news-18.jpeg"
+    },
+    {
+      "id": "19",
+      "title": "Wind Energy Project",
+      "date": "2025-03-12",
+      "content": "Clean energy wind farm starts in Syunik.",
+      "image": "/news/news-19.jpeg"
+    },
+    {
+      "id": "20",
+      "title": "Water Infrastructure Upgrade",
+      "date": "2025-03-10",
+      "content": "New systems being installed in Lori.",
+      "image": "/news/news-20.jpeg"
+    },
+    {
+      "id": "21",
+      "title": "5,000 Employees Milestone",
+      "date": "2025-03-05",
+      "content": "The company now employs over 5,000 people.",
+      "image": "/news/news-21.jpg"
+    },
+    {
+      "id": "22",
+      "title": "Tech Center Opens",
+      "date": "2025-03-01",
+      "content": "Sevan sees a new tech incubator by Real Construction.",
+      "image": "/news/news-22.jpg"
+    },
+    {
+      "id": "23",
+      "title": "Flood Protection in Lori",
+      "date": "2025-02-25",
+      "content": "New levees and barriers being installed.",
+      "image": "/news/news-23.jpg"
+    },
+    {
+      "id": "24",
+      "title": "10 Schools Renovated",
+      "date": "2025-02-20",
+      "content": "Public schools get modern facilities across Armenia.",
+      "image": "/news/news-24.jpg"
+    },
+    {
+      "id": "25",
+      "title": "International Award Finalist",
+      "date": "2025-02-15",
+      "content": "Eco-village plan selected for design award.",
+      "image": "/news/news-25.jpg"
+    },
+    {
+      "id": "26",
+      "title": "Fire Station Built",
+      "date": "2025-02-10",
+      "content": "New safety center opens in Ararat.",
+      "image": "/news/news-26.jpg"
+    },
+    {
+      "id": "27",
+      "title": "Smart Building Sensors",
+      "date": "2025-02-05",
+      "content": "Sensors being tested in smart apartments.",
+      "image": "/news/news-27.jpg"
+    },
+    {
+      "id": "28",
+      "title": "Logistics Hub Underway",
+      "date": "2025-02-01",
+      "content": "Center to boost national construction supply chain.",
+      "image": "/news/news-28.jpeg"
+    },
+    {
+      "id": "29",
+      "title": "Public Library in Goris",
+      "date": "2025-01-28",
+      "content": "Construction begins on a modern tech library.",
+      "image": "/news/news-29.jpg"
+    },
+    {
+      "id": "30",
+      "title": "Tunnel Links Villages",
+      "date": "2025-01-25",
+      "content": "New tunnel shortens rural travel by 40 minutes.",
+      "image": "/news/news-30.jpeg"
+    },
+    {
+      "id": "31",
+      "title": "Green Roof Pilot Program",
+      "date": "2025-01-20",
+      "content": "Sustainable rooftops begin rolling out.",
+      "image": "/news/news-31.jpg"
+    },
+    {
+      "id": "32",
+      "title": "Engineering Olympiad Sponsored",
+      "date": "2025-01-15",
+      "content": "Supporting Armenia's young engineering talent.",
+      "image": "/news/news-32.jpg"
+    },
+    {
+      "id": "33",
+      "title": "Mall Built in Abovyan",
+      "date": "2025-01-10",
+      "content": "New retail complex to host over 80 stores.",
+      "image": "/news/news-33.jpg"
+    },
+    {
+      "id": "34",
+      "title": "Hydropower Expansion",
+      "date": "2025-01-05",
+      "content": "Additional turbines added to small-scale hydroplant.",
+      "image": "/news/news-34.jpg"
+    },
+    {
+      "id": "35",
+      "title": "Rail Station Opens",
+      "date": "2024-12-30",
+      "content": "New commuter station connects rural towns.",
+      "image": "/news/news-35.jpg"
+    },
+    {
+      "id": "36",
+      "title": "Smart City Forum Held",
+      "date": "2024-12-20",
+      "content": "Public-private dialogue on urban development.",
+      "image": "/news/news-36.jpeg"
+    },
+    {
+      "id": "37",
+      "title": "School Supplies Donated",
+      "date": "2024-12-15",
+      "content": "Thousands of books and supplies donated.",
+      "image": "/news/news-37.jpg"
+    },
+    {
+      "id": "38",
+      "title": "Skyscraper Design Revealed",
+      "date": "2024-12-10",
+      "content": "Tallest building in Armenia breaks ground.",
+      "image": "/news/news-38.jpg"
+    },
+    {
+      "id": "39",
+      "title": "Expo 2025 Participation",
+      "date": "2024-12-01",
+      "content": "Innovation to be showcased at global expo.",
+      "image": "/news/news-39.jpg"
+    },
+    {
+      "id": "40",
+      "title": "1 Million Safe Work Hours",
+      "date": "2024-11-28",
+      "content": "Major safety milestone for company staff.",
+      "image": "/news/news-40.jpg"
+    },
+    {
+      "id": "41",
+      "title": "Recycling Plant Breaks Ground",
+      "date": "2024-11-20",
+      "content": "Waste recycling integrated into build process.",
+      "image": "/news/news-41.jpg"
+    },
+    {
+      "id": "42",
+      "title": "CEO Wins Industry Award",
+      "date": "2024-11-15",
+      "content": "Recognized for innovation in construction sector.",
+      "image": "/news/news-42.jpg"
+    },
+    {
+      "id": "43",
+      "title": "Green Energy Division Launch",
+      "date": "2024-11-10",
+      "content": "Renewables branch launches wind and solar projects.",
+      "image": "/news/news-43.jpg"
+    },
+    {
+      "id": "44",
+      "title": "Training Center in Armavir",
+      "date": "2024-11-05",
+      "content": "Modern lab and workshops open to students.",
+      "image": "/news/news-44.jpg"
+    },
+    {
+      "id": "45",
+      "title": "Road Projects Completed",
+      "date": "2024-10-30",
+      "content": "Several highways and feeder roads resurfaced.",
+      "image": "/news/news-45.jpg"
+    },
+    {
+      "id": "46",
+      "title": "Drones for Site Inspection",
+      "date": "2024-10-25",
+      "content": "Drone fleet used for efficiency and safety.",
+      "image": "/news/news-46.jpg"
+    },
+    {
+      "id": "47",
+      "title": "20 Year Anniversary",
+      "date": "2024-10-15",
+      "content": "Celebrating 20 years of innovation in building.",
+      "image": "/news/news-47.jpg"
+    },
+    {
+      "id": "48",
+      "title": "Data Center Project Begins",
+      "date": "2024-10-10",
+      "content": "First large-scale data center under construction.",
+      "image": "/news/news-48.jpg"
+    },
+    {
+      "id": "49",
+      "title": "Public Transit Hub Completed",
+      "date": "2024-10-01",
+      "content": "Central transport hub opens in capital.",
+      "image": "/news/news-49.jpg"
+    },
+    {
+      "id": "50",
+      "title": "Wellness Program for Staff",
+      "date": "2024-09-28",
+      "content": "Mental health, fitness, and nutrition plans introduced.",
+      "image": "/news/news-50.jpg"
+    }
   ],
   "buildings": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Elise Residential Complex",
       "location": "Yerevan, Davtashen 4th quarter, 46/9",
       "status": "available",
@@ -133,7 +457,7 @@
           "status": "available",
           "reserved": "free",
           "image": "/floorplans/building-1/60.jpg",
-          "quantity": 3
+          "quantity": 2
         },
         {
           "area": 75,
@@ -156,52 +480,52 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Green Hills",
       "location": "Yerevan, Nor Nork, David Bek 103/5",
-      "status": "available",
+      "status": "sold",
       "image": "/buildings/building-2.jpg",
       "apartments": [
         {
           "area": 45,
           "rooms": 1,
           "price": 54000,
-          "status": "available",
+          "status": "reserved",
           "reserved": "free",
           "image": "/floorplans/building-1/45.jpg",
-          "quantity": 3
+          "quantity": 0
         },
         {
           "area": 60,
           "rooms": 2,
           "price": 72000,
-          "status": "available",
+          "status": "reserved",
           "reserved": "free",
           "image": "/floorplans/building-1/60.jpg",
-          "quantity": 3
+          "quantity": 0
         },
         {
           "area": 75,
           "rooms": 3,
           "price": 90000,
-          "status": "available",
+          "status": "reserved",
           "reserved": "free",
           "image": "/floorplans/building-1/75.jpg",
-          "quantity": 3
+          "quantity": 0
         },
         {
           "area": 90,
           "rooms": 4,
           "price": 108000,
-          "status": "available",
+          "status": "reserved",
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg",
-          "quantity": 3
+          "quantity": 0
         }
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "New Komitas Residential District",
       "location": "Yerevan, Arabkir, Arghutyan 15/10",
       "status": "available",
@@ -246,7 +570,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Sunday Towers",
       "location": "Yerevan, Arabkir, G. Vardanyan 1/3",
       "status": "available",
@@ -291,7 +615,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Malkhasyants Complex",
       "location": "Yerevan, Arabkir, Malkhasyants 8",
       "status": "available",
@@ -336,7 +660,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "E1 Residence",
       "location": "Yerevan, Avan, Acharyan 35/19",
       "status": "available",
@@ -381,7 +705,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Nor Avan Residential Complex",
       "location": "Yerevan, Avan, Acharyan 37/1",
       "status": "available",
@@ -426,7 +750,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Kanach Tagh",
       "location": "Yerevan, Avan, Acharyan 37/27",
       "status": "available",
@@ -436,42 +760,42 @@
           "area": 45,
           "rooms": 1,
           "price": 54000,
-          "status": "available",
+          "status": "reserved",
           "reserved": "free",
           "image": "/floorplans/building-1/45.jpg",
-          "quantity": 3
+          "quantity": 0
         },
         {
           "area": 60,
           "rooms": 2,
           "price": 72000,
-          "status": "available",
+          "status": "reserved",
           "reserved": "free",
           "image": "/floorplans/building-1/60.jpg",
-          "quantity": 3
+          "quantity": 0
         },
         {
           "area": 75,
           "rooms": 3,
           "price": 90000,
-          "status": "available",
+          "status": "reserved",
           "reserved": "free",
           "image": "/floorplans/building-1/75.jpg",
-          "quantity": 3
+          "quantity": 0
         },
         {
           "area": 90,
           "rooms": 4,
           "price": 108000,
-          "status": "available",
+          "status": "reserved",
           "reserved": "free",
           "image": "/floorplans/building-1/90.jpg",
-          "quantity": 3
+          "quantity": 0
         }
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Solar Residential Complex",
       "location": "Yerevan, Avan, Alma-Ata 1/4",
       "status": "available",
@@ -516,7 +840,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Bedeck Davtashen Complex",
       "location": "Yerevan, Davtashen, Pirumyanner 13",
       "status": "available",
@@ -561,7 +885,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Bagrevand Residence",
       "location": "Yerevan, Jrvezh, Jrvezh 17",
       "status": "available",
@@ -606,7 +930,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Liberty 1",
       "location": "Yerevan, Kentron, Azatutyan 1/43",
       "status": "available",
@@ -651,7 +975,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Technotun",
       "location": "Yerevan, Kentron, Aghbyur Serob 50",
       "status": "available",
@@ -696,7 +1020,7 @@
       ]
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Firdus",
       "location": "Yerevan, Kentron, Firdus 33rd District",
       "status": "available",
@@ -741,7 +1065,7 @@
       ]
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "David Bek Residential Complex",
       "location": "Yerevan, Nor Nork, David Bek 105",
       "status": "available",
@@ -786,7 +1110,7 @@
       ]
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Lvovyan Tower",
       "location": "Yerevan, Nor Nork, Lvovyan 19/7",
       "status": "available",
@@ -831,7 +1155,7 @@
       ]
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Amanoo",
       "location": "Yerevan, Nork-Marash, G. Hovsepyan 38/11",
       "status": "available",
@@ -876,7 +1200,7 @@
       ]
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Mountain Plaza",
       "location": "Yerevan, Nork-Marash, G. Hovsepyan 48/3",
       "status": "available",
@@ -921,7 +1245,7 @@
       ]
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Monterosso",
       "location": "Yerevan, Nork-Marash, G. Hovsepyan 52/5",
       "status": "available",
@@ -966,7 +1290,7 @@
       ]
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Pullman Residences Yerevan",
       "location": "Yerevan, Nork-Marash, Norki Ayginer 180",
       "status": "available",
@@ -1011,7 +1335,7 @@
       ]
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Orient Stone",
       "location": "Yerevan, Shengavit, Arshakunyats 192",
       "status": "available",
@@ -1056,7 +1380,7 @@
       ]
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Frunze Residential Complex",
       "location": "Yerevan, Shengavit, Frunze 10/4",
       "status": "available",
@@ -1101,7 +1425,7 @@
       ]
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Abelyan",
       "location": "Yerevan, Ajapnyak, Abelyan 2/1",
       "status": "available",
@@ -1146,7 +1470,7 @@
       ]
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Alliance Plaza",
       "location": "Yerevan, Ajapnyak, Fuchik 1/1",
       "status": "available",
@@ -1191,7 +1515,7 @@
       ]
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Gevmik",
       "location": "Yerevan, Ajapnyak, Fuchik 1/3",
       "status": "available",
@@ -1236,7 +1560,7 @@
       ]
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Araks Residential Complex",
       "location": "Yerevan, Ajapnyak, Fuchik 1/3",
       "status": "available",
@@ -1281,7 +1605,7 @@
       ]
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Dream Family Townhouses",
       "location": "Yerevan, Ajapnyak, G-1 Dist.",
       "status": "available",
@@ -1326,7 +1650,7 @@
       ]
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Nazarbekyan Towers",
       "location": "Yerevan, Ajapnyak, Nazarbekyan 41/1, 41/8",
       "status": "available",
@@ -1371,7 +1695,7 @@
       ]
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "Shushi Palace",
       "location": "Yerevan, Ajapnyak, Nazarbekyan 44/13",
       "status": "available",
@@ -1416,7 +1740,7 @@
       ]
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "Nor Silikyan District",
       "location": "Yerevan, Ajapnyak",
       "status": "available",
@@ -1461,7 +1785,7 @@
       ]
     },
     {
-      "id": 31,
+      "id": "31",
       "name": "Antarayin Residential Complex",
       "location": "Yerevan, Arabkir",
       "status": "available",
@@ -1506,7 +1830,7 @@
       ]
     },
     {
-      "id": 32,
+      "id": "32",
       "name": "Platinum Homes",
       "location": "Yerevan, Arabkir, Aygedzor 18",
       "status": "available",
@@ -1551,7 +1875,7 @@
       ]
     },
     {
-      "id": 33,
+      "id": "33",
       "name": "Elite Group",
       "location": "Yerevan, Arabkir, Baghramyan 59",
       "status": "available",
@@ -1596,7 +1920,7 @@
       ]
     },
     {
-      "id": 34,
+      "id": "34",
       "name": "Barekamutyun Complex",
       "location": "Yerevan, Arabkir, Baghramyan 3rd Lane 4/3",
       "status": "available",
@@ -1641,7 +1965,7 @@
       ]
     },
     {
-      "id": 35,
+      "id": "35",
       "name": "Sil Capital",
       "location": "Yerevan, Arabkir, Davtyan 1/4",
       "status": "available",
@@ -1686,7 +2010,7 @@
       ]
     },
     {
-      "id": 36,
+      "id": "36",
       "name": "Elite Group",
       "location": "Yerevan, Arabkir, Mamikonyants 41",
       "status": "available",
@@ -1731,7 +2055,7 @@
       ]
     },
     {
-      "id": 37,
+      "id": "37",
       "name": "Mamik Residence",
       "location": "Yerevan, Arabkir, Mamikonyants 42/1",
       "status": "available",
@@ -1776,7 +2100,7 @@
       ]
     },
     {
-      "id": 38,
+      "id": "38",
       "name": "Northern Ray, Elite Group",
       "location": "Yerevan, Arabkir, N. Zaryan 74",
       "status": "available",
@@ -1821,7 +2145,7 @@
       ]
     },
     {
-      "id": 39,
+      "id": "39",
       "name": "Elite Group",
       "location": "Yerevan, Arabkir, Northern Ray 2",
       "status": "available",
@@ -1866,7 +2190,7 @@
       ]
     },
     {
-      "id": 40,
+      "id": "40",
       "name": "Orbeli Brothers",
       "location": "Yerevan, Arabkir, Orbeli Brothers 67/2",
       "status": "available",
@@ -1911,7 +2235,7 @@
       ]
     },
     {
-      "id": 41,
+      "id": "41",
       "name": "Itarco",
       "location": "Yerevan, Arabkir, Papazyan",
       "status": "available",
@@ -1956,7 +2280,7 @@
       ]
     },
     {
-      "id": 42,
+      "id": "42",
       "name": "Mia Town",
       "location": "Yerevan, Arabkir, Papazyan",
       "status": "available",
@@ -2001,7 +2325,7 @@
       ]
     },
     {
-      "id": 43,
+      "id": "43",
       "name": "Nut House",
       "location": "Yerevan, Avan, Avan-Arinj",
       "status": "available",
@@ -2046,7 +2370,7 @@
       ]
     },
     {
-      "id": 44,
+      "id": "44",
       "name": "Solar City",
       "location": "Yerevan, Avan, Avan-Arinj",
       "status": "available",
@@ -2091,7 +2415,7 @@
       ]
     },
     {
-      "id": 45,
+      "id": "45",
       "name": "High Park Residential Community",
       "location": "Yerevan, Avan",
       "status": "available",
@@ -2136,7 +2460,7 @@
       ]
     },
     {
-      "id": 46,
+      "id": "46",
       "name": "Zoar Residence",
       "location": "Yerevan, Avan",
       "status": "available",
@@ -2181,7 +2505,7 @@
       ]
     },
     {
-      "id": 47,
+      "id": "47",
       "name": "Bridgeview Residential Complex",
       "location": "Yerevan, Davtashen",
       "status": "available",
@@ -2226,7 +2550,7 @@
       ]
     },
     {
-      "id": 48,
+      "id": "48",
       "name": "Van Residential Complex",
       "location": "Yerevan, Davtashen, A. Mikoyan",
       "status": "available",
@@ -2271,7 +2595,7 @@
       ]
     },
     {
-      "id": 49,
+      "id": "49",
       "name": "Smart Plaza",
       "location": "Yerevan, Davtashen, Melkumov 46",
       "status": "available",
@@ -2316,7 +2640,7 @@
       ]
     },
     {
-      "id": 50,
+      "id": "50",
       "name": "Blue Sky Residence",
       "location": "Yerevan, Davtashen, Pirumyanner 7/6",
       "status": "available",

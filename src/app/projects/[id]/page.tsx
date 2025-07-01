@@ -19,8 +19,8 @@ interface Building {
   id: number;
   name: string;
   location: string;
-  image: string; // ✅ Include image field here
   status: string;
+  image: string;
   apartments: Apartment[];
 }
 
@@ -30,43 +30,71 @@ export default function ProjectDetailPage() {
 
   const [building, setBuilding] = useState<Building | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  const fetchBuilding = async () => {
+    try {
+      const res = await fetch(`http://localhost:4000/buildings/${id}`);
+      if (!res.ok) throw new Error('Not found');
+      const data: Building = await res.json();
+      setBuilding(data);
+    } catch (err) {
+      setError(`Project with ID ${id} not found or failed to fetch.`);
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const fetchBuilding = async () => {
-      try {
-        const res = await fetch('http://localhost:4000/buildings');
-        const data = await res.json();
-
-        const found = data.find((b: Building) => b.id === id);
-        if (!found) {
-          setError(`Project with ID ${id} not found`);
-        } else {
-          setBuilding(found);
-        }
-      } catch (err) {
-        setError('Failed to fetch project data');
-        console.error(err);
-      }
-    };
-
     if (id) fetchBuilding();
   }, [id]);
 
-  const handleReserve = (index: number) => {
+  const handleReserve = async (index: number) => {
     if (!building) return;
 
-    const updatedApts = [...building.apartments];
-    const apt = updatedApts[index];
+    const updatedApartments = [...building.apartments];
+    const apt = updatedApartments[index];
 
     if (apt.quantity > 0) {
       apt.quantity -= 1;
       if (apt.quantity === 0) {
         apt.status = 'reserved';
       }
-    }
 
-    setBuilding({ ...building, apartments: updatedApts });
+      const updatedBuilding: Building = {
+        ...building,
+        apartments: updatedApartments,
+      };
+
+      try {
+        const response = await fetch(`http://localhost:4000/buildings/${building.id}`, {
+          method: 'PUT', // Use PUT to replace the full building object
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(updatedBuilding),
+        });
+
+        if (!response.ok) {
+          console.error('Failed to update:', await response.text());
+          return;
+        }
+
+        setBuilding(updatedBuilding); // Update UI after successful save
+      } catch (err) {
+        console.error('Update failed:', err);
+      }
+    }
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center text-gray-600">
+        <p className="text-lg">Loading...</p>
+      </div>
+    );
+  }
 
   if (error) {
     return (
@@ -76,33 +104,14 @@ export default function ProjectDetailPage() {
     );
   }
 
-  if (!building) {
-    return (
-      <div className="min-h-screen flex items-center justify-center text-gray-600">
-        <p className="text-lg">Loading...</p>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen p-6 bg-[#91b3e0]">
       <div className="max-w-7xl mx-auto">
-        {/* Title and location */}
-        <h1 className="text-3xl font-bold text-[#27446C] mb-2">{building.name}</h1>
-        <p className="text-gray-700 mb-4">{building.location}</p>
+        <h1 className="text-3xl font-bold text-[#27446C] mb-2">{building?.name}</h1>
+        <p className="text-gray-700 mb-6">{building?.location}</p>
 
-        {/* ✅ Main Image from projects page */}
-        <Image
-          src={building.image}
-          alt={building.name}
-          width={1200}
-          height={500}
-          className="rounded-lg object-cover w-full mb-8 max-h-[400px]"
-        />
-
-        {/* Apartments grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {building.apartments.map((apt, idx) => (
+          {building?.apartments.map((apt, idx) => (
             <div key={idx} className="bg-white rounded-lg shadow-md p-4 flex flex-col">
               <Image
                 src={apt.image}
@@ -153,23 +162,15 @@ export default function ProjectDetailPage() {
             </div>
           ))}
         </div>
-      </div>
 
-      <div className="mt-12">
-        <Link href="/projects">
-          <button className="bg-[#27446C] text-white px-4 py-2 rounded hover:bg-[#1d3550] cursor-pointer">
-            ← Back to Projects
-          </button>
-        </Link>
+        <div className="mt-12">
+          <Link href="/projects">
+            <button className="bg-[#27446C] text-white px-4 py-2 rounded hover:bg-[#1d3550] cursor-pointer">
+              ← Back to Projects
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
 }
-
-
-
-
-
-
-
-
