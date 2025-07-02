@@ -36,7 +36,7 @@ export default function BuildingDetailClient({ building: initialBuilding }: { bu
         apt.status = 'reserved';
       }
 
-      const updatedBuilding = {
+      const updatedBuilding: Building = {
         ...building,
         apartments: updatedApartments,
       };

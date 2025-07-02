@@ -466,7 +466,7 @@
           "status": "available",
           "reserved": "free",
           "image": "/floorplans/building-1/75.jpg",
-          "quantity": 3
+          "quantity": 2
         },
         {
           "area": 90,
@@ -556,7 +556,7 @@
           "status": "available",
           "reserved": "free",
           "image": "/floorplans/building-1/75.jpg",
-          "quantity": 3
+          "quantity": 2
         },
         {
           "area": 90,

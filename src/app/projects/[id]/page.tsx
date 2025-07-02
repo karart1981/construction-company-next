@@ -32,11 +32,7 @@ async function getBuilding(id: number): Promise<Building | null> {
   }
 }
 
-export default async function ProjectDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function Page({ params }: { params: { id: string } }) {
   const id = Number(params.id);
   const building = await getBuilding(id);
 
@@ -44,4 +40,11 @@ export default async function ProjectDetailPage({
 
   return <BuildingDetailClient building={building} />;
 }
+
+
+
+
+
+
+
 
