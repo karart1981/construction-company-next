@@ -12,12 +12,13 @@ export default function NewsList() {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch('http://localhost:4000/news');
+        const response = await fetch('https://karart1981.github.io/host_api/db.json');
         if (!response.ok) {
           throw new Error('Failed to fetch news data');
         }
-        const data: NewsItem[] = await response.json();
-        setNews(data);
+
+        const data = await response.json();
+        setNews(data.news); // ✅ access the `news` property
       } catch (error) {
         console.error('Error fetching news:', error);
       } finally {
@@ -55,7 +56,9 @@ export default function NewsList() {
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-[#1b366b] mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-500 mb-3">{new Date(item.date).toLocaleDateString()}</p>
+              <p className="text-sm text-gray-500 mb-3">
+                {new Date(item.date).toLocaleDateString()}
+              </p>
               <p className="text-gray-700">{item.content}</p>
             </div>
           </div>

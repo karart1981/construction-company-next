@@ -19,33 +19,24 @@ const sliderSettings = {
   autoplay: true,
   autoplaySpeed: 2000,
   speed: 800,
-  centerMode: true, // centers the active slide
+  centerMode: true,
   centerPadding: '0px',
   slidesToShow: 4,
   slidesToScroll: 1,
   responsive: [
-    {
-      breakpoint: 1024,
-      settings: { slidesToShow: 3 }
-    },
-    {
-      breakpoint: 768,
-      settings: { slidesToShow: 2 }
-    },
-    {
-      breakpoint: 480,
-      settings: { slidesToShow: 1 }
-    }
-  ]
+    { breakpoint: 1024, settings: { slidesToShow: 3 } },
+    { breakpoint: 768, settings: { slidesToShow: 2 } },
+    { breakpoint: 480, settings: { slidesToShow: 1 } },
+  ],
 };
 
 const OurPartners: React.FC = () => {
   const [partners, setPartners] = useState<Partner[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/partners') 
+    fetch('https://karart1981.github.io/host_api/db.json')
       .then(res => res.json())
-      .then(data => setPartners(data))
+      .then(data => setPartners(data.partners)) // ✅ Access the .partners array
       .catch(err => console.error("Failed to fetch partners:", err));
   }, []);
 
@@ -70,4 +61,3 @@ const OurPartners: React.FC = () => {
 };
 
 export default OurPartners;
-

@@ -20,9 +20,9 @@ export default function ProjectsPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`http://localhost:4000/buildings`);
-        const data = await res.json();
-        setBuildings(data);
+        const res = await fetch('https://karart1981.github.io/host_api/db.json');
+        const json = await res.json();
+        setBuildings(json.buildings); // Assumes your JSON file has a "buildings" array
       } catch (error) {
         console.error('Error fetching buildings:', error);
       }
@@ -61,7 +61,6 @@ export default function ProjectsPage() {
         ))}
       </div>
 
-      {/* Show More Button */}
       {visibleCount < buildings.length && (
         <div className="flex justify-center mt-8">
           <button 

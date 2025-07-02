@@ -33,18 +33,24 @@ export default function ProjectDetailPage() {
   const [loading, setLoading] = useState(true);
 
   const fetchBuilding = async () => {
-    try {
-      const res = await fetch(`http://localhost:4000/buildings/${id}`);
-      if (!res.ok) throw new Error('Not found');
-      const data: Building = await res.json();
-      setBuilding(data);
-    } catch (err) {
-      setError(`Project with ID ${id} not found or failed to fetch.`);
-      console.error(err);
-    } finally {
-      setLoading(false);
+  try {
+    const res = await fetch('https://karart1981.github.io/host_api/db.json');
+    const data = await res.json();
+    const found = data.buildings.find((b: Building) => Number(b.id) === Number(id));
+
+    if (!found) {
+      throw new Error('Building not found');
     }
-  };
+
+    setBuilding(found);
+  } catch (err) {
+    console.error(err);
+    setError(`Project with ID ${id} not found or failed to fetch.`);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   useEffect(() => {
     if (id) fetchBuilding();
@@ -67,24 +73,8 @@ export default function ProjectDetailPage() {
         apartments: updatedApartments,
       };
 
-      try {
-        const response = await fetch(`http://localhost:4000/buildings/${building.id}`, {
-          method: 'PUT', // Use PUT to replace the full building object
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(updatedBuilding),
-        });
-
-        if (!response.ok) {
-          console.error('Failed to update:', await response.text());
-          return;
-        }
-
-        setBuilding(updatedBuilding); // Update UI after successful save
-      } catch (err) {
-        console.error('Update failed:', err);
-      }
+      // No real API to update on GitHub Pages, so just update UI locally
+      setBuilding(updatedBuilding);
     }
   };
 
@@ -96,10 +86,10 @@ export default function ProjectDetailPage() {
     );
   }
 
-  if (error) {
+  if (error || !building) {
     return (
       <div className="min-h-screen flex items-center justify-center text-red-600">
-        <p className="text-lg">{error}</p>
+        <p className="text-lg">{error || 'Project not found'}</p>
       </div>
     );
   }
@@ -107,11 +97,11 @@ export default function ProjectDetailPage() {
   return (
     <div className="min-h-screen p-6 bg-[#91b3e0]">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-[#27446C] mb-2">{building?.name}</h1>
-        <p className="text-gray-700 mb-6">{building?.location}</p>
+        <h1 className="text-3xl font-bold text-[#27446C] mb-2">{building.name}</h1>
+        <p className="text-gray-700 mb-6">{building.location}</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {building?.apartments.map((apt, idx) => (
+          {building.apartments.map((apt, idx) => (
             <div key={idx} className="bg-white rounded-lg shadow-md p-4 flex flex-col">
               <Image
                 src={apt.image}
@@ -174,5 +164,6 @@ export default function ProjectDetailPage() {
     </div>
   );
 }
+
 
 
