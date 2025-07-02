@@ -1,90 +1,17 @@
-'use client';
-
-import { useRouter } from 'next/navigation';
-import { useEffect, useState, ChangeEvent, FormEvent } from 'react';
+// app/login/page.tsx (Server Component)
 import { getSessionUser } from '@/utils/session';
-
-// Define the structure of the form state
-interface FormState {
-  email: string;
-  password: string;
-}
-
-// Define the structure of the user object
-export interface User {
-  name: string;
-  email: string;
-  password: string;
-  token?: string;
-}
+import { redirect } from 'next/navigation';
+import LoginClient from './LoginClient';
 
 export default function LoginPage() {
-  const [form, setForm] = useState<FormState>({ email: '', password: '' });
-  const router = useRouter();
-  const [error, setError] = useState<string>('');
+  const user = getSessionUser(); // server-side session check
 
-  // Redirect to profile if user is already logged in
-  useEffect(() => {
-    const user = getSessionUser();
-    if (user) {
-      router.push('/profile');
-    }
-  }, [router]);
+  if (user) {
+    redirect('/profile');
+  }
 
-  // Handle input changes
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  // Handle form submission
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const storedUser = getSessionUser() as User | null;
-
-    if (
-      storedUser &&
-      storedUser.email === form.email &&
-      storedUser.password === form.password
-    ) {
-      router.push('/profile');
-    } else {
-      setError('Invalid credentials');
-    }
-  };
-
-  return (
-    <div className="max-w-md mx-auto mt-10 p-6 border rounded shadow bg-white">
-      <h2 className="text-2xl mb-4 font-semibold text-center">Login</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          name="email"
-          type="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-          required
-        />
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={form.password}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-          required
-        />
-        <button
-          type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded w-full hover:bg-green-700 transition"
-        >
-          Log In
-        </button>
-        {error && <p className="text-red-600 text-sm">{error}</p>}
-      </form>
-    </div>
-  );
+  return <LoginClient />;
 }
+
 
 
