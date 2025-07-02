@@ -20,31 +20,24 @@ interface Building {
   apartments: Apartment[];
 }
 
-async function getBuilding(id: number): Promise<Building | null> {
-  try {
-    const res = await fetch(`http://localhost:4000/buildings/${id}`, {
-      cache: 'no-store',
-    });
-    if (!res.ok) return null;
-    return await res.json();
-  } catch {
-    return null;
-  }
-}
-
-export default async function Page({ params }: { params: { id: string } }) {
+// This is the correct type for dynamic route pages in Next.js App Router
+export default async function Page({
+  params,
+}: {
+  params: { id: string };
+}) {
   const id = Number(params.id);
-  const building = await getBuilding(id);
+  if (isNaN(id)) return notFound();
 
-  if (!building) return notFound();
+  const res = await fetch(`http://localhost:4000/buildings/${id}`, {
+    cache: 'no-store',
+  });
+
+  if (!res.ok) return notFound();
+
+  const building: Building = await res.json();
 
   return <BuildingDetailClient building={building} />;
 }
-
-
-
-
-
-
 
 
