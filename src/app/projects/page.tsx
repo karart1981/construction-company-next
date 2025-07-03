@@ -65,7 +65,7 @@ export default function ProjectsPage() {
         <div className="flex justify-center mt-8">
           <button 
             onClick={handleShowMore}
-            className="bg-white text-[#27446C] font-semibold px-6 py-3 rounded shadow hover:opacity-80 duration-300"
+            className="bg-white text-[#27446C] font-semibold px-6 py-3 rounded shadow hover:opacity-80 duration-300 cursor-pointer"
           >
             Show More
           </button>
