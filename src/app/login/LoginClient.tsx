@@ -27,7 +27,6 @@ export default function LoginClient() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     const storedUser = getSessionUser() as User | null;
 
     if (
@@ -42,35 +41,52 @@ export default function LoginClient() {
   };
 
   return (
-    <div className="max-w-[800px] mx-auto mt-20 p-6 border rounded shadow bg-white">
-      <h2 className="text-2xl mb-4 font-semibold text-center">Login</h2>
-      <form onSubmit={handleSubmit} className="space-y-16">
-        <input
-          name="email"
-          type="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={handleChange}
-          className="w-full p-4 border rounded-lg"
-          required
-        />
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={form.password}
-          onChange={handleChange}
-          className="w-full p-4 border rounded-lg"
-          required
-        />
-        <button
-          type="submit"
-          className="bg-green-700 text-white px-8 py-4 rounded-lg w-full hover:bg-green-600 transition-[var(--transition)] cursor-pointer"
-        >
-          Log In
-        </button>
-        {error && <p className="text-red-600 text-sm">{error}</p>}
-      </form>
+    <div className="flex items-center justify-center min-h-screen bg-[var(--dark-blue)] px-4">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 md:p-10">
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Login</h2>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              Email
+            </label>
+            <input
+              name="email"
+              id="email"
+              type="email"
+              placeholder="you@example.com"
+              value={form.email}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none transition"
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
+              Password
+            </label>
+            <input
+              name="password"
+              id="password"
+              type="password"
+              placeholder="••••••••"
+              value={form.password}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none transition"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition cursor-pointer"
+          >
+            Log In
+          </button>
+
+          {error && <p className="text-sm text-red-500 text-center">{error}</p>}
+        </form>
+      </div>
     </div>
   );
 }
