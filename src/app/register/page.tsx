@@ -21,7 +21,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="max-w-[800px] mx-auto mt-10 p-6 border rounded-lg shadow bg-white">
+    <div className="max-w-[800px] mx-auto mt-20 p-6 border rounded-lg shadow bg-white">
       <h2 className="text-2xl mb-4">Register</h2>
       <form onSubmit={handleSubmit} className="space-y-16">
         <input
