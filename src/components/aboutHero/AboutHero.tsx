@@ -52,7 +52,9 @@ export default function AboutHero() {
                 className="rounded-md"
               />
             </div>
-            <div className="text-white text-center text-[14px] sm:text-[16px]">{item.label}</div>
+            <div className="text-white text-center text-[14px] sm:text-[16px]">
+                <Link href="/projects">{item.label}</Link>
+            </div>
           </div>
         ))}
       </div>

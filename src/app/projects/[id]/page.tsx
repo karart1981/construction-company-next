@@ -121,7 +121,7 @@ export default function ProjectDetailPage() {
               </div>
 
               <p className="text-sm text-gray-800 mb-1">📐 Area: {apt.area} m²</p>
-              <p className="text-sm text-gray-800 mb-1">💵 Price: {apt.price.toLocaleString()} ֏</p>
+              <p className="text-sm text-gray-800 mb-1">💵 Price: {apt.price.toLocaleString()} $</p>
               <p className="text-sm text-gray-800 mb-1">🏢 Quantity: {apt.quantity}</p>
               <p className="text-sm mb-2">
                 🏷️ Status:{' '}
