@@ -81,7 +81,7 @@ export default function ProjectDetailPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center text-gray-600">
-        <p className="text-lg">Loading...</p>
+        <p className="text-lg text-white">Loading...</p>
       </div>
     );
   }
