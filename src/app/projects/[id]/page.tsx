@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -32,29 +32,28 @@ export default function ProjectDetailPage() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const fetchBuilding = async () => {
-  try {
-    const res = await fetch('https://karart1981.github.io/host_api/db.json');
-    const data = await res.json();
-    const found = data.buildings.find((b: Building) => Number(b.id) === Number(id));
+  const fetchBuilding = useCallback(async () => {
+    try {
+      const res = await fetch('https://karart1981.github.io/host_api/db.json');
+      const data = await res.json();
+      const found = data.buildings.find((b: Building) => Number(b.id) === Number(id));
 
-    if (!found) {
-      throw new Error('Building not found');
+      if (!found) {
+        throw new Error('Building not found');
+      }
+
+      setBuilding(found);
+    } catch (err) {
+      console.error(err);
+      setError(`Project with ID ${id} not found or failed to fetch.`);
+    } finally {
+      setLoading(false);
     }
-
-    setBuilding(found);
-  } catch (err) {
-    console.error(err);
-    setError(`Project with ID ${id} not found or failed to fetch.`);
-  } finally {
-    setLoading(false);
-  }
-};
-
+  }, [id]);
 
   useEffect(() => {
     if (id) fetchBuilding();
-  }, [id]);
+  }, [id, fetchBuilding]);
 
   const handleReserve = async (index: number) => {
     if (!building) return;
@@ -73,7 +72,7 @@ export default function ProjectDetailPage() {
         apartments: updatedApartments,
       };
 
-      // No real API to update on GitHub Pages, so just update UI locally
+      // Update only locally (since GitHub Pages is read-only)
       setBuilding(updatedBuilding);
     }
   };
@@ -164,6 +163,7 @@ export default function ProjectDetailPage() {
     </div>
   );
 }
+
 
 
 
