@@ -36,7 +36,7 @@ export default function ProjectsPage() {
   };
 
   return (
-    <div className="p-6 select-none bg-[#27446C] min-h-screen">
+    <div className="p-6 select-none bg-[var(--dark-blue)] min-h-screen">
       <h2 className="text-3xl font-bold mb-6 text-white text-center">Projects</h2>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
