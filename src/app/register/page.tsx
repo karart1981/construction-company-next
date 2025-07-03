@@ -21,14 +21,14 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 border rounded shadow">
+    <div className="max-w-[800px] mx-auto mt-10 p-6 border rounded-lg shadow bg-white">
       <h2 className="text-2xl mb-4">Register</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-16">
         <input
           name="name"
           placeholder="Name"
           onChange={handleChange}
-          className="w-full p-2 border"
+          className="w-full p-4 border rounded-lg"
           required
         />
         <input
@@ -36,7 +36,7 @@ export default function RegisterPage() {
           type="email"
           placeholder="Email"
           onChange={handleChange}
-          className="w-full p-2 border"
+          className="w-full p-4 border rounded-lg"
           required
         />
         <input
@@ -44,10 +44,10 @@ export default function RegisterPage() {
           type="password"
           placeholder="Password"
           onChange={handleChange}
-          className="w-full p-2 border"
+          className="w-full p-4 border rounded-lg"
           required
         />
-        <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
+        <button type="submit" className="bg-[var(--dark-blue)] text-white px-6 py-4 rounded-lg text-[20px] cursor-pointer">
           Register
         </button>
       </form>

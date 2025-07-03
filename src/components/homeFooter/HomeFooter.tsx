@@ -41,7 +41,7 @@ const HomeFooter: FC = () => {
         </h1>
 
         <form className={styles.form} onSubmit={handleSubmit}>
-          <input type="text" name="name" placeholder="Enter Your Name" required />
+          <input className="capitalize" type="text" name="name" placeholder="Enter Your Name" required />
           <input type="email" name="email" placeholder="Enter a E-mail address" required />
           <button type="submit">SUBMIT</button>
         </form>

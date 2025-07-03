@@ -42,16 +42,16 @@ export default function LoginClient() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 border rounded shadow bg-white">
+    <div className="max-w-[800px] mx-auto mt-10 p-6 border rounded shadow bg-white">
       <h2 className="text-2xl mb-4 font-semibold text-center">Login</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-16">
         <input
           name="email"
           type="email"
           placeholder="Email"
           value={form.email}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-4 border rounded-lg"
           required
         />
         <input
@@ -60,12 +60,12 @@ export default function LoginClient() {
           placeholder="Password"
           value={form.password}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-4 border rounded-lg"
           required
         />
         <button
           type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded w-full hover:bg-green-700 transition"
+          className="bg-green-700 text-white px-8 py-4 rounded-lg w-full hover:bg-green-600 transition-[var(--transition)] cursor-pointer"
         >
           Log In
         </button>

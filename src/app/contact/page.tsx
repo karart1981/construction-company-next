@@ -4,7 +4,7 @@ import ContactHero from '@/components/contactHero/ContactHero';
 const Contact = () => {
   return (
     <>
-        <ContactHero />  
+      <ContactHero />  
     </>
   )
 }

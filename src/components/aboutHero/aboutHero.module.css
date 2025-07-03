@@ -1,11 +1,11 @@
 .contact {
     all: unset;
-    color: #28466e;
+    color: var(--dark-blue);
     cursor: pointer; 
     font-weight: 700;
-    transition: opacity .3s ease;
+    transition: opacity var(--transition);
 
     &:hover{
-        opacity: 0.8;
+        opacity: var(--opacity);
     }
 }

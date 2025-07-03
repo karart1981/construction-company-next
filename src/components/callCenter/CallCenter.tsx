@@ -7,7 +7,7 @@ import styles from './callCenter.module.css';
 
 const CallCenter: React.FC = () => {
   return (
-    <div className="w-full bg-[#d6d7d9] flex justify-center items-center py-12 px-4 md:px-10 select-none">
+    <div className="w-full bg-[var(--mid-grey)] flex justify-center items-center py-12 px-4 md:px-10 select-none">
       <div className="bg-white flex flex-col lg:flex-row items-center justify-center gap-8 max-w-[1200px] w-full rounded-lg shadow-lg p-6">
         <div className="flex items-center relative">
           <div>

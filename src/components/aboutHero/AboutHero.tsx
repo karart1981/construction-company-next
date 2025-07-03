@@ -8,7 +8,7 @@ import React from 'react';
 export default function AboutHero() {
   return (
     <>
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-full min-h-[600px] bg-[#d6d7d9] px-4 md:px-12 py-10 gap-8 select-none">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-full min-h-[600px] bg-[var(--mid-grey)] px-4 md:px-12 py-10 gap-8 select-none">
         <div className="flex flex-col justify-center gap-4 max-w-xl text-center lg:text-left">
           <h2 className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[45px] font-bold leading-tight">
             Working to create a cleaner, greener world
@@ -17,7 +17,7 @@ export default function AboutHero() {
           <p>► Individual approach to each client</p>
           <p>► Flexible payment system</p>
           <Link href="/contact" className={styles.contact}>
-            <button className="py-3 px-8 bg-[#26466e] text-white rounded-3xl cursor-pointer text-[16px] hover:bg-[#1e3654] transition">
+            <button className="py-3 px-8 bg-[var(--dark-blue)] text-white rounded-3xl cursor-pointer text-[16px] hover:bg-[var(--mid-blue)] transition-[var(--transition)]">
               CONTACT US
             </button>
           </Link>
@@ -35,7 +35,7 @@ export default function AboutHero() {
       </div>
 
       {/* Icon section */}
-      <div className="w-full bg-[#26466e] flex flex-wrap justify-center items-start px-4 py-10 gap-10 select-none">
+      <div className="w-full bg-[var(--dark-blue)] flex flex-wrap justify-center items-start px-4 py-10 gap-10 select-none">
         {[
           { icon: '/build.png', label: 'Design-Build' },
           { icon: '/remodeling.png', label: 'Home Remodeling' },

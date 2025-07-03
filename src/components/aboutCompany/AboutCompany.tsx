@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function AboutCompany() {
   return (
-    <div className="bg-[#26466e] w-full py-16 px-4 flex flex-col lg:flex-row justify-center items-center gap-10 mx-auto select-none">
+    <div className="bg-[var(--dark-blue)] w-full py-16 px-4 flex flex-col lg:flex-row justify-center items-center gap-10 mx-auto select-none">
 
       <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-lg">
         <Image
@@ -18,7 +18,7 @@ export default function AboutCompany() {
 
       <div className="w-full lg:w-1/2 flex flex-col justify-center pb-[100px]">
         <h2 className="text-4xl font-bold mb-4 text-white">About Company</h2>
-        <div className="w-20 h-1 bg-[#27446C] mb-6"></div>
+        <div className="w-20 h-1 bg-[var(--white)] mb-6"></div>
 
         <p className="text-white mb-6">
           Founded in 2005, Real Construction has established itself as a trusted leader in the construction industry, delivering high-quality, reliable building solutions for nearly two decades. Specializing in residential, commercial, and industrial projects, Real Construction is known for its commitment to excellence, safety, and client satisfaction. The company’s experienced team of architects, engineers, and skilled builders work closely with each client to bring their unique vision to life, offering personalized service and expert guidance every step of the way.

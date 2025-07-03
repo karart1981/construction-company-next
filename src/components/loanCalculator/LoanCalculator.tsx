@@ -136,7 +136,7 @@ export default function LoanCalculator() {
         </div>
 
         <button
-          className="mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 cursor-pointer"
+          className="mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 cursor-pointer transition-[var(--transition)]"
           onClick={handleCalculate}
         >
           Calculate (Calculated in dollars)

@@ -1,13 +1,13 @@
 .link {
     all: unset;
-    color: #000;
+    color: var(--black);
     font-size: 30px;
     font-weight: 700;
     cursor:pointer;
-    translation: color .3s ease;
+    transition: color var(--transition);
 
     &:hover{
-        color: #26466e;
+        color: var(--dark-blue);
     }
 }
 .caller{
@@ -18,7 +18,7 @@
     object-position: 0% 50%;
 }
 .callIcon{
-    background: #26466e;
+    background: var(--dark-blue);
     width:60px;
     height:60px;
     border-radius: 50%;

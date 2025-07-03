@@ -58,14 +58,14 @@ export default function ContactSection() {
       title: 'OUR MAIN OFFICE',
       content: (
         <>
-          <a
+          <Link
             href="https://maps.app.goo.gl/8trqBq8Ltj5fES2KA"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
           >
             SoHo 94 Broadway St
-          </a>
+          </Link>
           <p>New York, NY 1001</p>
         </>
       ),
@@ -77,8 +77,8 @@ export default function ContactSection() {
       title: 'PHONE NUMBER',
       content: (
         <>
-          <a href="tel:23498765400" className="hover:underline">234-9876-5400</a><br />
-          <a href="tel:88801234567" className="hover:underline">888-0123-4567 (Toll Free)</a>
+          <Link href="tel:23498765400" className="hover:underline">234-9876-5400</Link><br />
+          <Link href="tel:88801234567" className="hover:underline">888-0123-4567 (Toll Free)</Link>
         </>
       ),
     },
@@ -87,27 +87,27 @@ export default function ContactSection() {
         <svg width="40" height="40" viewBox="0 0 32 32"><path fill="currentColor" d="M12 5v5h-2V8H4v18h2v1c0 1.645 1.355 3 3 3s3-1.355 3-3v-1h16V10h-4V5H12zm2 2h8v5h-8V7zm-8 3h2v14H6V10zm4 2h2v2h12v-2h2v12H10V12zm3 4v2h2v-2h-2zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zm-8 4v2h2v-2h-2zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zM8 26h2v1c0 .555-.445 1-1 1c-.555 0-1-.445-1-1v-1z"/></svg>
       ),
       title: 'FAX',
-      content: <a href="fax:12345678900" className="hover:underline">1-234-567-8900</a>,
+      content: <Link href="fax:12345678900" className="hover:underline">1-234-567-8900</Link>,
     },
     {
       icon: (
         <svg width="40" height="40" viewBox="0 0 32 32"><path fill="currentColor" d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm-2.2 2L16 14.78L6.2 8ZM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24Z"/></svg>
       ),
       title: 'EMAIL',
-      content: <a href="mailto:hello@theme.com" className="hover:underline">hello@theme.com</a>,
+      content: <Link href="mailto:hello@theme.com" className="hover:underline">hello@theme.com</Link>,
     },
   ];
 
   return (
     <>
-      <div className="bg-[#1b366b] w-full py-12 px-4 h-auto">
+      <div className="bg-[var(--dark-blue)] w-full py-12 px-4 h-auto select-none">
         <h2 className="text-white text-3xl md:text-5xl font-bold text-center mb-4">Contact Us</h2>
         <p className="text-white text-center text-base md:text-lg max-w-md mx-auto tracking-wide pb-[100px]">
           Contact us and our specialists will provide comprehensive answers to your questions and concerns.
         </p>
       </div>
 
-      <div className="bg-gray-100 w-full py-16 px-4">
+      <div className="bg-gray-100 w-full py-16 px-4 select-none">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 -mt-40">
           {contactCards.map((item, idx) => (
             <div key={idx} className="bg-white w-full sm:w-[calc(50%-0.75rem)] lg:w-[23%] p-6 rounded-2xl shadow-lg text-center flex flex-col items-center gap-2">
@@ -150,12 +150,12 @@ export default function ContactSection() {
             ></textarea>
             <button
               type="submit"
-              className="bg-blue-900 text-white py-3 px-6 rounded-full hover:bg-blue-800 transition w-fit capitalize"
+              className="bg-[var(--dark-blue)] text-white py-3 px-6 rounded-full hover:opacity-[var(--opacity)] transition w-fit capitalize cursor-pointer"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Sending...' : 'Submit'}
             </button>
-            {success && <p className="text-green-600 mt-2">Your message has been sent successfully!</p>}
+            {success && <p className="text-green-700 mt-2">Your message has been sent successfully!</p>}
           </form>
 
           <div className="flex-1">
@@ -177,7 +177,7 @@ export default function ContactSection() {
                  <Link href="#" target="_blank">
                      <svg width="20" height="20" viewBox="0 0 432 432"><path fill="currentColor" d="M319 221.5q-8-10.5-30-10.5q-27 0-38 16t-11 45v146q0 5-3 8t-8 3h-76q-4 0-7.5-3t-3.5-8V148q0-4 3.5-7.5t7.5-3.5h74q4 0 6.5 2t3.5 6v5q1 2 1 7q28-27 76-27q53 0 83 27t30 79v182q0 5-3.5 8t-7.5 3h-78q-4 0-7.5-3t-3.5-8V254q0-22-8-32.5zM88 91.5Q73 107 51.5 107T15 91.5t-15-37T15 18T51.5 3T88 18t15 36.5t-15 37zm13 56.5v270q0 5-3.5 8t-7.5 3H14q-5 0-8-3t-3-8V148q0-4 3-7.5t8-3.5h76q4 0 7.5 3.5t3.5 7.5z"/></svg>
                  </Link>
-             </div>
+            </div>
           </div>
         </div>
       </div>

@@ -13,7 +13,6 @@ export default function BuldingCostCalculator() {
   const [constructionCostPerSqM, setConstructionCostPerSqM] = useState<number>(800);
   const [shape, setShape] = useState<string>('Rectangle');
 
-  // 💡 Dynamic calculation using useMemo
   const totalCost = useMemo(() => {
     if (mode === 'buy') {
       return area * pricePerSqM;
@@ -29,13 +28,13 @@ export default function BuldingCostCalculator() {
       <div className="flex gap-4 mb-6">
         <button
           onClick={() => setMode('buy')}
-          className={`px-4 py-2 rounded ${mode === 'buy' ? 'bg-blue-500 text-white' : 'bg-gray-200'} cursor-pointer`}
+          className={`px-4 py-2 rounded ${mode === 'buy' ? 'bg-blue-600 text-white' : 'bg-gray-200'} cursor-pointer`}
         >
           Buy Building
         </button>
         <button
           onClick={() => setMode('build')}
-          className={`px-4 py-2 rounded ${mode === 'build' ? 'bg-green-500 text-white' : 'bg-gray-200'} cursor-pointer`}
+          className={`px-4 py-2 rounded ${mode === 'build' ? 'bg-green-600 text-white' : 'bg-gray-200'} cursor-pointer`}
         >
           Build From Scratch
         </button>

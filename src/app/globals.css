@@ -1,14 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --dark-blue: #1b376c;
+  --mid-blue: #2f4e85;
+  --light-blue: #91b3e0;
+  --black: #000;
+  --light-grey: #eef3fb;
+  --mid-grey: #d6d7d9;
+  --white: #fff;
+  --transition: .3s ease-in-out;
+  --opacity: 0.9;
 }
 
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--dark-blue);
   font-family: Arial, Helvetica, sans-serif;
 }
 
