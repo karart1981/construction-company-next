@@ -1,9 +1,21 @@
-// src/utils/session.ts
+export interface Reservation {
+  buildingId: number;
+  buildingName: string;
+  location: string;
+  apartment: {
+    area: number;
+    rooms: number;
+    price: number;
+    image: string;
+  };
+  date: string;
+}
 
 export interface User {
   name: string;
   email: string;
-  token?: string; // Add other fields as needed
+  image?: string;
+  token?: string;
 }
 
 export const setSessionUser = (user: User): void => {
@@ -28,7 +40,14 @@ export const isUserLoggedIn = (): boolean => {
 export const logoutUser = (): void => {
   if (typeof window !== 'undefined') {
     sessionStorage.removeItem('user');
+    localStorage.removeItem('userReservations'); // Clear reservations on logout
   }
 };
 
-
+export const getUserReservations = (): Reservation[] => {
+  if (typeof window !== 'undefined') {
+    const data = localStorage.getItem('userReservations');
+    return data ? JSON.parse(data) : [];
+  }
+  return [];
+};

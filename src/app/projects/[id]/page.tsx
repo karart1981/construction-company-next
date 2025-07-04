@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import emailjs from '@emailjs/browser';
 
-
 interface Apartment {
   area: number;
   rooms: number;
@@ -25,6 +24,28 @@ interface Building {
   image: string;
   apartments: Apartment[];
 }
+
+interface Reservation {
+  buildingId: number;
+  buildingName: string;
+  location: string;
+  apartment: {
+    area: number;
+    rooms: number;
+    price: number;
+    image: string;
+  };
+  date: string;
+}
+
+// 👇 Store reservation in localStorage
+const updateUserReservation = (reservation: Reservation) => {
+  const key = 'userReservations';
+  const stored = localStorage.getItem(key);
+  const reservations: Reservation[] = stored ? JSON.parse(stored) : [];
+  reservations.push(reservation);
+  localStorage.setItem(key, JSON.stringify(reservations));
+};
 
 export default function ProjectDetailPage() {
   const params = useParams();
@@ -58,6 +79,7 @@ export default function ProjectDetailPage() {
     if (id) fetchBuilding();
   }, [id, fetchBuilding]);
 
+  // ✅ Reservation handler (only once)
   const handleReserve = (index: number) => {
     if (!building) return;
 
@@ -71,6 +93,20 @@ export default function ProjectDetailPage() {
       setBuilding({ ...building, apartments: updated });
       setSelectedApartment(apt);
       setShowModal(true);
+
+      // Save reservation to localStorage
+      updateUserReservation({
+        buildingId: building.id,
+        buildingName: building.name,
+        location: building.location,
+        apartment: {
+          area: apt.area,
+          rooms: apt.rooms,
+          price: apt.price,
+          image: apt.image,
+        },
+        date: new Date().toISOString(),
+      });
     }
   };
 
@@ -87,10 +123,10 @@ export default function ProjectDetailPage() {
 
     try {
       await emailjs.send(
-        'service_82wrnaf',         
-        'template_1bed2hy',        
+        'service_82wrnaf',
+        'template_1bed2hy',
         templateParams,
-        'CJAVaMvYuQRJ5LSwH'          
+        'CJAVaMvYuQRJ5LSwH'
       );
       setSent(true);
     } catch (err) {
@@ -237,6 +273,7 @@ export default function ProjectDetailPage() {
     </div>
   );
 }
+
 
 
 
