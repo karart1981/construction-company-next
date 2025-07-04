@@ -87,10 +87,10 @@ export default function ProjectDetailPage() {
 
     try {
       await emailjs.send(
-        'service_82wrnaf',         // e.g. gmail_service
-        'template_1bed2hy',        // e.g. apartment_reservation_template
+        'service_82wrnaf',         
+        'template_1bed2hy',        
         templateParams,
-        'CJAVaMvYuQRJ5LSwH'          // e.g. DkP2mF5EXAMPLE
+        'CJAVaMvYuQRJ5LSwH'          
       );
       setSent(true);
     } catch (err) {
@@ -117,14 +117,14 @@ export default function ProjectDetailPage() {
   }
 
   return (
-    <div className="min-h-screen p-6 bg-[#91b3e0]">
+    <div className="min-h-screen p-6 bg-[#91b3e0] select-none">
       <div className="max-w-7xl mx-auto">
         <Image
           src={building.image}
           alt={building.name}
           width={1000}
           height={500}
-          className="w-full h-[300px] object-cover rounded-xl mb-6"
+          className="w-full h-full object-cover rounded-xl mb-6"
         />
         <h1 className="text-3xl font-bold text-[#27446C] mb-2">{building.name}</h1>
         <p className="text-gray-700 mb-6">{building.location}</p>
@@ -137,7 +137,7 @@ export default function ProjectDetailPage() {
                 alt={`Apartment ${apt.rooms} rooms`}
                 width={400}
                 height={200}
-                className="rounded h-40 object-cover"
+                className="rounded h-full w-full object-cover"
               />
               <div className="mt-3 flex gap-2 mb-2">
                 <span className="bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
@@ -168,7 +168,7 @@ export default function ProjectDetailPage() {
               <button
                 onClick={() => handleReserve(idx)}
                 disabled={apt.status === 'reserved'}
-                className={`mt-auto px-4 py-2 rounded text-white font-semibold transition ${
+                className={`mt-auto px-4 py-2 rounded text-white font-semibold cursor-pointer transition ${
                   apt.status === 'reserved'
                     ? 'bg-gray-400 cursor-not-allowed'
                     : 'bg-[#27446C] hover:bg-[#1d3550]'
@@ -182,7 +182,7 @@ export default function ProjectDetailPage() {
 
         <div className="mt-12">
           <Link href="/projects">
-            <button className="bg-[#27446C] text-white px-4 py-2 rounded hover:bg-[#1d3550]">
+            <button className="bg-[#27446C] text-white px-4 py-2 rounded hover:bg-[#1d3550] cursor-pointer">
               ← Back to Projects
             </button>
           </Link>
@@ -211,7 +211,7 @@ export default function ProjectDetailPage() {
                 <button
                   onClick={handleSendEmail}
                   disabled={sending || phoneNumber.length < 4}
-                  className="w-full bg-[#27446C] text-white py-2 rounded hover:bg-[#1d3550]"
+                  className="w-full bg-[#27446C] text-white py-2 rounded hover:bg-[#1d3550] cursor-pointer"
                 >
                   {sending ? 'Sending...' : 'Send'}
                 </button>
@@ -226,7 +226,7 @@ export default function ProjectDetailPage() {
                     setPhoneNumber('');
                     setSent(false);
                   }}
-                  className="mt-4 w-full bg-[#27446C] text-white py-2 rounded"
+                  className="mt-4 w-full bg-[#27446C] text-white py-2 rounded cursor-pointer"
                 >
                   Close
                 </button>
