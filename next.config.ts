@@ -1,6 +1,8 @@
 const nextConfig = {
   reactStrictMode: true,
-  // Add other options as needed
+  images: {
+    domains: ['karart1981.github.io'],
+  },
 };
 
 export default nextConfig;

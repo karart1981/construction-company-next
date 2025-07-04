@@ -4,6 +4,8 @@ import { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import emailjs from '@emailjs/browser';
+
 
 interface Apartment {
   area: number;
@@ -31,17 +33,18 @@ export default function ProjectDetailPage() {
   const [building, setBuilding] = useState<Building | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedApartment, setSelectedApartment] = useState<Apartment | null>(null);
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const fetchBuilding = useCallback(async () => {
     try {
       const res = await fetch('https://karart1981.github.io/host_api/db.json');
       const data = await res.json();
-      const found = data.buildings.find((b: Building) => Number(b.id) === Number(id));
-
-      if (!found) {
-        throw new Error('Building not found');
-      }
-
+      const found = data.buildings.find((b: Building) => Number(b.id) === id);
+      if (!found) throw new Error('Building not found');
       setBuilding(found);
     } catch (err) {
       console.error(err);
@@ -55,32 +58,52 @@ export default function ProjectDetailPage() {
     if (id) fetchBuilding();
   }, [id, fetchBuilding]);
 
-  const handleReserve = async (index: number) => {
+  const handleReserve = (index: number) => {
     if (!building) return;
 
-    const updatedApartments = [...building.apartments];
-    const apt = updatedApartments[index];
+    const updated = [...building.apartments];
+    const apt = updated[index];
 
     if (apt.quantity > 0) {
       apt.quantity -= 1;
-      if (apt.quantity === 0) {
-        apt.status = 'reserved';
-      }
+      if (apt.quantity === 0) apt.status = 'reserved';
 
-      const updatedBuilding: Building = {
-        ...building,
-        apartments: updatedApartments,
-      };
+      setBuilding({ ...building, apartments: updated });
+      setSelectedApartment(apt);
+      setShowModal(true);
+    }
+  };
 
-      // Update only locally (since GitHub Pages is read-only)
-      setBuilding(updatedBuilding);
+  const handleSendEmail = async () => {
+    if (!selectedApartment || !building) return;
+    setSending(true);
+
+    const templateParams = {
+      phone: phoneNumber,
+      building: building.name,
+      location: building.location,
+      apartment: `Rooms: ${selectedApartment.rooms}, Area: ${selectedApartment.area} m², Price: ${selectedApartment.price.toLocaleString()} $`,
+    };
+
+    try {
+      await emailjs.send(
+        'service_82wrnaf',         // e.g. gmail_service
+        'template_1bed2hy',        // e.g. apartment_reservation_template
+        templateParams,
+        'CJAVaMvYuQRJ5LSwH'          // e.g. DkP2mF5EXAMPLE
+      );
+      setSent(true);
+    } catch (err) {
+      console.error('Email send failed:', err);
+    } finally {
+      setSending(false);
     }
   };
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-gray-600">
-        <p className="text-lg text-white">Loading...</p>
+      <div className="min-h-screen flex items-center justify-center text-white">
+        Loading...
       </div>
     );
   }
@@ -88,7 +111,7 @@ export default function ProjectDetailPage() {
   if (error || !building) {
     return (
       <div className="min-h-screen flex items-center justify-center text-red-600">
-        <p className="text-lg">{error || 'Project not found'}</p>
+        {error}
       </div>
     );
   }
@@ -96,6 +119,13 @@ export default function ProjectDetailPage() {
   return (
     <div className="min-h-screen p-6 bg-[#91b3e0]">
       <div className="max-w-7xl mx-auto">
+        <Image
+          src={building.image}
+          alt={building.name}
+          width={1000}
+          height={500}
+          className="w-full h-[300px] object-cover rounded-xl mb-6"
+        />
         <h1 className="text-3xl font-bold text-[#27446C] mb-2">{building.name}</h1>
         <p className="text-gray-700 mb-6">{building.location}</p>
 
@@ -104,13 +134,12 @@ export default function ProjectDetailPage() {
             <div key={idx} className="bg-white rounded-lg shadow-md p-4 flex flex-col">
               <Image
                 src={apt.image}
-                alt={`Floor plan for ${apt.rooms} room apartment`}
+                alt={`Apartment ${apt.rooms} rooms`}
                 width={400}
                 height={200}
                 className="rounded h-40 object-cover"
               />
-
-              <div className="mt-3 flex flex-wrap gap-2 mb-2">
+              <div className="mt-3 flex gap-2 mb-2">
                 <span className="bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
                   {apt.rooms} bedroom
                 </span>
@@ -118,7 +147,6 @@ export default function ProjectDetailPage() {
                   Balcony
                 </span>
               </div>
-
               <p className="text-sm text-gray-800 mb-1">📐 Area: {apt.area} m²</p>
               <p className="text-sm text-gray-800 mb-1">💵 Price: {apt.price.toLocaleString()} $</p>
               <p className="text-sm text-gray-800 mb-1">🏢 Quantity: {apt.quantity}</p>
@@ -143,7 +171,7 @@ export default function ProjectDetailPage() {
                 className={`mt-auto px-4 py-2 rounded text-white font-semibold transition ${
                   apt.status === 'reserved'
                     ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-[#27446C] hover:bg-[#1d3550] cursor-pointer'
+                    : 'bg-[#27446C] hover:bg-[#1d3550]'
                 }`}
               >
                 Reserve
@@ -154,15 +182,64 @@ export default function ProjectDetailPage() {
 
         <div className="mt-12">
           <Link href="/projects">
-            <button className="bg-[#27446C] text-white px-4 py-2 rounded hover:bg-[#1d3550] cursor-pointer">
+            <button className="bg-[#27446C] text-white px-4 py-2 rounded hover:bg-[#1d3550]">
               ← Back to Projects
             </button>
           </Link>
         </div>
       </div>
+
+      {/* ✅ Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 w-full max-w-md">
+            {!sent ? (
+              <>
+                <h2 className="text-xl font-semibold mb-4 text-center text-[#27446C]">
+                  ✅ Successfully Reserved!
+                </h2>
+                <p className="mb-3 text-sm text-gray-700">
+                  Leave your phone number and we will contact you.
+                </p>
+                <input
+                  type="tel"
+                  placeholder="Your phone number"
+                  className="w-full border px-4 py-2 rounded mb-4"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                />
+                <button
+                  onClick={handleSendEmail}
+                  disabled={sending || phoneNumber.length < 4}
+                  className="w-full bg-[#27446C] text-white py-2 rounded hover:bg-[#1d3550]"
+                >
+                  {sending ? 'Sending...' : 'Send'}
+                </button>
+              </>
+            ) : (
+              <>
+                <h2 className="text-xl font-bold text-center text-green-600 mb-4">🎉 Thank you!</h2>
+                <p className="text-sm text-gray-700 text-center">We will contact you shortly.</p>
+                <button
+                  onClick={() => {
+                    setShowModal(false);
+                    setPhoneNumber('');
+                    setSent(false);
+                  }}
+                  className="mt-4 w-full bg-[#27446C] text-white py-2 rounded"
+                >
+                  Close
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
+
+
 
 
 
