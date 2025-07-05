@@ -1,5 +1,4 @@
-// app/profile/page.tsx
-import ClientProfile from './ClientProfile';
+import ClientProfile from '../../components/profile/ClientProfile';
 import News from '@/components/news/News';
 
 export default function ProfilePage() {
