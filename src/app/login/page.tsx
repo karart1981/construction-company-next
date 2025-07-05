@@ -1,17 +1,18 @@
-// app/login/page.tsx (Server Component)
+// app/login/page.tsx
 import { getSessionUser } from '@/utils/session';
 import { redirect } from 'next/navigation';
 import LoginClient from './LoginClient';
 
 export default function LoginPage() {
-  const user = getSessionUser(); // server-side session check
+  const user = getSessionUser();
 
   if (user) {
-    redirect('/profile');
+    redirect('/profile'); // already logged in
   }
 
   return <LoginClient />;
 }
+
 
 
 

@@ -6,4 +6,17 @@ export interface NewsItem {
   content: string;
   image: string;
 }
+export interface User {
+  name: string;
+  email: string;
+  password: string;
+  image?: string;
+  token?: string;
+}
+export interface FormState {
+  email: string;
+  password: string;
+}
+
+
 
