@@ -5,40 +5,8 @@ import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import emailjs from '@emailjs/browser';
+import { Apartment, BuildingProf, Reservation } from '@/types/types'; 
 
-interface Apartment {
-  area: number;
-  rooms: number;
-  price: number;
-  status: string;
-  reserved: string;
-  image: string;
-  quantity: number;
-}
-
-interface Building {
-  id: number;
-  name: string;
-  location: string;
-  status: string;
-  image: string;
-  apartments: Apartment[];
-}
-
-interface Reservation {
-  buildingId: number;
-  buildingName: string;
-  location: string;
-  apartment: {
-    area: number;
-    rooms: number;
-    price: number;
-    image: string;
-  };
-  date: string;
-}
-
-// 👇 Store reservation in localStorage
 const updateUserReservation = (reservation: Reservation) => {
   const key = 'userReservations';
   const stored = localStorage.getItem(key);
@@ -51,7 +19,7 @@ export default function ProjectDetailPage() {
   const params = useParams();
   const id = Number(params?.id);
 
-  const [building, setBuilding] = useState<Building | null>(null);
+  const [building, setBuilding] = useState<BuildingProf | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
@@ -64,7 +32,7 @@ export default function ProjectDetailPage() {
     try {
       const res = await fetch('https://karart1981.github.io/host_api/db.json');
       const data = await res.json();
-      const found = data.buildings.find((b: Building) => Number(b.id) === id);
+      const found = data.buildings.find((b: BuildingProf) => Number(b.id) === id);
       if (!found) throw new Error('Building not found');
       setBuilding(found);
     } catch (err) {
@@ -79,7 +47,6 @@ export default function ProjectDetailPage() {
     if (id) fetchBuilding();
   }, [id, fetchBuilding]);
 
-  // ✅ Reservation handler (only once)
   const handleReserve = (index: number) => {
     if (!building) return;
 
@@ -94,7 +61,6 @@ export default function ProjectDetailPage() {
       setSelectedApartment(apt);
       setShowModal(true);
 
-      // Save reservation to localStorage
       updateUserReservation({
         buildingId: building.id,
         buildingName: building.name,

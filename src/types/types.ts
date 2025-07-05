@@ -86,3 +86,21 @@ export interface UserRes {
   token?: string;
   reservations?: Reservation[];
 }
+export interface Apartment {
+  area: number;
+  rooms: number;
+  price: number;
+  status: string;
+  reserved: string;
+  image: string;
+  quantity: number;
+}
+
+export interface BuildingProf {
+  id: number;
+  name: string;
+  location: string;
+  status: string;
+  image: string;
+  apartments: Apartment[];
+}
