@@ -3,17 +3,22 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Project } from '@/types/types'
 
+interface Building {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+}
 
 const Projects = () => {
-  const [projects, setProjects] = useState<Project[]>([]);
+  const [buildings, setBuildings] = useState<Building[]>([]);
 
   useEffect(() => {
     fetch('https://karart1981.github.io/host_api/db.json')
       .then((res) => res.json())
-      .then((data) => setProjects(data.projects)) // Access the "projects" key
-      .catch((error) => console.error('Error fetching projects:', error));
+      .then((data) => setBuildings(data.buildings))
+      .catch((error) => console.error('Error fetching buildings:', error));
   }, []);
 
   return (
@@ -25,23 +30,27 @@ const Projects = () => {
         Discover a selection of our finest construction projects, from residential buildings to commercial spaces. Each project showcases our commitment to quality, innovation, and craftsmanship.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project) => (
+        {buildings.slice(0, 8).map((building) => (
           <div
-            key={project.id}
+            key={building.id}
             className="bg-white shadow-lg rounded-2xl overflow-hidden"
           >
-            <Image
-              width={400}
-              height={240}
-              src={project.image}
-              alt={project.title}
-              className="w-full h-60 object-cover"
-            />
+           <div className="overflow-hidden">
+              <Image
+                width={400}
+                height={240}
+                src={building.image}
+                alt={building.name || 'Building image'}
+                className="w-full h-60 object-cover transform transition-transform duration-500 ease-in-out hover:scale-110"
+              />
+            </div>
+
+
             <div className="p-4">
               <h3 className="text-xl font-semibold text-gray-800">
-                {project.title}
+                {building.name}
               </h3>
-              <p className="text-gray-600 mt-2">{project.description}</p>
+              <p className="text-gray-600 mt-2">{building.description}</p>
             </div>
           </div>
         ))}
