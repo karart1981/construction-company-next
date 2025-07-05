@@ -21,7 +21,6 @@ interface Reservation {
 interface User {
   name: string;
   email: string;
-  image?: string;
   token?: string;
   reservations?: Reservation[];
 }
@@ -75,3 +74,4 @@ export default function ClientProfile() {
     </>
   );
 }
+
