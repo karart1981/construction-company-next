@@ -6,12 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-
-type Partner = {
-  id: number;
-  logo: string;
-  alt: string;
-};
+import { Partner } from '@/types/types'; 
 
 const sliderSettings = {
   dots: false,

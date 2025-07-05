@@ -4,30 +4,10 @@ import { useEffect, useState } from 'react';
 import { getSessionUser, logoutUser, getUserReservations } from '@/utils/session';
 import { useRouter } from 'next/navigation';
 import ReservationItem from '@/components/profile/ReservationItem';
-
-interface Reservation {
-  buildingId: number;
-  buildingName: string;
-  location: string;
-  apartment: {
-    area: number;
-    rooms: number;
-    price: number;
-    image: string;
-  };
-  date: string;
-}
-
-interface User {
-  name: string;
-  email: string;
-  image?: string;
-  token?: string;
-  reservations?: Reservation[];
-}
+import { UserRes } from '@/types/types'; 
 
 export default function ClientProfile() {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<UserRes | null>(null);
   const router = useRouter();
 
   useEffect(() => {

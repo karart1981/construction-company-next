@@ -3,15 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-interface Building {
-  id: number;
-  name: string;
-  location: string;
-  image: string;
-  status?: number;
-  reserved?: number;
-}
+import { Building } from '@/types/types'; 
 
 export default function BuildingGrid({ buildings }: { buildings: Building[] }) {
   const [visibleCount, setVisibleCount] = useState<number>(8);
@@ -22,7 +14,7 @@ export default function BuildingGrid({ buildings }: { buildings: Building[] }) {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 select-none">
         {buildings.slice(0, visibleCount).map(building => (
           <div key={building.id} className="bg-white rounded-xl shadow p-4 flex flex-col">
             <Image 

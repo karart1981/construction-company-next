@@ -5,7 +5,7 @@ import { Construction } from 'lucide-react';
 
 export default function NotFound() {
   return (
-    <div className="min-h-[80vh] flex flex-col items-center justify-center bg-white px-4 py-12 text-center">
+    <div className="min-h-[80vh] flex flex-col items-center justify-center bg-white px-4 py-12 text-center select-none">
       <Construction className="w-16 h-16 text-[var(--dark-blue)] mb-4" />
       <h1 className="text-4xl font-bold text-gray-800 mb-2">Page Not Found</h1>
       <p className="text-gray-600 mb-6">

@@ -4,29 +4,10 @@ import { useEffect, useState } from 'react';
 import { getSessionUser, logoutUser, getUserReservations } from '@/utils/session';
 import { useRouter } from 'next/navigation';
 import ReservationItem from '@/components/profile/ReservationItem';
-
-interface Reservation {
-  buildingId: number;
-  buildingName: string;
-  location: string;
-  apartment: {
-    area: number;
-    rooms: number;
-    price: number;
-    image: string;
-  };
-  date: string;
-}
-
-interface User {
-  name: string;
-  email: string;
-  token?: string;
-  reservations?: Reservation[];
-}
+import { UserRes } from '@/types/types'; 
 
 export default function ClientProfile() {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<UserRes | null>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -59,7 +40,7 @@ export default function ClientProfile() {
         </button>
       </div>
 
-      <div className="max-w-3xl mx-auto px-4 mb-[100px]">
+      <div className="max-w-3xl mx-auto px-4 mb-[100px] select-none">
         <h3 className="text-xl font-semibold mb-4 text-white">🏠 Your Reservations</h3>
         {user.reservations && user.reservations.length > 0 ? (
           <ul className="space-y-4">

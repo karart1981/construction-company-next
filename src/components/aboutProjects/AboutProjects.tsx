@@ -3,13 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Project } from '@/types/types'
 
-type Project = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-};
 
 const Projects = () => {
   const [projects, setProjects] = useState<Project[]>([]);

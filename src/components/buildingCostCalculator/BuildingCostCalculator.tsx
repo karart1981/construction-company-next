@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-
-type Mode = 'buy' | 'build';
+import { Mode } from '@/types/types'; 
 
 export default function BuldingCostCalculator() {
   const [mode, setMode] = useState<Mode>('buy');

@@ -1,21 +1,7 @@
 'use client';
 
 import { useEffect, useState, MouseEvent } from 'react';
-
-interface Config {
-  buttonD: string;
-  buttonT: string;
-  shadowSize: string;
-  roundnessSize: string;
-  buttonDToBottom: string;
-  buttonDToRight: string;
-  selectedBackgroundColor: string;
-  selectedIconColor: string;
-  buttonWidth: string;
-  buttonHeight: string;
-  svgWidth: string;
-  svgHeight: string;
-}
+import { Config } from '@/types/types'; // Adjust the path as needed
 
 const configObj: Config = {
   buttonD: 'M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z',

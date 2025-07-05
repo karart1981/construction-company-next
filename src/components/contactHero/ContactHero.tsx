@@ -2,18 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-
-interface FormData {
-  email: string;
-  name: string;
-  message: string;
-}
-
-interface ContactCardItem {
-  icon: React.ReactNode;
-  title: string;
-  content: React.ReactNode;
-}
+import { FormData, ContactCardItem } from '@/types/types'; 
 
 export default function ContactSection() {
   const [formData, setFormData] = useState<FormData>({ email: '', name: '', message: '' });
