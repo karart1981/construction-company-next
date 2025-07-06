@@ -132,7 +132,7 @@ export default function ContactSection() {
             <textarea
               name="message"
               placeholder="Enter your message"
-              className="p-3 border-b-2 border-gray-300 focus:outline-none focus:border-blue-900 h-32 capitalize"
+              className="p-3 border-b-2 border-gray-300 focus:outline-none focus:border-blue-900 h-32"
               value={formData.message}
               onChange={handleChange}
               required
@@ -153,4 +153,3 @@ export default function ContactSection() {
     </>
   );
 }
-
