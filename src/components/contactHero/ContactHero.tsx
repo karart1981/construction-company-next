@@ -9,6 +9,7 @@ export default function ContactSection() {
   const [formData, setFormData] = useState<FormData>({ email: '', name: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -20,6 +21,7 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
     setSuccess(false);
+    setError(false);
 
     try {
       const result = await emailjs.sendForm(
@@ -34,6 +36,7 @@ export default function ContactSection() {
       setSuccess(true);
     } catch (error) {
       console.error('EmailJS error:', error);
+      setError(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -42,7 +45,11 @@ export default function ContactSection() {
   const contactCards: ContactCardItem[] = [
     {
       icon: (
-        <svg width="40" height="40" viewBox="0 0 32 32"><path fill="currentColor" d="m16 24l-6.09-8.6A8.14 8.14 0 0 1 16 2a8.08 8.08 0 0 1 8 8.13a8.2 8.2 0 0 1-1.8 5.13Zm0-20a6.07 6.07 0 0 0-6 6.13a6.19 6.19 0 0 0 1.49 4L16 20.52L20.63 14A6.24 6.24 0 0 0 22 10.13A6.07 6.07 0 0 0 16 4Z"/><circle cx="16" cy="9" r="2" fill="currentColor"/><path fill="currentColor" d="M28 12h-2v2h2v14H4V14h2v-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V14a2 2 0 0 0-2-2Z"/></svg>
+        <svg width="40" height="40" viewBox="0 0 32 32">
+          <path fill="currentColor" d="m16 24l-6.09-8.6A8.14 8.14 0 0 1 16 2a8.08 8.08 0 0 1 8 8.13a8.2 8.2 0 0 1-1.8 5.13Z"/>
+          <circle cx="16" cy="9" r="2" fill="currentColor"/>
+          <path fill="currentColor" d="M28 12h-2v2h2v14H4V14h2v-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V14a2 2 0 0 0-2-2Z"/>
+        </svg>
       ),
       title: 'OUR MAIN OFFICE',
       content: (
@@ -61,7 +68,9 @@ export default function ContactSection() {
     },
     {
       icon: (
-        <svg width="25" height="25" viewBox="0 0 20 20"><path fill="currentColor" d="M20 18.35V19a1 1 0 0 1-1 1h-2A17 17 0 0 1 0 3V1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 0 1 .99 1v3.35z"/></svg>
+        <svg width="25" height="25" viewBox="0 0 20 20">
+          <path fill="currentColor" d="M20 18.35V19a1 1 0 0 1-1 1h-2A17 17 0 0 1 0 3V1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 0 1 .99 1v3.35z"/>
+        </svg>
       ),
       title: 'PHONE NUMBER',
       content: (
@@ -73,14 +82,18 @@ export default function ContactSection() {
     },
     {
       icon: (
-        <svg width="40" height="40" viewBox="0 0 32 32"><path fill="currentColor" d="M12 5v5h-2V8H4v18h2v1c0 1.645 1.355 3 3 3s3-1.355 3-3v-1h16V10h-4V5H12zm2 2h8v5h-8V7zm-8 3h2v14H6V10zm4 2h2v2h12v-2h2v12H10V12zm3 4v2h2v-2h-2zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zm-8 4v2h2v-2h-2zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zM8 26h2v1c0 .555-.445 1-1 1c-.555 0-1-.445-1-1v-1z"/></svg>
+        <svg width="40" height="40" viewBox="0 0 32 32">
+          <path fill="currentColor" d="M12 5v5h-2V8H4v18h2v1c0 1.645 1.355 3 3 3s3-1.355 3-3v-1h16V10h-4V5H12zm2 2h8v5h-8V7zm-8 3h2v14H6V10zm4 2h2v2h12v-2h2v12H10V12zm3 4v2h2v-2h-2zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zm-8 4v2h2v-2h-2zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zM8 26h2v1c0 .555-.445 1-1 1c-.555 0-1-.445-1-1v-1z"/>
+        </svg>
       ),
       title: 'FAX',
       content: <Link href="fax:12345678900" className="hover:underline">1-234-567-8900</Link>,
     },
     {
       icon: (
-        <svg width="40" height="40" viewBox="0 0 32 32"><path fill="currentColor" d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm-2.2 2L16 14.78L6.2 8ZM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24Z"/></svg>
+        <svg width="40" height="40" viewBox="0 0 32 32">
+          <path fill="currentColor" d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm-2.2 2L16 14.78L6.2 8ZM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24Z"/>
+        </svg>
       ),
       title: 'EMAIL',
       content: <Link href="mailto:hello@theme.com" className="hover:underline">hello@theme.com</Link>,
@@ -145,11 +158,11 @@ export default function ContactSection() {
               {isSubmitting ? 'Sending...' : 'Submit'}
             </button>
             {success && <p className="text-green-700 mt-2">Your message has been sent successfully!</p>}
+            {error && <p className="text-red-600 mt-2">Failed to send message. Please try again.</p>}
           </form>
-
-          {/* Right side with get in touch and icons (no changes needed) */}
         </div>
       </div>
     </>
   );
 }
+
