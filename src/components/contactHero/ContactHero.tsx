@@ -25,10 +25,10 @@ export default function ContactSection() {
 
     try {
       const result = await emailjs.sendForm(
-        process.env.service_cx5fh24!,
-        process.env.template_43c3b2n!,
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         formRef.current!,
-        process.env.CJAvAMvYuQRJ5LSwH!
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
 
       console.log('Email sent:', result.text);
