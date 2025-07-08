@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import emailjs from '@emailjs/browser';
-import { Apartment, BuildingProf, Reservation } from '@/types/types'; 
+import { Apartment, BuildingProf, Reservation } from '@/types/types';
 
 const updateUserReservation = (reservation: Reservation) => {
   const key = 'userReservations';
@@ -24,7 +24,11 @@ export default function ProjectDetailPage() {
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [selectedApartment, setSelectedApartment] = useState<Apartment | null>(null);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
@@ -81,7 +85,11 @@ export default function ProjectDetailPage() {
     setSending(true);
 
     const templateParams = {
+      firstName,
+      lastName,
       phone: phoneNumber,
+      email,
+      message,
       building: building.name,
       location: building.location,
       apartment: `Rooms: ${selectedApartment.rooms}, Area: ${selectedApartment.area} m², Price: ${selectedApartment.price.toLocaleString()} $`,
@@ -200,18 +208,55 @@ export default function ProjectDetailPage() {
                   ✅ Successfully Reserved!
                 </h2>
                 <p className="mb-3 text-sm text-gray-700">
-                  Leave your phone number and we will contact you.
+                  Leave your contact info and message below:
                 </p>
+
+                <input
+                  type="text"
+                  placeholder="First name"
+                  className="w-full border px-4 py-2 rounded mb-4"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="Last name"
+                  className="w-full border px-4 py-2 rounded mb-4"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                />
                 <input
                   type="tel"
-                  placeholder="Your phone number"
+                  placeholder="Phone number"
                   className="w-full border px-4 py-2 rounded mb-4"
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}
                 />
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  className="w-full border px-4 py-2 rounded mb-4"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <textarea
+                  placeholder="Write your message..."
+                  className="w-full border px-4 py-2 rounded mb-4 resize-none"
+                  rows={4}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
+
                 <button
                   onClick={handleSendEmail}
-                  disabled={sending || phoneNumber.length < 4}
+                  disabled={
+                    sending ||
+                    firstName.length < 2 ||
+                    lastName.length < 2 ||
+                    phoneNumber.length < 4 ||
+                    !email.includes('@') ||
+                    message.length < 3
+                  }
                   className="w-full bg-[#27446C] text-white py-2 rounded hover:bg-[#1d3550] cursor-pointer"
                 >
                   {sending ? 'Sending...' : 'Send'}
@@ -224,7 +269,11 @@ export default function ProjectDetailPage() {
                 <button
                   onClick={() => {
                     setShowModal(false);
+                    setFirstName('');
+                    setLastName('');
                     setPhoneNumber('');
+                    setEmail('');
+                    setMessage('');
                     setSent(false);
                   }}
                   className="mt-4 w-full bg-[#27446C] text-white py-2 rounded cursor-pointer"
@@ -239,10 +288,5 @@ export default function ProjectDetailPage() {
     </div>
   );
 }
-
-
-
-
-
 
 
