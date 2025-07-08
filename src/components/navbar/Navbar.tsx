@@ -1,44 +1,32 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
+import { useAuth } from '@/context/AuthContext';
+import { logoutUser } from '@/utils/session';
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [registered, setRegistered] = useState<boolean>(false);
-  const [loggedIn, setLoggedIn] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(true); 
+  const [isOpen, setIsOpen] = useState(false);
+  const { user, loggedIn, registered, setUser, setLoggedIn, setRegistered } = useAuth();
 
-  const handleToggle = (): void => {
-    setIsOpen((prev) => !prev);
-  };
-
-  const handleLinkClick = (): void => {
-    setIsOpen(false);
-  };
+  const handleToggle = () => setIsOpen(!isOpen);
+  const handleLinkClick = () => setIsOpen(false);
 
   const handleLogout = () => {
-    sessionStorage.removeItem('isLoggedIn');
-    window.location.href = '/'; 
+    logoutUser();
+    setUser(null);
+    setLoggedIn(false);
+    setRegistered(false);
+    window.location.href = '/';
   };
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const user = sessionStorage.getItem('user');
-      const loginStatus = sessionStorage.getItem('isLoggedIn');
-      setRegistered(!!user);
-      setLoggedIn(loginStatus === 'true');
-      setLoading(false);
-    }
-  }, []);
 
   return (
     <nav className={styles.navbar}>
       <Link href="/" className="all-[unset]">
-        <Image src="/logo.png" width={50} height={50} alt="Logo of the Company" />
+        <Image src="/logo.png" width={50} height={50} alt="Logo" />
       </Link>
 
       {/* Desktop Menu */}
@@ -46,8 +34,6 @@ export default function Navbar() {
         <li><Link href="/" className={styles.menuLink}>Home</Link></li>
         <li><Link href="/projects" className={styles.menuLink}>Projects</Link></li>
         <li><Link href="/about" className={styles.menuLink}>About</Link></li>
-
-        {/* Dropdown */}
         <li className={styles.dropdownContainer}>
           <div className={`${styles.menuLink} ${styles.dropdownButton}`}>
             Calculators
@@ -57,30 +43,23 @@ export default function Navbar() {
             </ul>
           </div>
         </li>
-
         <li><Link href="/contact" className={styles.menuLink}>Contact</Link></li>
         <li>
-          {!loading && (
-            loggedIn ? (
-              <>
-                <Link href="/profile" className={styles.menuLink}>Profile</Link>
-                <button onClick={handleLogout} className="text-white underline">Log Out</button>
-              </>
-            ) : registered ? (
-              <Link href="/login" className={styles.menuLink}>Log In</Link>
-            ) : (
-              <Link href="/register" className={styles.menuLink}>Sign In</Link>
-            )
+          {loggedIn ? (
+            <>
+              <span className={`${styles.menuLink} font-semibold`}>Welcome, {user?.name}</span>
+              <button onClick={handleLogout} className="text-white underline ml-2">Log Out</button>
+            </>
+          ) : registered ? (
+            <Link href="/signin" className={styles.menuLink}>Sign In</Link>
+          ) : (
+            <Link href="/signup" className={styles.menuLink}>Sign Up</Link>
           )}
         </li>
       </ul>
 
       {/* Mobile Burger Icon */}
-      <button
-        className={styles.burgerIcon}
-        onClick={handleToggle}
-        aria-label="Toggle menu"
-      >
+      <button className={styles.burgerIcon} onClick={handleToggle} aria-label="Toggle menu">
         {isOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
 
@@ -94,17 +73,15 @@ export default function Navbar() {
           <li><Link href="/calculators#loan" className={styles.menuLink} onClick={handleLinkClick}>Loan Calculator</Link></li>
           <li><Link href="/contact" className={styles.menuLink} onClick={handleLinkClick}>Contact</Link></li>
           <li>
-            {!loading && (
-              loggedIn ? (
-                <>
-                  <Link href="/profile" className={styles.menuLink} onClick={handleLinkClick}>Profile</Link>
-                  <button onClick={() => { handleLogout(); handleLinkClick(); }} className="text-white underline">Log Out</button>
-                </>
-              ) : registered ? (
-                <Link href="/login" className={styles.menuLink} onClick={handleLinkClick}>Log In</Link>
-              ) : (
-                <Link href="/register" className={styles.menuLink} onClick={handleLinkClick}>Sign In</Link>
-              )
+            {loggedIn ? (
+              <>
+                <span className={`${styles.menuLink} font-semibold`}>Welcome, {user?.name}</span>
+                <button onClick={() => { handleLogout(); handleLinkClick(); }} className="text-white underline ml-2">Log Out</button>
+              </>
+            ) : registered ? (
+              <Link href="/signin" className={styles.menuLink} onClick={handleLinkClick}>Sign In</Link>
+            ) : (
+              <Link href="/signup" className={styles.menuLink} onClick={handleLinkClick}>Sign Up</Link>
             )}
           </li>
         </ul>
@@ -112,6 +89,11 @@ export default function Navbar() {
     </nav>
   );
 }
+
+
+
+
+
 
 
 
