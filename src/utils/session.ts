@@ -1,5 +1,3 @@
-// utils/session.ts
-
 export interface Reservation {
   buildingId: number;
   buildingName: string;

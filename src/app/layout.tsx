@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { AuthProvider } from '@/context/AuthContext';
+import SessionProvider from '@/components/SessionProvider';
 import "./globals.css";
 import Navbar from "../components/navbar/Navbar";
 import BackToTopButton from "@/components/backToTop/BackToTop";
@@ -34,10 +34,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AuthProvider>
+        <SessionProvider>
           <Navbar />
           {children}
-        </AuthProvider>
+        </SessionProvider>
+          
          <BackToTopButton />
       </body>
     </html>

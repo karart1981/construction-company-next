@@ -3,25 +3,17 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useSession, signOut } from 'next-auth/react';
 import { Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
-import { useAuth } from '@/context/AuthContext';
-import { logoutUser } from '@/utils/session';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { user, loggedIn, registered, setUser, setLoggedIn, setRegistered } = useAuth();
 
   const handleToggle = () => setIsOpen(!isOpen);
   const handleLinkClick = () => setIsOpen(false);
 
-  const handleLogout = () => {
-    logoutUser();
-    setUser(null);
-    setLoggedIn(false);
-    setRegistered(false);
-    window.location.href = '/';
-  };
+  const { data: session } = useSession();
 
   return (
     <nav className={styles.navbar}>
@@ -45,15 +37,24 @@ export default function Navbar() {
         </li>
         <li><Link href="/contact" className={styles.menuLink}>Contact</Link></li>
         <li>
-          {loggedIn ? (
-            <>
-              <span className={`${styles.menuLink} font-semibold`}>Welcome, {user?.name}</span>
-              <button onClick={handleLogout} className="text-white underline ml-2">Log Out</button>
-            </>
-          ) : registered ? (
-            <Link href="/signin" className={styles.menuLink}>Sign In</Link>
-          ) : (
-            <Link href="/signup" className={styles.menuLink}>Sign Up</Link>
+          {session ? (
+            <div className="flex items-center gap-[30px]">
+                <Link href="/dashboard" className={styles.menuLink}>Dashboard</Link>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    signOut();
+                  }}
+                  className={`${styles.menuLink} ${styles.buttonLink}`}
+                >
+                  Logout
+                </button>
+              </div>
+              ) : (
+            <div className="flex items-center gap-[30px]">
+                <Link href="/login" className={styles.menuLink}>Login</Link>
+                <Link href="/register" className={styles.menuLink}>Register</Link>
+            </div>
           )}
         </li>
       </ul>
@@ -73,15 +74,31 @@ export default function Navbar() {
           <li><Link href="/calculators#loan" className={styles.menuLink} onClick={handleLinkClick}>Loan Calculator</Link></li>
           <li><Link href="/contact" className={styles.menuLink} onClick={handleLinkClick}>Contact</Link></li>
           <li>
-            {loggedIn ? (
+            {session ? (
               <>
-                <span className={`${styles.menuLink} font-semibold`}>Welcome, {user?.name}</span>
-                <button onClick={() => { handleLogout(); handleLinkClick(); }} className="text-white underline ml-2">Log Out</button>
+                <Link
+                  href="/dashboard"
+                  className={styles.menuLink}
+                  onClick={handleLinkClick}
+                >
+                  Dashboard
+                </Link>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleLinkClick();
+                    signOut();
+                  }}
+                  className={`${styles.menuLink} ${styles.buttonLink}`}
+                >
+                  Logout
+                </button>
               </>
-            ) : registered ? (
-              <Link href="/signin" className={styles.menuLink} onClick={handleLinkClick}>Sign In</Link>
-            ) : (
-              <Link href="/signup" className={styles.menuLink} onClick={handleLinkClick}>Sign Up</Link>
+              ) : (
+              <>
+                  <Link href="/login" className={styles.menuLink} onClick={handleLinkClick}>Login</Link>
+                  <Link href="/register" className={styles.menuLink} onClick={handleLinkClick}>Register</Link>
+              </>
             )}
           </li>
         </ul>
